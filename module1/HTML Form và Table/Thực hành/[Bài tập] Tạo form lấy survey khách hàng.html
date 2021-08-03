@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form lấy servey khách hàng</title>
+</head>
+<body>
+    <h2>Market Research Servey</h2>
+    <p>Please take a few moments to complete this satisfaction survey</p>
+
+    <form>
+        <P>What is your age range ?</P>
+        <select name="age" style="width: 300px" >
+            <option value="18" >18</option>
+            <option value="19" >19</option>
+            <option value="20" >20</option>
+            <option value="21" >21</option>
+            <option value="22" >22</option>
+            <option value="23" >23</option>
+            <option value="24" >24</option>
+        </select>
+
+        <p>What is your yearly income  range</p>
+        <select name="budget" style="width: 300px">
+            <option value="" ></option>
+            <option value="5000$">5000$</option>
+            <option value="10000$">10000$</option>
+            <option value="20000$">20000$</option>
+        </select>
+
+        <p>Gender</p>
+        <input type="radio" name="Gender" value="Male">Male
+        <input type="radio" name="Gender" value="Female">Female
+
+        <p>Which of the following.Please check all that apply ?</p>
+        <input type="checkbox" name="produc" value="product 1">Product 1<br>
+        <input type="checkbox" name="produc" value="product 2">Product 2<br>
+        <input type="checkbox" name="produc" value="product 3">Product 3
+
+        <p>How often would you use our new product ?</p>
+        <input type="radio" name="often" value="Daily" checked>Daily<br>
+        <input type="radio" name="often" value="Weekly">Weekly<br>
+        <input type="radio" name="often" value="Monthly">Monthly
+
+        <p>What wouldyou pay for the new product ?</p>
+        <textarea cols="100px" rows="10px"></textarea>
+
+        <p>Please rate your level of agreement with the following statements</p>
+        <table border="2">
+            <tr>
+                <th></th>
+                <th>Strongly Disagree</th>
+                <th>Disagree</th>
+                <th>Agree</th>
+                <th>Strongly Agree</th>
+            </tr>
+
+
+            <tr>
+                <td>Our products are priced fairly</td>
+                <td><input type="radio" ></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+
+    </form>
+
+
+
+</body>
+</html>
