@@ -5,9 +5,74 @@
     <title>Ung dung may tinh</title>
 </head>
 <body>
-    <table>
+<table>
+    <caption>CALCULATOR</caption>
+    <tr>
+        <td colspan="2">
+            <input type="number" id="number1">
+        </td>
 
-    </table>
+        <td colspan="2">
+            <input type="number" id="number2">
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <button id="click1" onclick="phepcongg()">Addition(+)</button>
+        </td>
+        <td>
+            <button id="click2" onclick="pheptru()">Subtraction(-)</button>
+        </td>
+        <td>
+            <button id="click3" onclick="phepnhan()">Multipication(X)</button>
+        </td>
+        <td>
+            <button id="click4" onclick="phepchia()">Division(/)</button>
+        </td>
+    </tr>
+</table>
+
+<span>Result:</span>
+<p id="result"></p>
+
+<script>
+    function phepcongg() {
+        let sothu_1 = document.getElementById("number1").value;
+        let sothu_2 = document.getElementById("number2").value;
+        let ketqua1 = parseInt(sothu_1);
+        let ketqua2 = parseInt(sothu_2);
+        document.getElementById("result").innerText = ketqua1 + ketqua2
+
+
+    }
+
+    function pheptru() {
+        let sothu_3 = document.getElementById("number1").value;
+        let sothu_4 = document.getElementById("number2").value;
+
+        document.getElementById("result").innerText = sothu_3 - sothu_4
+    }
+
+    function phepnhan() {
+        let sothu_5 = document.getElementById("number1").value;
+        let sothu_6 = document.getElementById("number2").value;
+
+        document.getElementById("result").innerText = sothu_5 * sothu_6
+    }
+
+    function phepchia() {
+        let sothu_7 = document.getElementById("number1").value;
+        let sothu_8 = document.getElementById("number2").value;
+
+        document.getElementById("result").innerText = sothu_7 / sothu_8
+    }
+</script>
+
+<p></p>
 
 </body>
 </html>
+
+
+

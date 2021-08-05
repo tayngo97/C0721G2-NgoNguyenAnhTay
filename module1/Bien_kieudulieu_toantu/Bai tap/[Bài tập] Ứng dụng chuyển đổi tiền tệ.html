@@ -17,7 +17,7 @@
         <th></th>
     </tr>
     <tr>
-        <td><input type="text" width="200px" id="amount"></td>
+        <td><input type="number" width="200px" id="amount"></td>
         <td><select style="width: 200px" id="fromCurrency">
             <option>VND</option>
             <option>USD</option>
@@ -36,18 +36,20 @@
         let amount = document.getElementById("amount").value;
         let fromCurrency = document.getElementById("fromCurrency").value;
         let toCurrency = document.getElementById("toCurrency").value;
-        /*if (isNaN(amount) || amount <=0) {
-            alert("Số tiền bạn nhập không phải là số hoặc là số âm")
+
+        if (isNaN(amount) || amount <= 0) {
+            alert("số tiền bạn nhập không phải là số hoặc số âm")
         } else {
-            if (fromCurrency == "USD" && toCurrency == "VND") {
+            if (fromCurrency == "USA" && toCurrency == "VND") {
                 alert(amount * 23000);
             } else if (fromCurrency == "VND" && toCurrency == "USD") {
-                alert(amount / 23000)
+                alert(amount / 23000);
             } else {
-                alert("Loại tiền bạn lựa chọn không đúng")
+                alert("loại tiền bạn chọn không đúng")
             }
-        }*/
-    }
+        }}
+
+
 </script>
 </body>
 

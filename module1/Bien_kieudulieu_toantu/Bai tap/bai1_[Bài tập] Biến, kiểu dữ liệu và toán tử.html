@@ -22,12 +22,16 @@
             let diemHoa = document.getElementById("hoahoc").value;
             let diensinh = document.getElementById("sinhhoc").value;
 
+            let Diemly = parseInt(diemLy);
+            let Diemhoa = parseInt(diemHoa);
+            let Diemsinh = parseInt(diensinh);
 
-            let tong3mon = diemHoa+diemLy+diensinh;
-            let trungbinh3mon = tong3mon/3;
+
+            let tong3Mon = Diemly + Diemhoa + Diemsinh;
+            let trungBinh3Mon = tong3mon/3;
             document.write("tong diem 3 mon : " + tong3mon);
             document.write("<br/>");
-            document.write("diemtrungbinh3mon : " + trungbinh3mon);
+            document.write("diemtrungbinh3mon : " + trungBinh3Mon);
 
         }
 
