@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <input type="number" id="vatly">Vat Ly<br>
+    <input type="number" id="hoahoc">Hoa Hoc<br>
+    <input type="number" id="sinhhoc">Sinh Hoc<br>
+    <button type="button" onclick="tong3mon()" id="diem">Ket qua</button>
+    <script>
+
+
+
+
+
+        function tong3mon() {
+            let diemLy = document.getElementById("vatly").value;
+            let diemHoa = document.getElementById("hoahoc").value;
+            let diensinh = document.getElementById("sinhhoc").value;
+
+
+            let tong3mon = diemHoa+diemLy+diensinh;
+            let trungbinh3mon = tong3mon/3;
+            document.write("tong diem 3 mon : " + tong3mon);
+            document.write("<br/>");
+            document.write("diemtrungbinh3mon : " + trungbinh3mon);
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
