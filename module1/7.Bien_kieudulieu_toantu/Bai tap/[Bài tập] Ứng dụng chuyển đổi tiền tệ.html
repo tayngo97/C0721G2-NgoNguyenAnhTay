@@ -32,6 +32,7 @@
     </tr>
 </table>
 <script>
+    let result => 75 ? alert() : alert() ;
     function convert() {
         let amount = document.getElementById("amount").value;
         let fromCurrency = document.getElementById("fromCurrency").value;
@@ -40,7 +41,7 @@
         if (isNaN(amount) || amount <= 0) {
             alert("số tiền bạn nhập không phải là số hoặc số âm")
         } else {
-            if (fromCurrency == "USA" && toCurrency == "VND") {
+            if (fromCurrency == "USD" && toCurrency == "VND") {
                 alert(amount * 23000);
             } else if (fromCurrency == "VND" && toCurrency == "USD") {
                 alert(amount / 23000);
