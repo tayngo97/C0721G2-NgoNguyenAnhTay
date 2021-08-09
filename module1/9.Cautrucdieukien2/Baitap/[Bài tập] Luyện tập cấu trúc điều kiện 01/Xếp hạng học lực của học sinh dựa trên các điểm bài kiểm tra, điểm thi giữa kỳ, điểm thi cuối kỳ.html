@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Diem thi giua ky 3 mon</h3>
+    <input type="number" id="diem_toan1">Diem toan<br>
+    <input type="number" id="diem_hoa1">Diem hoa<br>
+    <input type="number" id="diem_ly1">Diem ly<br>
+    <button onclick="DiemTBgiuaky()">Submit</button>
+    <h4>Xep loai hoc luc giua ki </h4>
+    <p id="demo"></p>
+
+    <h3>Diem thi cuoi ky 3 mon</h3>
+    <input type="number" id="diem_toan2">Diem toan<br>
+    <input type="number" id="diem_hoa2">Diem ly<br>
+    <input type="number" id="diem_ly2">Diem hoa<br>
+    <button onclick="DiemTBcuoiky()">Submit</button>
+
+    <h4>Diemtrungbinhcuoiki</h4>
+    <p id="demo1"></p>
+
+    <h2>Xep loai hoc luc</h2>
+    <button onclick="xeploaiHOCLUC()">Submit</button>
+    <p id="demo2"></p>
+
+    <script>
+        function DiemTBgiuaky() {
+            var diemToanGK = document.getElementById("diem_toan1").value ;
+            var diemHoaGK = document.getElementById("diem_hoa1").value;
+            var diemLyGK = document.getElementById("diem_ly1").value;
+            var diemToanGiuaKi = parseFloat(diemToanGK);
+            var diemHoaGiuaKi = parseFloat(diemHoaGK);
+            var diemLyGiuaKi = parseFloat(diemLyGK);
+
+             document.getElementById("demo").innerText = (diemToanGiuaKi + diemLyGiuaKi + diemHoaGiuaKi)/3;
+
+        }
+
+        function DiemTBcuoiky() {
+            var diemToanCK1 = document.getElementById("diem_toan2").value ;
+            var diemHoaCK1 = document.getElementById("diem_hoa2").value;
+            var diemLyCK1 = document.getElementById("diem_ly2").value;
+            var diemToanCK = parseFloat(diemToanCK1);
+            var diemHoaCK = parseFloat(diemHoaCK1);
+            var diemLyCK = parseFloat(diemLyCK1);
+             document.getElementById("demo1").innerHTML = (diemToanCK + diemHoaCK + diemLyCK) /3;
+
+
+        }
+
+            function xeploaiHOCLUC() {
+                var diemTBgiuaky = document.getElementById("demo").textContent;
+                var diemTBcuoiky = document.getElementById("demo1").textContent ;
+                var ketQua1 = parseFloat(diemTBgiuaky);
+                var ketQua2 = parseFloat(diemTBcuoiky);
+
+                var result = document.getElementById("demo2").innerHTML = (parseFloat(ketQua1+ketQua2))/2;
+
+                if (result>= 7.5){
+                    alert("loại A");
+                }else if (result >6){
+                    alert("loai B")
+                }else if(result >4){
+                    alert("loai C")
+                }else alert("loai D")
+            }
+
+
+
+
+
+    </script>
+</body>
+</html>

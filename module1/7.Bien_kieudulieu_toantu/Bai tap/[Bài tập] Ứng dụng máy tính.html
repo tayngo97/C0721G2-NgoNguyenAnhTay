@@ -5,8 +5,8 @@
     <title>Ung dung may tinh</title>
 </head>
 <body>
-<table>
-    <caption>CALCULATOR</caption>
+<table border="1">
+    <caption >CALCULATOR</caption>
     <tr>
         <td colspan="2">
             <input type="number" id="number1">
@@ -19,16 +19,16 @@
     </tr>
     <tr>
         <td>
-            <button id="click1" onclick="phepcongg()">Addition(+)</button>
+            <button  onclick="phepCong()">Addition(+)</button>
         </td>
         <td>
-            <button id="click2" onclick="pheptru()">Subtraction(-)</button>
+            <button  onclick="phepTru()">Subtraction(-)</button>
         </td>
         <td>
-            <button id="click3" onclick="phepnhan()">Multipication(X)</button>
+            <button  onclick="phepNhan()">Multipication(X)</button>
         </td>
         <td>
-            <button id="click4" onclick="phepchia()">Division(/)</button>
+            <button  onclick="phepChia()">Division(/)</button>
         </td>
     </tr>
 </table>
@@ -37,35 +37,35 @@
 <p id="result"></p>
 
 <script>
-    function phepcongg() {
-        let sothu_1 = document.getElementById("number1").value;
-        let sothu_2 = document.getElementById("number2").value;
-        let ketqua1 = parseInt(sothu_1);
-        let ketqua2 = parseInt(sothu_2);
-        document.getElementById("result").innerText = ketqua1 + ketqua2
+    function phepCong() {
+        let soThu1 = document.getElementById("number1").value;
+        let soThu2 = document.getElementById("number2").value;
+        let ketQua1 = parseInt(soThu1);
+        let ketQua2 = parseInt(soThu2);
+        document.getElementById("result").innerText = ketQua1 + ketQua2
 
 
     }
 
-    function pheptru() {
-        let sothu_3 = document.getElementById("number1").value;
-        let sothu_4 = document.getElementById("number2").value;
+    function phepTru() {
+        let soThu3 = document.getElementById("number1").value;
+        let soThu4 = document.getElementById("number2").value;
 
-        document.getElementById("result").innerText = sothu_3 - sothu_4
+        document.getElementById("result").innerText = soThu3 - soThu4
     }
 
-    function phepnhan() {
-        let sothu_5 = document.getElementById("number1").value;
-        let sothu_6 = document.getElementById("number2").value;
+    function phepNhan() {
+        let soThu5 = document.getElementById("number1").value;
+        let soThu6 = document.getElementById("number2").value;
 
-        document.getElementById("result").innerText = sothu_5 * sothu_6
+        document.getElementById("result").innerText = soThu5 * soThu6
     }
 
-    function phepchia() {
-        let sothu_7 = document.getElementById("number1").value;
-        let sothu_8 = document.getElementById("number2").value;
+    function phepChia() {
+        let soThu7 = document.getElementById("number1").value;
+        let soThu8 = document.getElementById("number2").value;
 
-        document.getElementById("result").innerText = sothu_7 / sothu_8
+        document.getElementById("result").innerText = soThu7 / soThu8
     }
 </script>
 

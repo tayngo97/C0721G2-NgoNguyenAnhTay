@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <script>
+            var inputN = parseInt(prompt("Nhap so sản phẩm bán được !"));
+            var hoaHong ;
+            if ( 0<inputN && inputN < 100 ){
+                    hoaHong = ((inputN *5)/100) * 22000 ;
+                    alert("Số tiền hoa hồng nhân được = " + hoaHong + "VND");
+            }else if ( 100 < inputN && 1000 >inputN  ){
+                hoaHong = ((inputN *10)/100) * 22000 ;
+                alert("Số tiền hoa hồng nhân được = " + hoaHong + "VND");
+            } else (inputN > 1000 )
+                hoaHong = ((inputN *20)/100)* 22000 ;
+                alert("Số tiền hoa hồng nhân được = " + hoaHong + "VND");
+
+
+
+        </script>
+</body>
+</html>
