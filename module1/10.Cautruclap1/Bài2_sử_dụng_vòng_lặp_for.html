@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Tổng các số từ 1 đến số vừa nhập : </h3><span><p id="demo1"></p></span>
+
+    <script>
+        let inputNumber = parseInt(prompt(""));
+        let total = 0 ;
+        for (i = 1 ; i<= inputNumber;i++){
+            total = total + i ;
+        }  document.getElementById("demo1").innerHTML = total;
+
+    </script>
+</body>
+</html>

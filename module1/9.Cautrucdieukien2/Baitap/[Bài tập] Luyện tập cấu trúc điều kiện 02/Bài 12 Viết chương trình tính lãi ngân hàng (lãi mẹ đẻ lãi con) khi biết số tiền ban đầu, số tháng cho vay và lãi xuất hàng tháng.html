@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .month {
+            background-color: mediumvioletred;
+        }
+    </style>
+</head>
+<body><center>
+    <table border="1">
+        <caption>ABBank lãi suất</caption>
+        <tr>
+            <td class="month">Ngân hàng</td>
+            <td class="month">01 tháng</td>
+            <td class="month">06 tháng</td>
+            <td class="month">12 tháng</td>
+        </tr>
+        <tr>
+            <td>Lãi suất</td>
+            <td>3%</td>
+            <td>4%</td>
+            <td>5%</td>
+        </tr>
+    </table>
+
+    <h4>Số tiền gửi</h4>
+    <input id="amout1" type="number" placeholder="10000000 VND"><span>VNĐ</span>
+
+    <h4>Kỳ hạn gửi</h4>
+    <input id="month1" type="number" placeholder="01 tháng"><span>tháng</span>
+    <br>
+
+    <button onclick="demo1()">Submit</button>
+
+    <h4>Số tiền lãi nhận được</h4>
+    <p id="demo3"></p>
+
+
+    <script>
+        function demo1() {
+            let amount = document.getElementById("amout1").value;
+            let month = document.getElementById("month1").value;
+
+
+            if (month >= 1 && month <6){
+                document.getElementById("demo3").innerText = amount / 100 * 103 ;
+            }else if (month >= 6 && month <=11 ){
+                document.getElementById("demo3").innerText = amount / 100 * 104 ;
+            }else (month>12)
+                document.getElementById("demo3").innerText = "=" + amount / 100 * 105 + "vnd" ;
+        }
+
+
+    </script>
+</center>
+</body>
+</html>

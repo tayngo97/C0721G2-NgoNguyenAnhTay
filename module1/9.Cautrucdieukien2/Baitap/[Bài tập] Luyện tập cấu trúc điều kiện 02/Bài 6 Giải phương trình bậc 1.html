@@ -6,18 +6,21 @@
 </head>
 <body>
 <script>
-    let a = parseInt(prompt("nhập số a !"));
-    let b = parseInt(prompt("nhập số b !"));
-    let x ;
+    var a = prompt("Nhập giá trị a ");
+    var b = prompt("Nhập giá trị b ");
 
-    if (a== 0){
-        if (b==0){
-            alert("Vô số nghiệm")
-        }else (b != 0)
-            alert("Vô nghiệm !")
+    if (isNaN(a) || isNaN(b)){
+        alert("Hãy nhập vào số ");
+    }else if (a == 0 ){
+        alert("Phương trình vô nghiệm");
+    }else if (b==0){
+        alert("Phương trình có vô số nghiệm ");
+    }else {
+        x = -b/a
+        alert("Kết quả x là : "+ x);
+    }
 
-    }else ( a !=0)
-        alert(x = b/a );
+
 
 
 
