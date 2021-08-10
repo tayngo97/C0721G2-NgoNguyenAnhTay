@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../10.Cautruclap1/Baitap/.idea/Baitap.iml" filepath="$PROJECT_DIR$/../../../10.Cautruclap1/Baitap/.idea/Baitap.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/[Bài tập] Luyện tập cấu trúc điều kiện 02.iml" filepath="$PROJECT_DIR$/.idea/[Bài tập] Luyện tập cấu trúc điều kiện 02.iml" />
     </modules>
   </component>
