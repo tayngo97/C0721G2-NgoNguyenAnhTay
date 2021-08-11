@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        var count = 1 ;
+
+        var a = parseInt(prompt("Nhập khoảng bắt đầu!"));
+        var b = parseInt(prompt("Nhập khoảng kết thúc !"));
+        var result = Math.round(Math.random(b -a) + a);
+
+        do {
+            let num = prompt("Yêu cầu bán nhập số");
+
+            if (num == result){
+                alert("Xin chúc mừng bạn đã trúng giải đặc biệt");
+                break;
+            }else if (num > result){
+                alert("Nhập số nhỏ hơn")
+            } else alert("Nhập số lớn hơn")
+
+            count++;
+        }while (count <= 3);
+        if (count == 4){
+            alert("Bạn đã hết lượt chơi")
+        }
+
+
+    </script>
+</body>
+</html>

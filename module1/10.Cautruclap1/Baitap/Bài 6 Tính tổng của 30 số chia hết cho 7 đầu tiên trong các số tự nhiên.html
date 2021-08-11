@@ -7,16 +7,21 @@
 <body>
  <script>
      var num = 0 ;
-        var sum = 0 ;
-     for (var i = 0 ; i < 30; i ++){
-         num = num + 7 ;
-         document.write(num + "<br>");
-         sum = sum + num ;
+     var count = 0 ;
+     var result = 0 ;
+     while (count<53){
+         if (num % 7 == 0){
+             document.write(num + "<br>");
+             result = result + num ;
+             count++;
+         }
+         num ++
      }
+     document.write("Tổng các số trên là : " + result)
 
 
 
-     document.write("Tổng 30 số đầu tiền chia hết cho 7" + " = " + sum)
+
 
 
 

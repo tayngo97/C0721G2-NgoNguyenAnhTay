@@ -10,23 +10,42 @@
     for ( var n = 1 ; n <= 5; n ++){
         for (var i = 1 ; i <= n; i ++){
             document.write("*")
-        }document.write("<br>")
+        }
+        document.write("<br>")
     }
 
-
+    document.write("<br>");
 
     for ( var n = 1  ; n <= 5; n ++){
         for (var i = 6 ; i > n  ; i --){
             document.write("*")
-        }document.write("<br>")
+        }
+        document.write("<br>")
     }
+
+    document.write("<br>");
+
 
     for ( var n = 1  ; n <= 5; n ++){
-        for (var i = 6 ; i < n  ; i --){
+        for (var i = 6 ; i > n  ; i --){
+            document.write("&nbsp&nbsp");
+        } for (var i = 1 ; i <= n; i ++){
             document.write("*")
-        }document.write("<br>")
+        }
+
+        document.write("<br>")
     }
 
+    document.write("<br>");
+
+    for ( var n = 1 ; n <= 5; n ++){
+        for (var i = 1 ; i <= n; i ++){
+            document.write("&nbsp&nbsp")
+        } for (var i = 6 ; i > n; i --){
+            document.write("*")
+        }
+        document.write("<br>")
+    }
 
 </script>
 </body>
