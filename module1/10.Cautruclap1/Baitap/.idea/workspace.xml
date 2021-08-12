@@ -1,77 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ae46d66-7ecf-402c-8ca5-cb56f961da12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Bài 3 in tam giác vuông.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bài 6 Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bài 7 Hãy viết một chương trình in ra các số từ 1 đến 100.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../8.Cautrucdieukien1/Thuchanh/Thuchanh_Luyentapvoicautruc If-Else-If.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/Bai_tap_Maytinhdongian.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/Tính chỉ số cân nặng của cơ thể.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Cau lenh swith case.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 01/Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 01/Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 01/Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 01/Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 01/Tính cước điện thoại cho một hộ gia đình với các thông số đã cho.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 01/Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 01/ính hoa hồng nhận được tuỳ theo mức doanh số bán hàng.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 1 Chuyển từ độ C sang độ F.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 10  Viết chương trình tính giá điện.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 4 Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 5Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 6 Giải phương trình bậc 1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 8 Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 9 Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../9.Cautrucdieukien2/Baitap/[Bài tập] Ứng dụng vui DoYouLoveMe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Bai_tap_Kanban_Corellnote/Bai_tap/Bai_tap_Corell Note.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Bai_tap_Kanban_Corellnote/Bai_tap/Baitap_Kanban.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Bai_tap_Kanban_Corellnote/Bai_tap/abc.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Bai tap/.idea/Bai tap.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Bai tap/.idea/baitap_taoCV ca nhan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Bai tap/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Bai tap/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Bai tap/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Bai tap/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Bai tap/Baitap_su dung git.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Bai tap/Baitap_taodanhsach.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Bai tap/baitap_taoCVcanhan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Thuc hanh/Clone du an tu Git.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Thuc hanh/Sử dụng thẻ HTML cơ bản.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Git_HTML/Thuc hanh/Tạo dự án mới trên github.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/.idea/Bai tap.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/Phần 1 bài tạp tạo form đơn giản .html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/Phần 2 bài tập tạo form đơn giản.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/[Bài tập] Tạo bảng nâng cao bàn cờ vua.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/[Bài tập] Tạo bảng nâng cao thời khóa biểu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/[Bài tập] Tạo bảng đơn giản.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/[Bài tập] Tạo form lấy survey khách hàng.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Bai tap/[Bài tập] Tạo giao diện form đăng ký người dùng.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/.idea/Thực hành.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/Thực hành tạo form cơ bản.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/Tạo một forrm tìm kiếm Google.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/[Thực hành] Tạo bảng cơ bản.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/[Thực hành] Tạo bảng nâng cao.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/myScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HTML Form và Table/Thực hành/text.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Pseudo_Flow Chart/Bai_tap/Baitap)motathuattoantinhdiemtrungbinh.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Pseudo_Flow Chart/Bai_tap/Bài tập_ Mô tả thuật toán có cấu trúc điều kiện.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Pseudo_Flow Chart/Bai_tap/Bài tập_Mo ta thuat toan tim gia tri lon nhất trong 3 so.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Pseudo_Flow Chart/Bai_tap/Bài tập_tim giá trị lớn nhất trong một dãy số.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Pseudo_Flow Chart/Bai_tap/baI_tap_Mô tả thuật toán chuyển đổi tiền tệ.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Pseudo_Flow Chart/Thuc_Hanh/Thuật toán chuyển đổi nhiệt độ.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Pseudo_Flow Chart/Thuc_Hanh/Thực hành_thuat game doan so.docx" beforeDir="false" />
-    </list>
+    <list default="true" id="6ae46d66-7ecf-402c-8ca5-cb56f961da12" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +15,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -105,7 +35,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Bài tập_Luyện tập vòng lặp 01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Bài 7 Hãy viết một chương trình in ra các số từ 1 đến 100.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -140,6 +70,7 @@
       <updated>1628598430029</updated>
       <workItem from="1628598431223" duration="6032000" />
       <workItem from="1628646085430" duration="6214000" />
+      <workItem from="1628691672201" duration="5690000" />
     </task>
     <servers />
   </component>
@@ -151,11 +82,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="274" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1628598822074" />
-    <state x="787" y="0" key="FileChooserDialogImpl" timestamp="1628654047764">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="840" y="0" key="FileChooserDialogImpl" timestamp="1628691685182">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="787" y="0" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1628654047764" />
-    <state x="840" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1628604475272" />
+    <state x="840" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1628691685182" />
     <state width="1345" height="98" key="GridCell.Tab.0.bottom" timestamp="1628604476448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
