@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num, max, index,sum = 0 ;
+    index = 0;
+    num = [6, 7, 5, 6, 11, 100, 77];
+    max = num[0];
+    for (let i = 0; i < num.length - 1; i++) {
+        if (num[i] > max) {
+            max = num[i];
+            index = i;
+        }
+        sum = sum + num[i]
+    }
+
+    diemtrungbinh = sum/num.length;
+    document.write('số lớn nhất:' + max + 'vị trí' + index + '<br>');
+document.write(diemtrungbinh);
+
+</script>
+</body>
+</html>

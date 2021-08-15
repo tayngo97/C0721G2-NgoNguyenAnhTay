@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [4,8,9,5,1,2,3,6];
+   // document.write(number.reverse());
+    let first ,last ;
+    first = 0 ;
+    last = number.length-1;
+    console.log(last);
+    while(first < last )
+    {
+        let b = number[first];  //b=4
+        number[first] = number[last];//=4
+        number[last] = b ; //=6
+        first++ ;
+        last-- ;
+    }document.write(number);
+
+
+
+
+
+
+  // for (let i = 0 ; i <number.length-1;i++)
+  //  {
+  //      document.write(number.reverse());
+  //   }
+
+
+
+</script>
+</body>
+</html>

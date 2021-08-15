@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+   let num = prompt("Nhập vào số kí tư cảu mảng");
+    let count = 0 ;
+    let array = [];
+   for (let i = 0 ;i < num;i++){
+       array[i] = prompt("mời bạn nhập vào phần tử thứ "+ i);
+       if (!isNaN(array[i])){
+           count++
+       }
+   } document.write("Số kí tự số là :" + count)
+
+
+</script>
+
+</body>
+</html>

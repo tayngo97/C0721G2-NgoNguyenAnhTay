@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="demo1" type="text">Nhập từ cần tìm kiếm<br>
+<button onclick="timkiem()">Search</button>
+
+
+<script>
+
+    function timkiem() {
+        var Voca = document.getElementById("demo1").value;
+
+        let englishVoca = ["hello", "goodbye", "job"];
+        let vietnamVoca = ["xinchao", "tambiet", "congviec"];
+
+        for (var i = 0; i < englishVoca.length; i++) {
+            if (Voca == englishVoca[i]) {
+                document.write(vietnamVoca[i] + "tại vị trí" + i)
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

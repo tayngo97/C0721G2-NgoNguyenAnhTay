@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [5,4,6,8,9,7,2,3,1,98]
+    let flag;
+    let index = 0;
+    let nhapVao = parseInt(prompt("nhập giá trị tại đây."))
+    for( let i = 0 ; i <= num.length-1; i++){
+        if(num[i] == nhapVao){
+            flag = true;
+            index = i ;
+        }
+    }
+    if (flag){
+   num.splice(index,1,0)
+    }
+    document.write(num)
+    console.log(num)
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" type="text">nhập từ cần tìm<br>
+<button onclick="timkiem()">Tìm kiếm</button>
+<script>
+    function timkiem() {
+        var search = document.getElementById("nhap").value;
+        var english = ["hello", "smile", "sun"];
+        var vietNam = ["xinchao", "cuoi", "matTroi"];
+
+        for (var i = 0; i < english.length; i++) {
+            if (search == english[i]) {
+                document.write(vietNam[i]);
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

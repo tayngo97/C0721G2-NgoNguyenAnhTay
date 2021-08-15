@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+    let x = [-3, 5, 1, 3, 2, 10];
+    let firts = 0 ;
+    let last = x.length - 1;
+
+    while (firts<last){
+        let b = x[firts] ;
+        x[firts] = x[last] ;
+        x[last] = b ;
+        firts ++ ;
+        last -- ;
+    }
+    document.write(x);
+
+</SCRIPT>
+</body>
+</html>
