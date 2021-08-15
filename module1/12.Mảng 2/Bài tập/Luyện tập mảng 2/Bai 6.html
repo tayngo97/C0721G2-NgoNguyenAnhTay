@@ -6,18 +6,15 @@
 </head>
 <body>
 <script>
-
-    let num = prompt("Nhập vào độ dài của mảng");
+    let num = prompt("Nhập kích thước của mảng");
     let array = [];
-
     for (let i = 0 ; i < num ; i ++){
-        let str = prompt("Nhập vào mảng kí tự thứ " + i);
+         array[i] = prompt("Nhập vào mảng kí tự thứ " + i);
         if (array[i] === "-" ){
-            str.replace("_")
+            array[i] = "_"
         }
     }
-
-    document.write(array);
+    document.write(array.toString())
 
 
 </script>
