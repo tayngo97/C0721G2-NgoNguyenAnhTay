@@ -15,7 +15,6 @@
                 count++;
                 flag = true;
             }
-
         }
         if(flag ) {
             document.write("Kí tự " + input + " có trong mảng và số lần xuất hiện là " + count);
@@ -23,14 +22,19 @@
         } else {
             alert('Trả về -1');
         }
-
     }
 
-    let number = parseInt(prompt("Nhập vào số lượng phần tử bạn muốn tạo mảng"));
     let array = [];
-    for (let i = 0; i < number; i++ ) {
-        array[i] = prompt("Nhập phần tử thứ " + i);
+    let i =0 ;
+    while (true){
+        array [i] = prompt("Nhập vào kí tự thứ " + i);
+        let check = confirm("bạn có muốn nhập tiếp ko ?");
+        if (!check){
+            break ;
+        }
+        i++;
     }
+
 
     checkArray(array);
 

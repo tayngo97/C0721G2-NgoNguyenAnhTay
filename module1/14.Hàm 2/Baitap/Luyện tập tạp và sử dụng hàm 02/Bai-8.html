@@ -7,18 +7,22 @@
 <body>
 <script>
     function reverseArray() {
-        document.write(array.reverse());
+        document.write("array reverse là : " + array.reverse());
 
     }
 
-    let number = prompt("Nhập số phần tử bạn muốn tạo mảng 1 vô đây");
+
     let array = [];
-    for ( let i = 0; i < number; i++) {
+    let i =0 ;
+    while (true){
         array [i] = prompt("Nhập vào kí tự thứ " + i);
+        let check = confirm("bạn có muốn nhập tiếp ko ?");
+        if (!check){
+            break ;
+        }
+        i++;
     }
-    // document.write(array);
-
-    reverseArray()
+    reverseArray(array);
 
 
 
