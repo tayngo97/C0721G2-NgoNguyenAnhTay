@@ -12,11 +12,9 @@
       <change afterPath="$PROJECT_DIR$/12.Mảng 2/Bài tập/Luyện tập mảng 2/Bai 6.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/12.Mảng 2/Bài tập/Luyện tập mảng 2/text.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/12.Mảng 2/Thưc hành/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/13.Hàm 1/Baitap/Bai1_Hamkiemtrasonguyento.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/13.Hàm 1/Baitap/Luyện tập tạo và sử dụng hàm 01/Bài 1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/13.Hàm 1/Baitap/Luyện tập tạo và sử dụng hàm 01/Bài 2.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/13.Hàm 1/Thuchanh/Bai1_TaoVaGoiHam.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/13.Hàm 1/Thuchanh/Bai2chuyển đổi nhiệt độ.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14.Hàm 2/Baitap/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/8.Cautrucdieukien1/Thuchanh/Thuchanh_Luyentapvoicautruc If-Else-If.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/9.Cautrucdieukien2/Baitap/Bai_tap_Maytinhdongian.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/9.Cautrucdieukien2/Baitap/Tính chỉ số cân nặng của cơ thể.html" afterDir="false" />
@@ -36,7 +34,6 @@
       <change afterPath="$PROJECT_DIR$/9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 8 Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 9 Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/9.Cautrucdieukien2/Baitap/[Bài tập] Ứng dụng vui DoYouLoveMe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai3_Timgiatrinhonhatcuamang.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lam bai tap/Bai 1.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lam bai tap/bai 2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bai_tap_Kanban_Corellnote/Bai_tap/Bai_tap_Corell Note.jpg" beforeDir="false" />
@@ -140,7 +137,8 @@
       <workItem from="1627888688833" duration="1900000" />
       <workItem from="1627891430950" duration="421000" />
       <workItem from="1627893768708" duration="109000" />
-      <workItem from="1629186178417" duration="10106000" />
+      <workItem from="1629186178417" duration="10153000" />
+      <workItem from="1629248611366" duration="1034000" />
     </task>
     <servers />
   </component>
