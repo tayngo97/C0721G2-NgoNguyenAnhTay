@@ -14,6 +14,8 @@
       <change afterPath="$PROJECT_DIR$/12.Mảng 2/Thưc hành/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/13.Hàm 1/Thuchanh/Bai1_TaoVaGoiHam.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/13.Hàm 1/Thuchanh/Bai2chuyển đổi nhiệt độ.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14.Hàm 2/Baitap/Chuongtrinh_QuanLiSanPham.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14.Hàm 2/Baitap/Kiểm tra chuỗi đối xứng.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/14.Hàm 2/Baitap/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/8.Cautrucdieukien1/Thuchanh/Thuchanh_Luyentapvoicautruc If-Else-If.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/9.Cautrucdieukien2/Baitap/Bai_tap_Maytinhdongian.html" afterDir="false" />
@@ -138,7 +140,7 @@
       <workItem from="1627891430950" duration="421000" />
       <workItem from="1627893768708" duration="109000" />
       <workItem from="1629186178417" duration="10153000" />
-      <workItem from="1629248611366" duration="6281000" />
+      <workItem from="1629248611366" duration="12149000" />
     </task>
     <servers />
   </component>
@@ -146,10 +148,11 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="84" key="FileChooserDialogImpl" timestamp="1629188429425">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="2552" y="128" key="FileChooserDialogImpl" timestamp="1629274726243">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="421" y="84" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1629188429425" />
+    <state x="2552" y="128" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629274726243" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1629191470398">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
