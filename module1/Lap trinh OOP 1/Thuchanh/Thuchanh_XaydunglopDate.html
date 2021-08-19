@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     class MyDate{
+         constructor (day,month,year) {
+        this.day = day ;
+        this.month=month;
+        this.year = year;}
+
+        getDay = function () {
+                return this.day
+        };
+
+        getMonth = function () {
+                return this.month
+        };
+        getYear = function () {
+                return this.year
+        };
+
+
+        setDay = function(day) {
+            this.day  = day;
+        };
+        setMonth = function(month) {
+            this.month  = month;
+        };
+        setYear = function(year) {
+            this.year  = year;
+        };
+
+        setDate = function (day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        };
+
+        toString = function () {
+            return this.day.toString() + "/" + this.month.toString() + "/" + this.year.toString();
+        }
+
+
+     }
+
+    let date = new MyDate(4,2,2021);
+    document.write(date.getDay() + "/" + date.getMonth() + "/" + date.getYear());
+    document.write("<br>");
+
+     date.setDay(3);
+     date.setMonth(6);
+     date.setYear(2200);
+     document.write(date.getDay() + "/" + date.getMonth() + "/" + date.getYear() + "<br>");
+
+    let date1 = new MyDate(4,5,2020);
+    document.write(date1.toString() + "<br>");
+
+    let date2 = new MyDate(4,3,3564);
+    document.write(date2.toString());
+
+
+
+</script>
+
+</body>
+</html>

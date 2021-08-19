@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    class Rectangle{
+        constructor(chieudai,chieurong) {
+          this.chieudai = chieudai;
+          this.chieurong =chieurong;
+        }
+
+        dienTich () {
+            return  this.chieudai * this.chieurong;
+
+        }
+        chuVi (){
+            return  (this.chieudai + this.chieurong)*2;
+        }
+
+        setChieudai(chieudaimoi){
+            this.chieudai = chieudaimoi;
+        }
+        setChieurong(chieurongmoi){
+            this.chieurong = chieurongmoi
+        }
+
+
+
+    }
+
+    let S1 = new Rectangle(10,20);
+    document.write("Diện tích hình chũ nhật S1 là " +S1.dienTich() + "<br>");
+    document.write("Chu vi hình chữ nhật S1 là "+S1.chuVi() + "<br>");
+
+
+    let S2 = new Rectangle();
+    S2.setChieudai(50);
+    S2.setChieurong(40);
+    document.write("diện tích mới là :" +  S2.dienTich() + "<br>");
+    document.write("chu vi mới là " + S2.chuVi());
+
+
+
+
+
+
+</script>
+</body>
+</html>
