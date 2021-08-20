@@ -7,16 +7,18 @@
 <body>
 <script>
   var numV = [5,100,2,5,1,6,9,69,88,18];
- var login
-  login = prompt('Login : ');
- //console.log(typeof( login)) ;
+ var login;
+ var flag = false ;
+  login = parseInt(prompt('Login : '));
+ console.log(typeof( login)) ;
  for (let i = 0 ; i <= numV.length-1;i++){
      if (login == numV[i]){
-         alert('V is in the array');break;
-     } else {
-         alert('V is not in the array');break;
+         flag = true ;
      }
  }
+ if (flag){
+     alert(login + "nằm trong array")
+ } else alert(login + "không nằm trong array")
 
 
 

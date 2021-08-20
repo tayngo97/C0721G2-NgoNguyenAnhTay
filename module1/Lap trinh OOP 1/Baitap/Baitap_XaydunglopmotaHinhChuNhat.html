@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="myCanVas" width="500" height="200"></canvas><br>
+
 <script>
 
     class Rectangle{
@@ -15,6 +17,7 @@
 
         dienTich () {
             return  this.chieudai * this.chieurong;
+
         }
         chuVi (){
             return  (this.chieudai + this.chieurong)*2;
@@ -26,17 +29,33 @@
         setChieurong(chieurongmoi){
             this.chieurong = chieurongmoi
         }
+
+        displayCanVas(){
+            let ctx = document.getElementById("myCanVas").getContext("2d");
+            ctx.fillStyle='#FF1493';
+            ctx.fillRect(0,0,this.chieudai,this.chieurong);
+        }
+
     }
 
-    let S1 = new Rectangle(10,20);
-    document.write("Diện tích hình chũ nhật S1 là " +S1.dienTich() + "<br>");
+    let S1 = new Rectangle(1000,100);
+    document.write("Diện tích hình chữ nhật S1 là " +S1.dienTich() + "<br>");
     document.write("Chu vi hình chữ nhật S1 là "+S1.chuVi() + "<br>");
 
+
     let S2 = new Rectangle();
-    S2.setChieudai(50);
-    S2.setChieurong(40);
+    S2.setChieudai(200);
+    S2.setChieurong(100);
     document.write("diện tích mới là :" +  S2.dienTich() + "<br>");
     document.write("chu vi mới là " + S2.chuVi());
+    S2.displayCanVas();
+
+
+
+
+
+
+
 
 </script>
 </body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    class Temperature{
+        constructor(C) {
+            this.doC = C;
+        }
+
+        changetoF(){
+            let doF = (this.doC * 1.8000) + 32.00;
+            return doF;
+        }
+
+        changetoK(){
+            let doK = this.doC + 273.15;
+            return doK;
+        }
+        setC(doC){
+            this.doC = doC
+        }
+    }
+
+    let temperature = new Temperature(20);
+    document.write( temperature.changetoF()+ " độ F " +"<br>");
+    temperature.setC(45);
+    document.write(temperature.changetoF() +  " độ F " + "<br>");
+    alert (temperature.setC() + "là" + temperature.changetoK() + "độ");
+
+</script>
+</body>
+</html>

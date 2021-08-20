@@ -6,7 +6,12 @@
 </head>
 <body>
     <script>
-        let inputa = parseInt(prompt("Nhập chiều dài cạnh a "));
+        do { var inputa = parseInt(prompt("Nhập chiều dài cạnh a "));
+            if (inputa<=0){
+                alert("Nhập vào số duong!")
+            }
+        }while (inputa<=0);
+
         let dientichHV = inputa * inputa ;
 
         alert("Diện tích HV là :" + dientichHV  );

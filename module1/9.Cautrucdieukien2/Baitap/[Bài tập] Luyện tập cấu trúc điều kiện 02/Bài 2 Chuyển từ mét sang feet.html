@@ -6,7 +6,13 @@
 </head>
 <body>
     <script>
-        let inputM = parseInt(prompt("Hãy nhập số mét !"));
+
+        do {var inputM = parseInt(prompt("Hãy nhập số "));
+            if (inputM<=0){
+                alert("Nhập vào số duong!")
+            }
+        }while (inputM<=0);
+
         let sofeet ;
         sofeet = inputM * 3.2808 ;
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weightt = 10;
+        }
+
+        isEmpty() {
+            if (this.weightt== 0){
+                alert("Apple empty !")
+            }
+        }
+
+        // decrease() {
+        //     if (this.weightt > 0) {
+        //         this.weightt--;
+        //     }
+        // }
+    }
+
+    class Human {
+        constructor(name,weight,gender) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        // isMale() {
+        //     return this.gender;
+        //
+        // }
+
+        setGender(){
+            if (this.gender== "Nam" ){
+                return this.gender = "Nam"
+            } else {
+                return this.gender = "Nứ"
+            }
+        }
+
+        checkAplle(Apple){
+            return Apple.isEmpty()
+        }
+
+        eat(Apple){
+            if (Apple.weightt>0){
+                Apple.weightt --;
+                this.weight ++;
+            }else {
+                alert("Empty")
+            }
+        }
+
+        say (){
+            document.write("Tôi tên là : " + this.name+ " cân nặng " + this.weight + " giới tính  : " + this.gender);
+        }
+
+        setName(nameMoi){
+            this.name = nameMoi;
+        }
+        getName(){
+            return this.name;
+        }
+
+        setWeight(weightMoi){
+            this.weight = weightMoi;
+        }
+
+        getWeight(){
+            return this.weight ;
+        }
+    }
+
+    var adam = new Human("Adam",50,"Nam");
+    document.write(adam.say());
+    var apple = new Apple();
+    alert(apple);
+    console.log(apple)
+
+
+
+
+
+</script>
+</body>
+</html>
