@@ -6,8 +6,23 @@
 </head>
 <body>
     <script>
-        let inputa = parseInt(prompt("Nhập chiều dài !"));
-        let inputb = parseInt(prompt("Nhạp chiều rộng !"));
+
+        do {let inputa = parseInt(prompt("Nhập chiều dài canh a !"));
+            if (inputa<=0){
+                alert("Nhập vào số duong!")
+            }
+        }while (inputa<=0);
+
+
+
+
+        do { let inputb = parseInt(prompt("Nhạp chiều rộng canh b !"));
+            if (inputb<=0){
+                alert("Nhập vào số duong!")
+            }
+        }while (inputb<=0);
+
+
 
         let Shinhchunhat= inputa*inputb ;
         alert("Diện tích hình chữ nhât = " + Shinhchunhat  );

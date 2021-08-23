@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        let arr  = ["u","i","u","a","e","U","O","I","A","E"];
+        let inputAlpha = prompt("Nhập vào chữ cái bất kì");
+        let flag = false ;
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]== inputAlpha){
+                flag = true ;
+            }
+        }
+        if (flag){
+            alert(inputAlpha+ "là Nguyên âm")
+        }else alert(inputAlpha + " là Phụ âm")
+
+
+    </script>
+</body>
+</html>

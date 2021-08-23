@@ -6,60 +6,54 @@
 </head>
 <body>
 <script>
-    let MyDate = function(day, month, year) {
+    var a,b,a1,b1;
+    var h;
+    do
 
-        this.day = day;
+    {
+        a=  parseInt(prompt("Nhap vao a1= "));
+        b= parseInt(prompt("Nhap vao b1= "));
+        a1=  parseInt(prompt("Nhap vao a1= "));
+        b1= parseInt(prompt("Nhap vao b1= "));
 
-        this.month = month;
+        var phepcong = a/b + a1/b1;
+        var pheptru = a/b - a1/b1;
+        var phepnhân = a/b * a1/b1;
+        var phepchia = a/b / a1/b1;
+        if (b1==0) {
+            document.write("Gia tri cua b khong hop ly, xin kta lai!");
+        }
+    }while (b1==0);
 
-        this.year = year;
-
-        this.getDay = function() {
-            return this.day;
-        }
-        this.getMonth = function() {
-            return this.month;
-        }
-        this.getYear = function() {
-            return this.year;
-        }
-        this.setDay = function(day) {
-            this.day  = day.toString();
-        }
-        this.setMonth = function(month) {
-            this.month  = month.toString();
-        }
-        this.setYear = function(year) {
-            this.year  = year.toString();
-        }
-        this.setDate = function (day,month,year) {
-            this.day = day;
-            this.month = month;
-            this.year = year;
-        }
-        this.toString = function () {
-            return this.day.toString() + "/" + this.month.toString() + "/" + this.year.toString();
-        }
-
+    if(a==0)
+    {
+        document.write(" ket qua la 0");
     }
-    let date = new MyDate(2, 2, 2007);
-    let day = date.getDay(); // 2
-    console.log(typeof (day));
-    let month = date.getMonth(); // 2
-    console.log(typeof (month));
-    let year = date.getYear(); // 2007
-    console.log(typeof (year));
-    alert(day + "/" + month + "/" + year);
-    date.setDay(10);
-    date.setMonth(10);
-    date.setYear(2019);
-    alert(day + "/" + month + "/" + year);
+    else
+    {
+        while (a!=b)
+        {
+            if(a>b)
+            {
+                a=a-b;
+            }
+            else if(b>a)
+            {
+                b=b-a;
+            }
+        }
+        h=a;
+    }
+    document.write("phép cộng" + phepcong+ "<br>");
+    document.write("phéo trừ" + pheptru + "<br>");
+    document.write("phép chia " + phepchia + "<br>");
+    document.write("phép nhân" + phepnhân + "<br>");
+    document.write("Phan so toi gian la "+ a1/h + "/" + b1/h)
 
 
-    let date1 = new MyDate(25,5,2006);
-    alert(date1.toString());
-    date1.setDate(12,12,2022);
-    alert(date1.toString());
+
+
 </script>
+
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input placeholder="Nhập vào lương" type="number" id="salaryGross">
+<button onclick="submit()">Submit</button>
+<h4>NET salary :</h4>
+<p id="result"></p>
+
+<script>
+    function submit(){
+            let salaryGross = parseInt(document.getElementById("salaryGross").value) ;
+            let salaryNet;
+            if (salaryGross >15000000){
+                salaryNet = document.getElementById("result").innerText = salaryGross/100* 80 + "VND";
+            }else if (salaryGross >7000000  && salaryGross<=15000000){
+                salaryNet = document.getElementById("result").innerText = salaryGross/100*90 + "VND";
+            }else (salaryGross <7000000)
+            salaryNet = document.getElementById("result").innerText = salaryGross/100*95 + "VND";
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
