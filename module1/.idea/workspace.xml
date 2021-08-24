@@ -50,6 +50,7 @@
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 1/Thuchanh/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/Baitap_Ungdung_AdamvaEva.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/Bài tập Xây dựng lớp mô tả điện thoại.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/CaroOOP.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/Công tắc bóng đèn.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/RatandCat.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Thuchanh/Thực hành Xây dựng lớp mô phỏng sự hoạt động của đèn.html" afterDir="false" />
@@ -161,6 +162,7 @@
       <workItem from="1629540891564" duration="305000" />
       <workItem from="1629553796193" duration="305000" />
       <workItem from="1629685442658" duration="15757000" />
+      <workItem from="1629787389090" duration="5038000" />
     </task>
     <servers />
   </component>
@@ -197,7 +199,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Lap trinh OOP 1/Thuchanh/index.html</url>
           <line>19</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
