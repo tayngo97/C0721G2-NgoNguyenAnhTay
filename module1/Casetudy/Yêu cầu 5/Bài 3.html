@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let matrix = [[1,2,-3,4,5], [3,4,5,6,7]];
+
+    console.log(matrix);
+    getMaxNumer(matrix);
+    getMinNumer(matrix);
+
+    function getMaxNumer(matrix) {
+        let max = matrix[0][0];
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if(max < matrix[i][j]) {
+                    max = matrix[i][j];
+                }
+            }
+        }
+        console.log("GTLN la: " + max)
+    }
+
+    function getMinNumer(matrix) {
+        let min = matrix[0][0];
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if(min > matrix[i][j]) {
+                    min = matrix[i][j];
+                }
+            }
+        }
+        console.log("GTNN la: " + min)
+    }
+
+</script>
+
+</body>
+</html>

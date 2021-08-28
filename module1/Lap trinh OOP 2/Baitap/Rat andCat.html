@@ -14,25 +14,25 @@
         this.isDie = isDie;
     }
 
-    speek() {
+    speak() {
         alert("chít chít chít");
     }
     }
 
     class Cat {
-        constructor(name, weight, speed,rat) {
+        constructor(name, weight, speed) {
             this.name = name;
             this.weight = weight;
             this.speed = speed;
-            this.rat = rat
+
         }
 
-        speek() {
+        speak() {
             alert("meo meo meo");
         }
 
         catchRat(rat) {
-            rat.speek()
+            rat.speak();
             if (this.speed > rat.speed) {
                 alert("Chuột đã bị bắt");
                 return true;
@@ -54,10 +54,10 @@
         }
     }
 
-    let rat = new Rat("Jerry", 1, 4.0, true)
+    let rat = new Rat("Jerry", 1, 4.0, true);
     let cat = new Cat("Tom", 20, 4.5);
     cat.eatRat(rat);
-    rat.speek()
+    rat.speak()
 </script>
 </body>
 </html>

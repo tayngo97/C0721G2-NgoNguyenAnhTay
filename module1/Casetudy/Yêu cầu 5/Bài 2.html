@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [[1,2,3,4,5],
+               [3,4,5,6,7]];
+    console.log(sumEvenArr(arr));
+    function sumEvenArr(matrix) {
+        let primeNumber = [];
+        let uniquePrime = [];
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (checkPrime(matrix[i][j])){
+                    primeNumber.push(matrix[i][j])
+                }
+            }
+        }
+
+        for (let i = 0; i < primeNumber.length; i++) {
+
+            if(!uniquePrime.includes(primeNumber[i])){
+                uniquePrime.push(primeNumber[i])
+            }
+        }
+        return uniquePrime ;
+    }
+
+
+    function checkPrime(element) {
+        if(element < 2) {
+            return false;
+        }
+        else {
+            for (let i = 2; i < element; i++) {
+                if(element % i === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+</script>
+</body>
+</html>

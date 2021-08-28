@@ -14,6 +14,7 @@
             this.thuDen = [];
             this.daGui = [];
             this.soanThao = [];
+            this.tinNhap = [] ;
         }
 
         isStatusPhone() {
@@ -32,17 +33,24 @@
         }
 
         sacPinPhone() {
+            if(this.status == true){
             while (this.pin <= 100) {
                 this.pin = this.pin + 0.01;
+                alert(this.pin)
             }
+            } else alert("Moi bat dien thoai !")
         }
 
-        soanMess() {
-            let mess = prompt("Mời bàn nhập tin nhắn: ")
+
+
+        soantinnhan() {
+            let mess = prompt("Mời bàn nhập tin nhắn: ");
             //Yêu cầu là hiển thị 1 dòng thông báo là bạn có muốn gửi tin
             //nhắn hiện tại hay không?
-            this.soanThao.push(mess);
-            this.pin--;
+            if (confirm("Ban co muon gui tin nhan di khong?")) {
+                this.soanThao.push(mess);
+                this.pin--;
+            }
         }
 
         inboxMess(phoneName, mess) {
@@ -54,7 +62,7 @@
         sentMess(phone) {
             let data = "";
             for (let i = 0; i < this.soanThao.length; i++) {
-                data+= i+": "+this.soanThao[i];
+                data+= " tin nhắn thứ " + i + " : "+this.soanThao[i] ;
             }
             let index = parseInt(prompt(data))
             this.daGui.push("Đã gửi tin đến tên điện thoại: " + phone.namePhone + ",với lời nhắn: " +this.soanThao[index])
@@ -63,11 +71,41 @@
             phone.inboxMess(this.namePhone,this.soanThao[index]);
             this.soanThao.splice(index,1);
         }
+        checkSenmess(){
+            if (this.status == true){
+                alert(this.daGui)
+            }else alert("Moi bat dien thoai !")
+
+        }
+        checkThuden(){
+            if (this.status == true){
+                alert(this.thuDen);
+            }else alert("Moi bat dien thoai !")
+        }
+        checktinNhap(){
+            if (this.status == true){
+                alert(this.tinNhap);
+            }else alert("Moi bat dien thoai !")
+        }
         //yêu cầu hoàn thiện
         //Viết phương thức xem tin nhắn đã gửi và hộp thư đến?
         //Các chức năng không thể hoạt động nếu điện thoại chưa bật.
         //Yêu cầu là hiển thị 1 dòng thông báo là bạn có muốn gửi tin nhắn hiện tại hay không?
     }
+
+    let Nokia1 = new Phone("Nokia",25,false);
+    Nokia1.onPhone();
+    // Nokia1.checkSenmess();
+    // Nokia1.checkThuden();
+    // Nokia1.soantinnhan();
+    // Nokia1.checktinNhap();
+    Nokia1.soantinnhan();
+    Nokia1.soantinnhan();
+    Nokia1.soantinnhan();
+    Nokia1.soantinnhan();
+    Nokia1.soantinnhan();
+    Nokia1.sentMess();
+
 </script>
 </body>
 </html>

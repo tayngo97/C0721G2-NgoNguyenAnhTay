@@ -6,12 +6,35 @@
 </head>
 <body>
 <script>
-    for (let i = 0;i<5;i++){
-        for (let j =0;j<6;j++){
-            if (i==0||j==0||j==5||i==4){
-                document.write("*");
-            }else document.write("&nbsp&nbsp")
-        } document.write("<br>");
+    // for (let i = 0;i<5;i++){
+    //     for (let j =0;j<6;j++){
+    //         if (i==0||j==0||j==5||i==4){
+    //             document.write("*");
+    //         }else document.write("&nbsp&nbsp")
+    //     } document.write("<br>");
+    // }
+
+
+    let row = prompt("Nhập vào chiều cao tam giác vuông: ");
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j <= i; j++) {
+            switch (i) {
+                case (row - 1):
+                    document.write("*");
+                    break;
+                default: {
+                    switch (j) {
+                        case 0:
+                        case i:
+                            document.write("*");
+                            break;
+                        default:
+                            document.write("&ensp;");
+                    }
+                }
+            }
+        }
+        document.write("<br>");
     }
 </script>
 </body>

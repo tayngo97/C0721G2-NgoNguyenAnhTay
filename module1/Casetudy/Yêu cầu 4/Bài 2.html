@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputStr = prompt("Nhập chuỗi vào đây"); // number  = (12311);
+    let uniqueChars = [];
+
+    // c.push(number[0]);
+    for (let i = 0; i < inputStr.length; i++) {
+        // cách 1 ; let flag = false;
+        // for (let j = 0; j < c.length; j++) {
+        //     if( number[i] == c[j]) {
+        //         flag = true;
+        //     }
+        // }
+        // if(!flag) {
+        //     c.push(number[i]);
+        // }
+
+
+        // Cách 2 dùng hàm include ;
+        if(!uniqueChars.includes(inputStr[i])){
+            uniqueChars.push(inputStr[i])
+        }
+    }
+
+    document.write(uniqueChars.toString());
+
+
+</script>
+</body>
+</html>

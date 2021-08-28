@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        table {
+            border-top:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+            border-collapse:collapse;
+
+        }
         th {
             background-color: aquamarine;
             width:110px ;
         }
-        tr {
+        tr:hover {
             text-align: center;
             width:110px ;
-
+            background-color: #303030;
         }
         .edit {
             background-color: blueviolet ;
@@ -38,45 +44,45 @@
 
 
 <script>
-      class Product{
-          constructor(name,price,description) {
-              this.name = name ;
-              this.price = price ;
-              this.description = description ;
-          }
-      }
-      
-      function displayProduct() {
-          let temp = "<table border='2'  width='1000px'>";
-          temp += "<tr><th>Name</th><th>Price</th><th>Description</th><th>Edit</th><th>Delete</th></tr>";
-          for (let i = 0; i < products.length ; i++){
-              temp += "<tr>";
-              temp += "<td>" +   products[i].name    +  "</td>";
-              temp += "<td>" +   products[i].price    +  "</td>";
-              temp += "<td>" +   products[i].description    +  "</td>";
-              temp += "<td><button class='edit' onclick='editProduct(" +i +")'>Edit</button></td>"
-              temp += "<td><button class='delete' onclick='deleteProduct(" +i +")'>Delete</button></td>"
-              temp += "</tr>"
-          }
-          temp += "<table>";
-          document.getElementById("displayProduct").innerHTML = temp;
-      }
+    class Product{
+        constructor(name,price,description) {
+            this.name = name ;
+            this.price = price ;
+            this.description = description ;
+        }
+    }
 
-      let products = [];
-      products.push(new Product("Nokia",1500000,"Nokia1122"));
-      products.push(new Product("Iphone",1000000,"Iphone 6"));
-      displayProduct();
+    function displayProduct() {
+        let temp = "<table >";
+        temp += "<tr><th>Name</th><th>Price</th><th>Description</th><th>Edit</th><th>Delete</th></tr>";
+        for (let i = 0; i < products.length ; i++){
+            temp += "<tr>";
+            temp += "<td>" +   products[i].name    +  "</td>";
+            temp += "<td>" +   products[i].price    +  "</td>";
+            temp += "<td>" +   products[i].description    +  "</td>";
+            temp += "<td><button class='edit' onclick='editProduct(" +i +")'>Edit</button></td>"
+            temp += "<td><button class='delete' onclick='deleteProduct(" +i +")'>Delete</button></td>"
+            temp += "</tr>"
+        }
+        temp += "<table>";
+        document.getElementById("displayProduct").innerHTML = temp;
+    }
+
+    let products = [];
+    products.push(new Product("Nokia",1500000,"Nokia1122"));
+    products.push(new Product("Iphone",1000000,"Iphone 6"));
+    displayProduct();
 
     function createProduct() {
-          let name = document.getElementById("name").value ;
-            document.getElementById("name").value = "" ;
-          let price = document.getElementById("price").value ;
-            document.getElementById("price").value = "" ;
-          let description = document.getElementById("description").value ;
-            document.getElementById("description").value = "" ;
+        let name = document.getElementById("name").value ;
+        document.getElementById("name").value = "" ;
+        let price = document.getElementById("price").value ;
+        document.getElementById("price").value = "" ;
+        let description = document.getElementById("description").value ;
+        document.getElementById("description").value = "" ;
 
-          products.push(new Product(name,parseInt(price),description));
-          displayProduct();
+        products.push(new Product(name,parseInt(price),description));
+        displayProduct();
     }
 
     function deleteProduct(index) {
@@ -112,15 +118,15 @@
     }
 
     function saveProduct(index) {
-            if (confirm("Are you sure to save the product ?")){
-                products[index].name = document.getElementById("newName").value ;
-                products[index].price = document.getElementById("newPrice").value ;
-                products[index].description = document.getElementById("newDescription").value ;
-                displayProduct()
-            }else { displayProduct()
+        if (confirm("Are you sure to save the product ?")){
+            products[index].name = document.getElementById("newName").value ;
+            products[index].price = document.getElementById("newPrice").value ;
+            products[index].description = document.getElementById("newDescription").value ;
+            displayProduct()
+        }else { displayProduct()
         }
     }
-      
+
     function seachProduct() {
         let flag = false ;
         let seachName = document.getElementById("name").value ;
@@ -135,12 +141,12 @@
                 let temp = "Sản phẩm tìm kiếm là : "  +products[i].name + " có giá là : " + products[i].price + " mô tả ; "+ products[i].description ;
                 document.getElementById("seachResult").innerHTML = temp ;
                 flag = true ;
-                }
             }
+        }
         if (!flag){
             document.getElementById("seachResult").innerHTML = "Không tìm thấy sản phẩm" ;
         }
-        }
+    }
 
 
 

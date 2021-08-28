@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let  s2 = "adcaa";
+    let commonArr = [];
+    let uniqueChars = [];
+
+    for (let i = 0; i < s1.length; i++) {
+        if (s1.includes(s2[i])){
+            commonArr.push(s2[i]);
+        }
+    }
+
+    for (let i = 0; i < commonArr.length; i++) {
+
+        if(!uniqueChars.includes(commonArr[i])){
+            uniqueChars.push(commonArr[i])
+        }
+    }
+    document.write(uniqueChars.toString());
+</script>
+</body>
+</html>

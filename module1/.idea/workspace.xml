@@ -37,10 +37,27 @@
       <change afterPath="$PROJECT_DIR$/9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 8 Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/9.Cautrucdieukien2/Baitap/[Bài tập] Luyện tập cấu trúc điều kiện 02/Bài 9 Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/9.Cautrucdieukien2/Baitap/[Bài tập] Ứng dụng vui DoYouLoveMe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Quản lí sản phẩm tham khảo.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 1/Bài 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 1/Bài 3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 1/Bài 4.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 1/bài 1.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 2/Bài 1.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 2/Bài 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 3/Bài 1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 3/Bài 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 3/Bài 3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 3/Bài 4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 3/Bài 5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 4/Bài 1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 4/Bài 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 4/Bài 3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 4/bai 3 cách 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 5/Bài 1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 5/Bài 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 5/Bài 3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 6/Xổ số kiên thiết tham khảo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 6/Xổ số tham khảo.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lam bai tap/Bai 1.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lam bai tap/bai 2.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 1/Thuchanh/Baitap_XaydunglopmotaHinhChuNhat.html" afterDir="false" />
@@ -52,7 +69,7 @@
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/Bài tập Xây dựng lớp mô tả điện thoại.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/CaroOOP.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/Công tắc bóng đèn.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/RatandCat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/Rat andCat.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Baitap/Remote and tivi.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 2/Thuchanh/Thực hành Xây dựng lớp mô phỏng sự hoạt động của đèn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bai_tap_Kanban_Corellnote/Bai_tap/Bai_tap_Corell Note.jpg" beforeDir="false" />
@@ -167,7 +184,8 @@
       <workItem from="1629855141027" duration="5519000" />
       <workItem from="1629894139097" duration="7287000" />
       <workItem from="1629974997932" duration="598000" />
-      <workItem from="1630023740587" duration="670000" />
+      <workItem from="1630023740587" duration="46941000" />
+      <workItem from="1630122134068" duration="14262000" />
     </task>
     <servers />
   </component>
@@ -192,11 +210,12 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1629191470398" />
-    <state x="411" y="157" key="run.anything.popup" timestamp="1629687615100">
+    <state x="411" y="157" key="run.anything.popup" timestamp="1630076158620">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="411" y="157" key="run.anything.popup/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1629687615100" />
     <state x="2536" y="240" key="run.anything.popup/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629368147210" />
+    <state x="411" y="157" key="run.anything.popup/0.0.1280.680/1920.4.1920.1040@0.0.1280.680" timestamp="1630076158620" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

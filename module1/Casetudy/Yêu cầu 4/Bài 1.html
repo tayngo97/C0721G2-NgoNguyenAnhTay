@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = "tRuong DDFFSDSsssss TaN   HAI";
+    console.log(str);
+
+    // //C1: giai thich: ^: bắt đầu 1 chuỗi, \s: 1 khoảng trắng, \S: không phải khoảng trắng
+    // let newStr =str.toLowerCase().replace(/(^\w|\s\w)/g, m1 => m1.toUpperCase());
+    // newStr = newStr.replace(/\s+/g, ' ');
+    // console.log(newStr);
+    //
+    // c2:
+    let newStr2 = str.toLowerCase().split(' ');
+    console.log(newStr2);
+    for(let i = 0; i < newStr2.length ; i++) {
+        newStr2[i] = newStr2[i].charAt(0).toUpperCase() + newStr2[i].slice(1,7); // charAT để tìm và sửa vị trí cần sừa rồi sau đó slice để hiển thị lại các vị trí còn lại
+    }       // vị trí end của hàm slice sẽ ko được hiển thị
+    newStr2 = newStr2.join(" ").replace(/\s+/g, ' ');
+    console.log(newStr2);
+    document.write(newStr2.toString());
+
+
+</script>
+</body>
+</html>
