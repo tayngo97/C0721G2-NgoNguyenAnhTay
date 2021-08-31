@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*#father{*/
+        /*    border:2px solid black;*/
+        /*    width:400px;*/
+        /*    overflow:auto;*/
+        /*}*/
+        table {
+            border-top:5px solid #ccc;
+            border-bottom:5px solid #ccc;
+            border-collapse:collapse;
+        }
+        th {
+            background-color: aquamarine;
+            width:110px ;
+        }
+        tr:hover {
+            text-align: center;
+            width:210px ;
+            background-color: #5f6062;
+
+        }
+        /*tr:nth-child(odd){*/
+        /*    background-color: #aaaaaa;*/
+        /*}*/
+        /*tr:nth-child(even){*/
+        /*    background-color: white;*/
+        /*}*/
+        .edit {
+            background-color: skyblue  ;
+            width: 100px;
+        }
+        .delete {
+            background-color: #d61b06;
+            width: 100px;
+        }
+        .save {
+            background-color: greenyellow;
+            width: 100px;
+        }
+        .button:focus{
+            outline-color: #d61b06;
+        }
+    </style>
+</head>
+<body>
+<label>Name</label><input id="id" placeholder="ID">
+<label>Name</label><input id="name" placeholder="Phone Name">
+<label>Price</label><input id="price" placeholder="VND">
+<label>Description</label><input id="description" placeholder="Description">
+<button class="button"  onclick="createProduct()">Create Product</button>
+<div id="displayProduct"></div>
+<script>
+    class Phone{
+        constructor(id,name,price,branch) {
+            this.id = id ;
+            this.name = name ;
+            this.price = price ;
+            this.branch = branch ;
+        }
+    }
+
+    function displayProduct() {
+        let temp = "<table id='father' >";
+        temp += "<tr><th>Id</th><th>Name</th><th>Price</th><th>Description</th></tr>";
+        for (let i = 0; i < products.length ; i++){
+            temp += "<tr>";
+            temp += "<td>" +   products[i].id    +  "</td>";
+            temp += "<td>" +   products[i].name    +  "</td>";
+            temp += "<td>" +   products[i].price    +  "</td>";
+            temp += "<td>" +   products[i].branch    +  "</td>";
+            temp += "</tr>"
+        }
+        temp += "<table>";
+        document.getElementById("displayProduct").innerHTML = temp;
+    }
+
+    let products = [];
+    products.push(new Phone(123,"Nokia",1500000,"Nokia1122"));
+    products.push(new Phone(124,"Iphone",1000000,"Iphone 6"));
+    displayProduct();
+
+    function createProduct() {
+        let id = document.getElementById("id").value;
+        document.getElementById("id").value = "" ;
+        let name = document.getElementById("name").value ;
+        document.getElementById("name").value = "" ;
+        let price = document.getElementById("price").value ;
+        document.getElementById("price").value = "" ;
+        let description = document.getElementById("description").value ;
+        document.getElementById("description").value = "" ;
+        products.push(new Phone(parseInt(id),name,parseInt(price),description));
+        displayProduct();
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

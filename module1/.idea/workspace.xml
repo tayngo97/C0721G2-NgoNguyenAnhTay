@@ -58,8 +58,10 @@
       <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 5/Bài 3.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 6/Xổ số kiên thiết tham khảo.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Casetudy/Yêu cầu 6/Xổ số tham khảo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lam bai tap/Bai 1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lam bai tap/bai 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lam bai tap/Bai 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lam bai tap/Bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lam bai tap/Bài 1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lam bai tap/bai 4.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 1/Thuchanh/Baitap_XaydunglopmotaHinhChuNhat.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 1/Thuchanh/Funny circles.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Lap trinh OOP 1/Thuchanh/Thuchanh_XaydunglopDate.html" afterDir="false" />
@@ -185,7 +187,12 @@
       <workItem from="1629894139097" duration="7287000" />
       <workItem from="1629974997932" duration="598000" />
       <workItem from="1630023740587" duration="46941000" />
-      <workItem from="1630122134068" duration="14262000" />
+      <workItem from="1630122134068" duration="19308000" />
+      <workItem from="1630204858994" duration="28000" />
+      <workItem from="1630213447699" duration="2842000" />
+      <workItem from="1630224272445" duration="9008000" />
+      <workItem from="1630285615893" duration="17189000" />
+      <workItem from="1630333811212" duration="4309000" />
     </task>
     <servers />
   </component>
@@ -201,11 +208,16 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="58" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1629356515061" />
-    <state x="2552" y="128" key="FileChooserDialogImpl" timestamp="1629274726243">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="2274" y="119" key="CommitChangelistDialog2" timestamp="1630155315056">
+      <screen x="1920" y="4" width="1920" height="1040" />
+    </state>
+    <state x="2274" y="119" key="CommitChangelistDialog2/0.0.1280.680/1920.4.1920.1040@1920.4.1920.1040" timestamp="1630155315056" />
+    <state x="2552" y="132" key="FileChooserDialogImpl" timestamp="1630204884968">
+      <screen x="1920" y="4" width="1920" height="1040" />
     </state>
     <state x="421" y="84" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1629188429425" />
     <state x="2552" y="128" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629274726243" />
+    <state x="2552" y="132" key="FileChooserDialogImpl/0.0.1280.680/1920.4.1920.1040@1920.4.1920.1040" timestamp="1630204884968" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1629191470398">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -216,6 +228,10 @@
     <state x="411" y="157" key="run.anything.popup/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1629687615100" />
     <state x="2536" y="240" key="run.anything.popup/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629368147210" />
     <state x="411" y="157" key="run.anything.popup/0.0.1280.680/1920.4.1920.1040@0.0.1280.680" timestamp="1630076158620" />
+    <state x="2543" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1630213738710">
+      <screen x="1920" y="4" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/1920.4.1920.1040@1920.4.1920.1040" timestamp="1630213738710" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

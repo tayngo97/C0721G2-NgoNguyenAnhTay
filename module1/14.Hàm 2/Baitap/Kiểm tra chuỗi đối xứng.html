@@ -6,17 +6,18 @@
 </head>
 <body>
 <script>
-    let str ="adccda";
+    let str ="addccda";
 
     function isPalindrome(str) {
         for(let i =0; i<str.length/2;i++) {
             if(str[i] !== str[str.length-i-1]) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
-    if (isPalindrome(str)){
+
+    if (!isPalindrome(str)){
         alert("chuỗi đối xứng")
     }else {
         alert("chuỗi ko đối xứng")

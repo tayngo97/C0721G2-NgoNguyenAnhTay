@@ -6,17 +6,10 @@
 </head>
 <body>
 <script>
-    let s = ("cabca");
-    let count = 0;
-    let flag = false;
-    for (let i =0;i<s.length;i++){
-        if (s[0] == s[i]  ){
-            flag= true ;
-        }
-    } if (!flag) {
-        count++
-    }
-
+    let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+    let result = words.filter(function(word) {
+        return word.length < 8 ;
+    }); console.log(result)
 </script>
 </body>
 </html>

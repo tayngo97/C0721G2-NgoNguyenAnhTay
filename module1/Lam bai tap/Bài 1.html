@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+
+      // let input = parseInt(prompt("nhập vào n:"));
+      // let arr = [];
+      // let arr1 = [];
+      // let arr2 = [];
+      // for (let i =0;i<input;i++){
+      //     arr.push(parseInt(prompt("phan tu tứ i" + i)))
+      // }
+      // for (let j =0;j<arr.length;j++){
+      //     if (arr[j] %2 ==0){
+      //         arr1.push(arr[j])
+      //     } else {
+      //         arr2.push(arr[j])
+      //     }
+      // }
+      // let sum1 = 0;
+      // for (let i =0;i<arr1.length;i++){
+      //     sum1 += arr1[i];
+      // }
+      // let sum2 = 0;
+      // for (let i =0;i<arr2.length;i++){
+      //     sum2 += arr1[i];
+      // }
+      // document.writeln("tổng các số chẵn trong mảng là:" + sum1);
+      // document.writeln("<br>");
+      // document.writeln("tổng các số lẽ trong mảng là:" +sum2);
+
+      let arr = [2, 3, 4, 5, 2, 34, 5, 4, 2, 5];
+      let max = arr.reduce((t, v) => t > v ? t : v);
+      console.log(max);
+      
+      let evenNum = arr.filter(function (even) {
+          if (even % 2 == 0) {
+              return even;
+          }
+      });
+
+      let oddNum = arr.filter(function (odd) {
+          return odd % 2 !== 0;
+      });
+      console.log(evenNum);
+      console.log(oddNum);
+      var sumEven = evenNum.reduce(function (a, b) {
+          return a + b;
+      });
+      console.log(sumEven);
+      var sumOdd = oddNum.reduce(function (a, b) {
+          return a + b;
+      });
+      console.log(sumOdd);
+
+
+  </script>
+</body>
+</html>

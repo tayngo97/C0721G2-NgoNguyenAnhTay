@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        /*#father{*/
+        /*    border:2px solid black;*/
+        /*    width:400px;*/
+        /*    overflow:auto;*/
+        /*}*/
         table {
-            border-top:1px solid #ccc;
-            border-bottom:1px solid #ccc;
+            border-top:5px solid #ccc;
+            border-bottom:5px solid #ccc;
             border-collapse:collapse;
-
         }
         th {
             background-color: aquamarine;
@@ -16,11 +20,18 @@
         }
         tr:hover {
             text-align: center;
-            width:110px ;
-            background-color: #303030;
+            width:210px ;
+            background-color: #5f6062;
+
         }
+        /*tr:nth-child(odd){*/
+        /*    background-color: #aaaaaa;*/
+        /*}*/
+        /*tr:nth-child(even){*/
+        /*    background-color: white;*/
+        /*}*/
         .edit {
-            background-color: blueviolet ;
+            background-color: skyblue  ;
             width: 100px;
         }
         .delete {
@@ -31,18 +42,19 @@
             background-color: greenyellow;
             width: 100px;
         }
+        .button:focus{
+            outline-color: #d61b06;
+        }
     </style>
 </head>
 <body>
-<label>Name</label><input id="name" placeholder="Name">
-<label>Price</label><input id="price" placeholder="Price">
+<label>Name</label><input id="name" placeholder="Phone Name">
+<label>Price</label><input id="price" placeholder="VND">
 <label>Description</label><input id="description" placeholder="Description">
-<button onclick="createProduct()">Create Product</button>
+<button class="button"  onclick="createProduct()">Create Product</button>
 <button onclick="seachProduct()">Seach Product</button>
 <p id="seachResult" style="font-size: x-large; color: #f4511e" ></p>
 <div id="displayProduct"></div>
-
-
 <script>
     class Product{
         constructor(name,price,description) {
@@ -53,7 +65,7 @@
     }
 
     function displayProduct() {
-        let temp = "<table >";
+        let temp = "<table id='father' >";
         temp += "<tr><th>Name</th><th>Price</th><th>Description</th><th>Edit</th><th>Delete</th></tr>";
         for (let i = 0; i < products.length ; i++){
             temp += "<tr>";
@@ -147,11 +159,6 @@
             document.getElementById("seachResult").innerHTML = "Không tìm thấy sản phẩm" ;
         }
     }
-
-
-
 </script>
-
-
 </body>
 </html>
