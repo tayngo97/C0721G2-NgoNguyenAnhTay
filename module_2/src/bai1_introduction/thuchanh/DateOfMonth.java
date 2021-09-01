@@ -1,6 +1,6 @@
 package bai1_introduction.thuchanh;
 import java.util.Scanner;
-public class dateOfMonth {
+public class DateOfMonth {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

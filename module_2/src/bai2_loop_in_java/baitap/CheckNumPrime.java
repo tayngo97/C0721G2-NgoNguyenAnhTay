@@ -2,7 +2,7 @@ package bai2_loop_in_java.baitap;
 
 import java.util.Scanner;
 
-public class checkNumPrime {
+public class CheckNumPrime {
     public static void main(String[] args) {
         int n = 2 ;
         Scanner sc= new Scanner(System.in);

@@ -1,6 +1,6 @@
 package bai1_introduction.thuchanh;
 import java.util.Scanner;
-public class areaRetange {
+public class AreaRetange {
     public static void main(String[] args) {
         float width ;
         float height ;

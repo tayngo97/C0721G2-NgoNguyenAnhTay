@@ -2,7 +2,7 @@ package bai1_introduction.baitap;
 
 import java.util.Scanner;
 
-public class numToLetter {
+public class NumToLetter {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number!");

@@ -2,7 +2,7 @@ package bai1_introduction.baitap;
 
 import java.util.Scanner;
 
-public class convertToVnd {
+public class ConvertToVnd {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

@@ -2,7 +2,7 @@ package bai3_array_method_in_java.thuchanh;
 
 import java.util.Scanner;
 
-public class findStudentsName {
+public class FindStudentsName {
     public static void main(String[] args) {
         String[] students ;
         int size ;

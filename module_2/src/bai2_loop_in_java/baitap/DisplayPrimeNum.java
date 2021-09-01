@@ -1,6 +1,6 @@
 package bai2_loop_in_java.baitap;
 
-public class displayPrimeNum {
+public class DisplayPrimeNum {
     public static void main(String[] args) {
         int number = 30 ;
         int count = 0 ;

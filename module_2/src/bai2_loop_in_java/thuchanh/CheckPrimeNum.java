@@ -2,7 +2,7 @@ package bai2_loop_in_java.thuchanh;
 
 import java.util.Scanner;
 
-public class checkPrimeNum {
+public class CheckPrimeNum {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number!");

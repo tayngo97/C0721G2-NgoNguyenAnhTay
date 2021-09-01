@@ -2,7 +2,7 @@ package bai2_loop_in_java.thuchanh;
 
 import java.util.Scanner;
 
-public class drawingMenu {
+public class DrawingMenu {
     public static void main(String[] args) {
         int choice;
         Scanner input = new Scanner(System.in);

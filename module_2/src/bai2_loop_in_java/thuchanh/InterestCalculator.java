@@ -2,7 +2,7 @@ package bai2_loop_in_java.thuchanh;
 
 import java.util.Scanner;
 
-public class interestCalculator {
+public class InterestCalculator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         double money  ;

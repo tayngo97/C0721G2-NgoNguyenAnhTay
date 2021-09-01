@@ -2,7 +2,7 @@ package bai2_loop_in_java.thuchanh;
 
 import java.util.Scanner;
 
-public class greatestCommonFactor {
+public class GreatestCommonFactor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

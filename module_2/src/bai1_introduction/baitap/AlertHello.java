@@ -2,7 +2,7 @@ package bai1_introduction.baitap;
 
 import java.util.Scanner;
 
-public class alertHello {
+public class AlertHello {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

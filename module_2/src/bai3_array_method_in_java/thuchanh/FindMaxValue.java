@@ -2,7 +2,7 @@ package bai3_array_method_in_java.thuchanh;
 
 import java.util.Scanner;
 
-public class findMaxValue {
+public class FindMaxValue {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int size;

@@ -2,7 +2,7 @@ package bai3_array_method_in_java.thuchanh;
 
 import java.util.Scanner;
 
-public class sortArrays {
+public class SortArrays {
     public static void main(String[] args) {
         int size ;
         int[] array ;
