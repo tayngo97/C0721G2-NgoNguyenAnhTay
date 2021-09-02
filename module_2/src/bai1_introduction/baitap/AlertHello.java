@@ -1,5 +1,4 @@
 package bai1_introduction.baitap;
-
 import java.util.Scanner;
 
 public class AlertHello {

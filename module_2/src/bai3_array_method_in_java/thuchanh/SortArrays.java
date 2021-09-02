@@ -7,7 +7,6 @@ public class SortArrays {
         int size ;
         int[] array ;
         Scanner scanner = new Scanner(System.in);
-
         do {
             System.out.println("Enter size of array , size does not exceed 20 !");
             size = scanner.nextInt();
