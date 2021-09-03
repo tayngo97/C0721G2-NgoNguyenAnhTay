@@ -41,11 +41,13 @@ public class Sum_Duongcheo_Mang2chieu {
                 if (i == k){
                     sum += arr[i][k];
                 }
-                if (i + k == arr.length-1 ){
+                if (i + k == arr.length-1 ){ // Đường chéo phụ
                     sum1 += arr[i][k];
                 }
             }
         }
+
+
 
         System.out.println("Tong duong cheo chinh : " + sum);
         System.out.println("Tong duong cheo phu : " + sum1);

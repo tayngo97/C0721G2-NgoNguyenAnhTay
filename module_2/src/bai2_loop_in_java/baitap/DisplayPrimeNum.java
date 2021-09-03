@@ -2,7 +2,7 @@ package bai2_loop_in_java.baitap;
 
 public class DisplayPrimeNum {
     public static void main(String[] args) {
-        int number = 30 ;
+        int number = 20 ;
         int count = 0 ;
         int N = 2;
 
@@ -11,7 +11,6 @@ public class DisplayPrimeNum {
                 System.out.print(N + " ,");
                 count++;
             }
-
             if (N == 2){
                 N ++;
             } else {

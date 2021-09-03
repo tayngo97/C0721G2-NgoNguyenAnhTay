@@ -1,5 +1,6 @@
 package bai3_array_method_in_java.baitap;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Sum_In_Colum {
@@ -18,13 +19,17 @@ public class Sum_In_Colum {
                 arr[row][column] = scanner.nextInt();
             }
         }
+
         System.out.println("Display arr : ");
-        for (int row = 0; row < arr.length; row++) {
-            for (int column = 0; column < arr[row].length; column++){
-                System.out.print(arr[row][column] + "\t");
-            }
-            System.out.println();
-        }
+        System.out.println(Arrays.deepToString(arr)) ;
+
+//        System.out.println("Display arr : ");
+//        for (int row = 0; row < arr.length; row++) {
+//            for (int column = 0; column < arr[row].length; column++){
+//                System.out.print(arr[row][column] + "\t");
+//            }
+//            System.out.println();
+//        }
 
         int sumColum = 0 ;
         System.out.println("Enter the collum to Sum !");

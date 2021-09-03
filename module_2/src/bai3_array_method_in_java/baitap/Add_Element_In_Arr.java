@@ -29,7 +29,7 @@ public class Add_Element_In_Arr {
 
         System.out.println("Enter the index need to add !");
         int index = scanner.nextInt();
-        if (index == -1 || index >= arrNum.length -1 ){ // Thêm phầm tử vào mảng
+        if (index == -1 || index >= arrNum.length ){ // Thêm phầm tử vào mảng
             System.out.println("Can not add the element into array !");
         } else {
             for (int i =0 ;  i<newArr.length;i++){
@@ -41,7 +41,7 @@ public class Add_Element_In_Arr {
                     }
                 }else if (i<index){
                     newArr[i] = arrNum[i];
-                } else newArr[i] = arrNum[i-1];
+                }else newArr[i] = arrNum[i-1];
             }
 
             System.out.println("New array : ");

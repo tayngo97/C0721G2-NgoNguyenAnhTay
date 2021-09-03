@@ -6,11 +6,11 @@ public class Find_Same_Char {
     public static void main(String[] args) {
         String str = "abcdabcd" ;
         Scanner scanner = new Scanner(System.in);
-            char input = 'c'; // nhờ a Tiến chỉ cách nhập char từ bàn phím ?
-
+//            char input = 'c';
+            String input = scanner.nextLine();
         int count = 0 ;
         for (int i = 0 ; i<str.length();i++){
-            if (str.charAt(i) == input){
+            if (str.charAt(i) == input.charAt(0) ){
                 count++;
             }
         }
