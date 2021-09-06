@@ -4,24 +4,24 @@ public class DisplayPrimeNum {
     public static void main(String[] args) {
         int number = 20 ;
         int count = 0 ;
-        int N = 2;
+        int n = 2;
 
         while (count != number){
-            if (isPrime(N)){
-                System.out.print(N + " ,");
+            if (isPrime(n)){
+                System.out.print(n + " ,");
                 count++;
             }
-            if (N == 2){
-                N ++;
+            if (n == 2){
+                n ++;
             } else {
-                N += 2;
+                n += 2;
             }
         }
     }
 
-    public static boolean isPrime(int N){
-        for (int i = 2; i<= Math.sqrt(N);i++){
-            if (N%i==0){
+    public static boolean isPrime(int num){
+        for (int i = 2; i<= Math.sqrt(num);i++){
+            if (num%i==0){
                 return false ;
             }
         } return true ;

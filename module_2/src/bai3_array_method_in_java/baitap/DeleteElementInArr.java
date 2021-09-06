@@ -23,7 +23,7 @@ public class DeleteElementInArr {
         int[]  newarr = new int[numbers.length - count];
 //        System.out.println(newarr.length);
 
-//             Cách 1 sử dụng duyệt song song mảng
+//            // Cách 1 sử dụng duyệt song song mảng
         for (int i = 0, j = 0 ; i < numbers.length || j < newarr.length   ;i++){
             if (X != numbers[i]){
                 newarr[j] = numbers[i];

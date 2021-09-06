@@ -47,8 +47,6 @@ public class Sum_Duongcheo_Mang2chieu {
             }
         }
 
-
-
         System.out.println("Tong duong cheo chinh : " + sum);
         System.out.println("Tong duong cheo phu : " + sum1);
     }
