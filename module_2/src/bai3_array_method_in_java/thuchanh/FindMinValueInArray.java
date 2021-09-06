@@ -1,6 +1,6 @@
 package bai3_array_method_in_java.thuchanh;
 
-public class Find_Min_Value_In_Array {
+public class FindMinValueInArray {
     public static void main(String[] args) {
         int[] numberlist = {4,5,2,2,3,4,5,1,0,6,9};
         System.out.println("The min value in array is : " +minValue(numberlist));

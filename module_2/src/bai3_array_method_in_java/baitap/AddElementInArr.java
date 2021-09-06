@@ -3,15 +3,15 @@ package bai3_array_method_in_java.baitap;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Add_Element_In_Arr {
+public class AddElementInArr {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] arrNum ;//khai báo mảng
 
 
         System.out.println("Enter the number of length in array ! ");
-        int N = scanner.nextInt();
-        arrNum = new int[N];// khai báo kích thước của mảng
+        int n = scanner.nextInt();
+        arrNum = new int[n];// khai báo kích thước của mảng
 
         for (int i = 0 ; i<arrNum.length;i++){
             System.out.println("Enter element of index " + i);
@@ -28,7 +28,7 @@ public class Add_Element_In_Arr {
         System.out.println(Arrays.toString(newArr));
 
         System.out.println("\n" + "Enter the number to add in arrNum !" );
-        int X = scanner.nextInt();
+        int x = scanner.nextInt();
         System.out.println("Enter the index need to add !");
         int index = scanner.nextInt();
 
@@ -38,7 +38,7 @@ public class Add_Element_In_Arr {
         } else {
             for (int i =0 ;  i<newArr.length;i++){
                 if (index == i){
-                    newArr[i] = X;
+                    newArr[i] = x;
                 }else if (i<index){
                     newArr[i] = arrNum[i];
                 }else newArr[i] = arrNum[i-1];

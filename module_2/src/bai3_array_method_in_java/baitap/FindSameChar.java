@@ -2,7 +2,7 @@ package bai3_array_method_in_java.baitap;
 
 import java.util.Scanner;
 
-public class Find_Same_Char {
+public class FindSameChar {
     public static void main(String[] args) {
         String str = "abcdabcd" ;
         Scanner scanner = new Scanner(System.in);

@@ -1,7 +1,7 @@
 package bai4_oop.baitap;
 
-public class Fan {
-    static final int FAST = 3 ;
+public class  Fan {
+    final int FAST = 3 ;
     final int MEDIUM = 2 ;
     final int SLOW = 1 ;
     private int speed = this.SLOW;
@@ -10,7 +10,6 @@ public class Fan {
     private String color = "blue";
 
     public Fan(){
-
     }
 
     public Fan(int speed, boolean on, double radius, String color) {
@@ -19,6 +18,7 @@ public class Fan {
         this.radius = radius;
         this.color = color;
     }
+
 
     public int getSpeed() {
         return speed;
@@ -52,21 +52,24 @@ public class Fan {
         this.color = color;
     }
 
-    public void tostring(){
+    public String toString(){
         if (isOn()){
-            System.out.println( " Fam is on speed is :  " + this.getSpeed() + " color : " + this.getColor() + " radius :  " + this.getRadius());
-        } else System.out.println(" Fan is off Color :  " + this.getColor() + " radius " );
+            return   " Fan is on speed is :  " + this.getSpeed() + " color : " + this.getColor() + " radius :  " + this.getRadius();
+        } else return  " Fan is off Color :  " + this.getColor() + " radius ";
     }
 
     public static void main(String[] args) {
         Fan fan1 = new Fan(3,true,10,"Yellow");
-        fan1.tostring();
+        System.out.println(fan1);
         fan1.setOn(false);
-        fan1.tostring();
+        fan1.toString();
         fan1.setSpeed(2);
+
         fan1.setOn(true);
-        fan1.tostring();
+        fan1.toString();
         Fan fan2 = new Fan(2,false,5,"blue");
-        fan2.tostring();
+        fan2.toString();
     }
 }
+
+

@@ -2,7 +2,7 @@ package bai3_array_method_in_java.baitap;
 
 import java.util.Scanner;
 
-public class Find_Maxvalue_In_2dimensional_Array {
+public class FindMaxValueInArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter row of array"); // Người dùng nhập row và col của mảng

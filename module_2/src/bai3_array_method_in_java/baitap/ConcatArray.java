@@ -2,7 +2,7 @@ package bai3_array_method_in_java.baitap;
 
 import java.util.Scanner;
 
-public class Concat_2array {
+public class ConcatArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
