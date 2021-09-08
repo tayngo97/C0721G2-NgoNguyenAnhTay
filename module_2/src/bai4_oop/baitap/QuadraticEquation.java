@@ -67,7 +67,7 @@ public class QuadraticEquation {
     }
 
     public String toString(){
-          if (getDiscriminant() > 0){
+          if (getDiscriminant()  > 0){
               return  "2 nghiem cua phuong trinh la " + getRoot1() + "va" + getRoot2();
           } else if (getDiscriminant() == 0){
               double sameRoot = -this.b / 2*this.a ;

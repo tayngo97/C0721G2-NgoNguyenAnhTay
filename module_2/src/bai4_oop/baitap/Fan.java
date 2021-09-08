@@ -63,10 +63,9 @@ public class  Fan {
         System.out.println(fan1);
         fan1.setOn(false);
         fan1.toString();
-        fan1.setSpeed(MEDIUM);
-
         fan1.setOn(true);
         fan1.toString();
+
         Fan fan2 = new Fan(MEDIUM,false,5,"blue");
         fan2.toString();
     }
