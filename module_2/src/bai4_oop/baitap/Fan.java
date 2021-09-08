@@ -1,9 +1,9 @@
 package bai4_oop.baitap;
 
 public class  Fan {
-    final int FAST = 3 ;
-    final int MEDIUM = 2 ;
-    final int SLOW = 1 ;
+    final static int FAST = 3 ;
+    final static int MEDIUM = 2 ;
+    final static int SLOW = 1 ;
     private int speed = this.SLOW;
     private boolean on = false ;
     private double radius = 5 ;
@@ -59,15 +59,15 @@ public class  Fan {
     }
 
     public static void main(String[] args) {
-        Fan fan1 = new Fan(3,true,10,"Yellow");
+        Fan fan1 = new Fan(FAST,true,10,"Yellow");
         System.out.println(fan1);
         fan1.setOn(false);
         fan1.toString();
-        fan1.setSpeed(2);
+        fan1.setSpeed(MEDIUM);
 
         fan1.setOn(true);
         fan1.toString();
-        Fan fan2 = new Fan(2,false,5,"blue");
+        Fan fan2 = new Fan(MEDIUM,false,5,"blue");
         fan2.toString();
     }
 }
