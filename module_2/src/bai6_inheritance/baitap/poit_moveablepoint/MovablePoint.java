@@ -46,16 +46,18 @@ public class MovablePoint extends Point {
         return arr;
     }
 
+
+
     public MovablePoint move(){
-          setX(getY())  += getxSpeed();
-         setY(getY())  += getySpeed();
-        return this;
-    } // nhờ a Tiến chỉ lại chỗ ni e tìm ko ra lỗi.thanks a nhé
+        setX(getX()+xSpeed);
+        setY(getY() + ySpeed);
+            return this;
+    }
 
     @Override
     public String toString() {
-        return "MovablePoint{" + Arrays.toString(getXY()) +
-                " speed = " + Arrays.toString(getSpeed()) +
+        return " speed = " + Arrays.toString(getSpeed()) +
+                "MovablePoint{" + Arrays.toString(getXY()) +
                 '}';
     }
 }
