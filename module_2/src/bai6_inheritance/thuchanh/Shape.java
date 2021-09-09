@@ -3,7 +3,8 @@ package bai6_inheritance.thuchanh;
 public class Shape {
     private String color = "green";
     private boolean filled = true;
-    private ShapeTest shape ;
+    private ShapeTest shape ; // nho a Tien chi lai cho~nay
+
     public Shape() {
     }
 
