@@ -1,8 +1,8 @@
 package bai7_abstract_interface.baitap.resizeable_interface;
 
 public class Rectangle extends Shape implements Resizeable {
-    private double width = 1.0;
-    private double length = 1.0;
+    private double width = 5.0;
+    private double length = 7.0;
 
     public Rectangle() {
     }
