@@ -1,9 +1,9 @@
 package bai6_inheritance.baitap.circle_cylinder;
 
 public class Circle {
-    public double radius = 2.0;
-    public String color = "Red";
-    public double area = Math.pow(this.radius,2) * Math.PI;
+    private double radius = 2.0;
+    private String color = "Red";
+    private double area = Math.pow(this.radius,2) * Math.PI;
 
     public Circle() {
     }
@@ -21,6 +21,14 @@ public class Circle {
     public void setRadius(double radius) {
         this.radius = radius;
         this.area = Math.pow(this.radius,2) * Math.PI;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
     }
 
     public String getColor() {

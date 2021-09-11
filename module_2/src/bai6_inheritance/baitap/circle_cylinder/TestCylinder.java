@@ -6,7 +6,7 @@ public class TestCylinder {
         System.out.println(cylinder);
         cylinder.setColor("blue");
         cylinder.setRadius(7.0);
-        cylinder.setChieucao(10.0);
+        cylinder.setChieucao(20.0);
         System.out.println(cylinder);
     }
 }

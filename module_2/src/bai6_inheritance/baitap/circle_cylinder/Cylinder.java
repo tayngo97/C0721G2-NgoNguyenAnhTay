@@ -2,7 +2,7 @@ package bai6_inheritance.baitap.circle_cylinder;
 
 public class Cylinder extends Circle {
     private double chieucao = 5.0;
-    public double v = area * this.chieucao  ;
+    public double v = getArea() * this.chieucao  ;
 
     public Cylinder() {
     }
@@ -26,13 +26,13 @@ public class Cylinder extends Circle {
     }
 
     public double getV(){
-        return v = area * this.chieucao ;
+        return v = getArea() * this.chieucao ;
     }
 
     @Override
     public String toString() {
         return "Cylinder{ with color : " +
-                super.color + " with radius : " +super.radius +
+                super.getColor() + " with radius : " + super.getRadius() +
                 " chieucao= " + chieucao +
                 " the tich " + getV() +
                 '}';

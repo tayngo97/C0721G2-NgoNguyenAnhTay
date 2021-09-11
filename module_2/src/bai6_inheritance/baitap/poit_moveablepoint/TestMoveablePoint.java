@@ -6,10 +6,6 @@ public class TestMoveablePoint {
         Point point = new Point(0,0);
         MovablePoint movablePoint = new MovablePoint(5,6);
         movablePoint.move();
-        movablePoint.move();
-        movablePoint.move();
-        movablePoint.move();
-        movablePoint.move();
         System.out.println(movablePoint);
 
         MovablePoint movablePoint1 = new MovablePoint(0,0,10,6);
