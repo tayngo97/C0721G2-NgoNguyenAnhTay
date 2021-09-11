@@ -1,6 +1,6 @@
 package bai7_abstract_interface.baitap.resizeable_interface;
 
-public class Square extends Shape implements Resizeable {
+public class Square extends Rectangle implements Resizeable {
     private double size = 5.0 ;
 
     public Square() {

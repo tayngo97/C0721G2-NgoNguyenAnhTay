@@ -1,6 +1,7 @@
 package bai7_abstract_interface.thuchanh.comparable_interface;
 import java.util.Arrays;
 
+
 public class ComparableCircleTest {
     public static void main(String[] args) {
         ComparableCircle[] circles = new ComparableCircle[3];

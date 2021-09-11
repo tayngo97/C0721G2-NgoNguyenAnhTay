@@ -23,7 +23,7 @@ public class Main {
         System.out.println("------------------------------------------");
         System.out.println("After change size : ");
         for (Shape shape1 : shapes) {
-            double percen = (Math.random() * 100)/100;
+            double percen = Math.random() ;
             if (shape1 instanceof Circle) {
                 System.out.println( ((Circle) shape1).resize(percen) );
             } else if (shape1 instanceof Rectangle) {

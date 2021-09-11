@@ -2,7 +2,7 @@ package bai7_abstract_interface.baitap.colorable_interface;
 
 import bai7_abstract_interface.baitap.resizeable_interface.Shape;
 
-public class Square extends Shape implements Colorable  {
+public class Square extends Rectangle implements Colorable  {
     private double size = 5.0 ;
 
     public Square() {

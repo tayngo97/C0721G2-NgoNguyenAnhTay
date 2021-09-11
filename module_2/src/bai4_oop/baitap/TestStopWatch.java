@@ -6,9 +6,10 @@ public class TestStopWatch {
         StopWatch watch = new StopWatch(System.currentTimeMillis(),System.currentTimeMillis());
         SelectionSort ob = new SelectionSort();
         int arr[] = new int [100000];
+
         for (int i = 0; i < 100000; i++) {
             Random rd = new Random();//khai báo một đối tượng random
-            int number = rd.nextInt(100000);//trả về một số nguyên bất kì
+            int number = rd.nextInt(71) + 20;//trả về một số nguyên bất kì
             arr[i] = number;
         }
         watch.start();
