@@ -1,50 +1,120 @@
 package bai10_dsa_danhsach.baitap.trienkhai_arraylist_method;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Arrays;
 import java.util.ConcurrentModificationException;
 
 public class MyList<E> {
-    int size = 0;
-    static final int DEFAULT_CAPACITY = 10;
-    Object[] element;
+    private int size = 0;
+    private static int DEFAULT_CAPACITY = 10;
+    private Object[] elements;
 
     public MyList() {
-        element = new Object[DEFAULT_CAPACITY];
-    }
-
-
-    public int getSize() {
-        return size;
+        elements = new Object[DEFAULT_CAPACITY];
     }
 
     public MyList(int capacity) {
-        element = new Object[capacity];
+        elements = new Object[capacity];
     }
 
-    private void ensureCapa() {
-        element = Arrays.copyOf(element, element.length +1);
+    public int size() {
+        return size;
     }
 
-    public void add(int index, E e) {
-        if (size == element.length) {
-            ensureCapa();
-        }
-        if (index < 0 || index > this.size)
-            throw new IndexOutOfBoundsException(" Exception index " + index);
-        for (int i = 0; i < element.length; i++) {
-            if (index == i) {
-                element[i] = e;
-            } else if (index < i) {
-                element[i] = element[i];
-            } else element[i] = element[i-1];
-            size++;
-        }
+    private void ensureCapacity() {
+        int newSize = elements.length * 2;
+        elements = Arrays.copyOf(elements, newSize);
+
     }
 
-    public void printMyList(){
-        for (int i = 0; i < element.length; i++) {
-            System.out.print(element[i] + " ");
+    public void ensureCapacity(int minCapacity) {
+        elements = Arrays.copyOf(elements, minCapacity);
+    }
+
+    public boolean add(E e) {
+        if (size == elements.length) {
+            ensureCapacity();
         }
+        for (int i = 0; i < size; i++) {
+            if (elements[i].equals(e)){
+                return false;
+            }
+        }
+        elements[size++] = e;
+        return true;
+    }
+
+    public void add(int index, E element) {
+        if (index < 0 || index > size()) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size());
+        }
+        int i = size();
+        while (index < i) {
+            elements[i] = elements[i - 1];
+            i--;
+        }
+        elements[index] = element;
+        size++;
+    }
+
+    public E remove(int index) {
+        if (index < 0 || index >= size()) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size());
+        }
+        E temp = (E) elements[index];
+        while (index < size() - 1) {
+            elements[index] = elements[index + 1];
+            index++;
+        }
+        size--;
+        return temp;
+    }
+
+    public E clone() {
+        if (size() == 0){
+            throw new NullPointerException();
+        }
+        MyList<Object> clone = new MyList<>(size());
+        for (int i = 0; i <size() ; i++) {
+            clone.add(elements[i]);
+        }
+        return (E) clone;
+
+
+    }
+
+    public E get(int i) {
+        if (i >= size || i < 0) {
+            throw new IndexOutOfBoundsException("Index: " + i + ", Size: " + size);
+        }
+        return (E) elements[i];
+    }
+
+    public boolean contains(E o) {
+        for (int i = 0; i < size(); i++) {
+            if (elements[i].equals(o)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int indexOf(E o) {
+        for (int i = 0; i < size(); i++) {
+            if (elements[i].equals(o)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void clear() {
+        size= 0;
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(Arrays.copyOf(elements, size()));
     }
 }
