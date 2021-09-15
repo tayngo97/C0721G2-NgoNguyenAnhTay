@@ -1,16 +1,15 @@
-package bai11_stack_queue;
-import java.util.TreeMap;
-import java.util.HashMap;
+package bai11_stack_queue.baitap;
+
 import java.util.Map;
+import java.util.TreeMap;
 
-public class CountChar {
-
+public class CoutnChar {
     public static void charCount(String input){
         String inputStr = input.toLowerCase();
         String[] inputStr1 = inputStr.split(" ");
 
         Map<String,Integer> charHashMap = new TreeMap<String, Integer>();
-            //Key,Value
+        //Key,Value
 
         for (String element : inputStr1){
             if (!charHashMap.containsKey(element)){ // nếu chưa có
@@ -31,3 +30,4 @@ public class CountChar {
 
     }
 }
+

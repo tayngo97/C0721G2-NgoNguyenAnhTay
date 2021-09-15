@@ -1,9 +1,6 @@
-package bai11_stack_queue;
+package bai11_stack_queue.baitap;
 
-import java.util.ArrayDeque;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Palindrome {
     public static void main(String[] args) {

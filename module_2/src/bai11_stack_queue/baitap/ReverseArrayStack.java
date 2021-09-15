@@ -1,4 +1,4 @@
-package bai11_stack_queue;
+package bai11_stack_queue.baitap;
 
 import java.util.Arrays;
 import java.util.Collection;
