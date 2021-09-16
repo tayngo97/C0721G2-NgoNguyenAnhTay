@@ -3,7 +3,7 @@ package bai11_stack_queue.baitap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class CoutnChar {
+public class CountChar {
     public static void charCount(String input){
         String inputStr = input.toLowerCase();
         String[] inputStr1 = inputStr.split(" ");

@@ -9,6 +9,7 @@ public class ReverseArrayStack {
     public static void main(String[] args) {
         Stack<Integer> integerStack = new Stack<Integer>();
         // LastIn FiestOout   1,2,3,4   pop 4,3,2,1
+
         int[] n = {1,2,3,4};
         for (int i=0;i<n.length;i++){
             integerStack.push(n[i]);
@@ -25,10 +26,10 @@ public class ReverseArrayStack {
         System.out.println("ReverseString");
         String str = "GoodNight";
         System.out.println(str);
-        System.out.println(ReverseString(str));
+        System.out.println(reverseString(str));
     }
 
-    public static String ReverseString(String str)
+    public static String reverseString(String str)
     {
         char[] reverseString = new char[str.length()];
         Stack<Character> stack = new Stack<Character>();
