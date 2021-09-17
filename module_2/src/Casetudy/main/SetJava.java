@@ -1,22 +1,17 @@
 package Casetudy.main;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class SetJava {
     public static void main(String[] args) {
-        Set<Integer> integers =  new HashSet<>();
-        integers.add(3);
-        integers.add(10);
-        integers.add(11);
-        integers.add(4);
-        integers.add(5);
-        integers.add(6);
-        integers.add(6);
-        System.out.println(integers);
-
-        System.out.println(integers.isEmpty());
+        ArrayList list = new ArrayList();
+        list.add(5);
+        list.add(3);
+        list.add(1);
+        list.add(6);
+        list.add(0, 4);
+        list.remove(1);
+        System.out.println(list);
     }
-}
+    }
+
