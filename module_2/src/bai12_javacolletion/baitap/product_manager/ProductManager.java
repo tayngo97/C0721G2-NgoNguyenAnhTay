@@ -10,8 +10,20 @@ public class ProductManager {
         this.products = new ArrayList();
     }
 
-    public void addProduct(Product product) {
+    public void addProduct() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter id: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Enter name:");
+        String name = scanner.nextLine();
+        System.out.print("Enter branch: ");
+        String branch = scanner.nextLine();
+        System.out.print("Enter price: ");
+        int price = scanner.nextInt();
+        Product product = new Product(id, name, branch, price);
         products.add(product);
+        System.out.println(product);
     }
 
     public boolean deleteProduct(int id) {
@@ -36,25 +48,26 @@ public class ProductManager {
         }
     }
 
+
     public boolean searchProduct(String name) {
 //      return  this.products.stream().filter(product -> product.getName().equals(name)).collect(Collectors.toList());
         for (Product product : products) {
-            if (product.getName().equals(name)) {
+            if (product.getName().contains(name)) {
                 System.out.println(product);
-                return true;
+                return true ;
             }
         }
         return false;
     }
 
-    public void editProduct(int id) {
+    public void editProduct() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter id of product !");
+        int id = scanner.nextInt();
         for (Product product : products) {
             if (product.getId() == id) {
-                Scanner scanner = new Scanner(System.in);
-
-
+                System.out.println(product);
                 while (true) {
-                    System.out.println("Enter choice to edit !");
                     System.out.println("1.Edit new id ");
                     System.out.println("2.Edit new name ");
                     System.out.println("3.Edit new branch ");
@@ -66,19 +79,27 @@ public class ProductManager {
                         case 1:
                             System.out.println("Enter new id ");
                             int id1 = scanner.nextInt();
-                            product.setId(id1); break;
+                            product.setId(id1);
+                            System.out.println(product);
+                        break;
                         case 2:
                             System.out.println("Enter new name");
                             String name = scanner.nextLine();
-                            product.setName(name); break;
+                            product.setName(name);
+                            System.out.println(product);
+                            break;
                         case 3:
                             System.out.println("Enter new branch");
                             String branch = scanner.nextLine();
-                            product.setBranch(branch); break;
+                            product.setBranch(branch);
+                            System.out.println(product);
+                            break;
                         case 4:
                             System.out.println("Enter new price");
                             int price = scanner.nextInt();
-                            product.setPrice(price); break;
+                            product.setPrice(price);
+                            System.out.println(product);
+                            break;
                         case 5:
                             return;
                         default:
@@ -88,6 +109,7 @@ public class ProductManager {
                 }
             }
         }
+        showList();
     }
 
     public void sortIncreaseProduct() {

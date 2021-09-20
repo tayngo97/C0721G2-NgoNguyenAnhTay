@@ -8,9 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ProductManager productManager = new ProductManager();
-        productManager.addProduct(new Product(123,"Iphone","Apple",20000000));
-        productManager.addProduct(new Product(124,"Nokia","Nokia",10000000));
-        productManager.addProduct(new Product(125,"Huawei","Huawei",15000000));
+
 
         while (true) {
             System.out.println("Application Manager Officer");
@@ -25,25 +23,11 @@ public class Main {
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1: {
-                    System.out.print("Enter id: ");
-                    int id = scanner.nextInt();
-                    scanner.nextLine();
-                    System.out.print("Enter name:");
-                    String name = scanner.nextLine();
-                    System.out.print("Enter branch: ");
-                    String branch = scanner.nextLine();
-                    System.out.print("Enter price: ");
-                    int price = scanner.nextInt();
-                    Product product = new Product(id, name, branch, price);
-                    productManager.addProduct(product);
-                    System.out.println(product);
+                    productManager.addProduct();
                     break;
                 }
                 case 2: {
-                    System.out.println("Enter id of product !");
-                    int id = scanner.nextInt();
-                    productManager.editProduct(id);
-                    productManager.showList();
+                    productManager.editProduct();
                     break;
                 }
                 case 3: {
@@ -63,19 +47,21 @@ public class Main {
                     System.out.println(productManager.searchProduct(name));
                     break;
                 }
-                case 6:{
+                case 6: {
                     productManager.sortIncreaseProduct();
                     productManager.showList();
                     break;
                 }
-                case 7:{
+                case 7: {
                     productManager.sorDecreaseProduct();
                     productManager.showList();
                     break;
                 }
-                case 8: return;
+                case 8:
+                    return;
                 default:
-                    System.out.println("Invalid"); continue;
+                    System.out.println("Invalid");
+                    continue;
             }
         }
     }
