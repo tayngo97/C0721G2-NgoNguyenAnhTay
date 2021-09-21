@@ -2,7 +2,7 @@ package bai16_io_textfile.baitap;
 
 import java.io.*;
 
-public class Copy {
+public class CopyFileText {
     public void copyFile(String path){
         try {
             FileInputStream fis = new FileInputStream(path);
