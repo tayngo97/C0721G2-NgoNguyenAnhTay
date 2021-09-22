@@ -1,4 +1,4 @@
-package models;
+package models.person;
 
 public abstract class Person {
     private String name;
@@ -41,11 +41,11 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    public String getCMND() {
+    public int getCMND() {
         return CMND;
     }
 
-    public void setCMND(String CMND) {
+    public void setCMND(int CMND) {
         this.CMND = CMND;
     }
 
@@ -63,5 +63,16 @@ public abstract class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "name='" + name + '\'' +
+                ", birthday=" + birthday +
+                ", gender='" + gender + '\'' +
+                ", CMND=" + CMND +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'';
     }
 }

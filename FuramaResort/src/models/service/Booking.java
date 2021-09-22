@@ -1,43 +1,47 @@
-package models;
+package models.service;
 
 import models.person.Customer;
 
-public class Booking {
-    private int bookingID;
-    private int checkinTime;
-    private int checkoutTime;
+import java.util.Comparator;
+
+
+public class Booking  {
+    private String bookingID ;
+    private String checkinTime ;
+    private String checkoutTime;
     private Customer customer;
     private  Facility facility;
 
-    public Booking(int bookingID, int checkinTime, int checkoutTime, Customer customer, Facility facility) {
+    public Booking(String bookingID, String checkinTime, String checkoutTime,Customer customer,Facility facility) {
         this.bookingID = bookingID;
         this.checkinTime = checkinTime;
         this.checkoutTime = checkoutTime;
         this.customer = customer;
-        this.facility = facility;
+        this.facility = facility ;
     }
 
-    public int getBookingID() {
+
+    public String getBookingID() {
         return bookingID;
     }
 
-    public void setBookingID(int bookingID) {
+    public void setBookingID(String bookingID) {
         this.bookingID = bookingID;
     }
 
-    public int getCheckinTime() {
+    public String getCheckinTime() {
         return checkinTime;
     }
 
-    public void setCheckinTime(int checkinTime) {
+    public void setCheckinTime(String checkinTime) {
         this.checkinTime = checkinTime;
     }
 
-    public int getCheckoutTime() {
+    public String getCheckoutTime() {
         return checkoutTime;
     }
 
-    public void setCheckoutTime(int checkoutTime) {
+    public void setCheckoutTime(String checkoutTime) {
         this.checkoutTime = checkoutTime;
     }
 
@@ -58,14 +62,25 @@ public class Booking {
     }
 
     @Override
+    public int hashCode() {
+        return 12;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Booking booking = (Booking) obj ;
+        return this.bookingID.equals(booking.bookingID);
+    }
+
+    @Override
     public String toString() {
-        return "Booking{" +
+        return "New Booking{" +
                 "bookingID=" + bookingID +
                 ", checkinTime=" + checkinTime +
-                ", checkoutTime=" + checkoutTime +
-                ", customer=" + customer +
+                ", checkoutTime=" + checkoutTime + "\n" +
+                ", customer=" + customer + "\n" +
                 ", facility=" + facility +
-                '}';
+                '}' + "\n";
     }
 
 }

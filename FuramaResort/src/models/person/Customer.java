@@ -1,16 +1,16 @@
-package models;
+package models.person;
 
-public class Customer  extends Person{
+public class Customer  extends Person {
     private String customerID;
     private String typeOfGuest;
     private String address;
-    private final static String DIAMOND = "Diamond";
-    private final static String PLATINUM = "Platinum";
-    private final static String GOLD = "Gold";
-    private final static String SILVER = "Silver";
-    private final static String MEMBER = "Member";
+    public final static String DIAMOND = "Diamond";
+    public final static String PLATINUM = "Platinum";
+    public final static String GOLD = "Gold";
+    public final static String SILVER = "Silver";
+    public final static String MEMBER = "Member";
 
-    public Customer(String name, int birthday, String gender, int CMND, int phoneNumber, String email, String customerID, String typeOfGuest, String address) {
+    public Customer(String name, int birthday, String gender, int CMND, int phoneNumber, String email, String  customerID , String typeOfGuest, String address) {
         super(name, birthday, gender, CMND, phoneNumber, email);
         this.customerID = customerID;
         this.typeOfGuest = typeOfGuest;
@@ -41,8 +41,13 @@ public class Customer  extends Person{
         this.address = address;
     }
 
-    public static void main(String[] args) {
-        Customer customer = new Customer("Lan",123,"Male",123,123,"Ef","asd",GOLD,"DN");
+    @Override
+    public String toString() {
+        return "Customer{" +
+                super.toString() +
+                ", customerID='" + customerID + '\'' +
+                ", typeOfGuest='" + typeOfGuest + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
-
 }

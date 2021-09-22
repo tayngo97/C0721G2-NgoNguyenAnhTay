@@ -1,6 +1,8 @@
-package models;
+package models.service;
 
-public class Room extends Facility{
+import models.service.Facility;
+
+public class Room extends Facility {
     private String promotionService;
 
     public Room(String serviceName, int usableArea, int rentalCost, int maxNumberOfTenants, String typeOfRent, String promotionService) {
@@ -14,5 +16,12 @@ public class Room extends Facility{
 
     public void setPromotionService(String promotionService) {
         this.promotionService = promotionService;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" + super.toString() +
+                "promotionService='" + promotionService + '\'' +
+                "} ";
     }
 }

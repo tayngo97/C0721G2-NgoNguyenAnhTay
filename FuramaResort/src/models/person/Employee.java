@@ -1,21 +1,22 @@
-package models;
+package models.person;
 
-public class Employee  extends Person{
+public class Employee  extends Person {
     private String staffID;
     private String level;
     private String position;
     private  int salary;
-    private final static String INTERMEDIATE = "intermediate";
-    private final static String COLLEGE = "college";
-    private final static String UNIVERSITY = "university";
-    private final static String AFFTERUNIVERSITY = "afferuniversity";
 
-    private final static String RECEPTION = "reception";
-    private final static String WAITERS = "waiters";
-    private final static String EXPERT = "expert";
-    private final static String SUPERVIOR = "supervisor";
-    private final static String MANAGER = "manager";
-    private final static String GM = "General Manager";
+    public final static String INTERMEDIATE = "intermediate";
+    public final static String COLLEGE = "college";
+    public final static String UNIVERSITY = "university";
+    public final static String AFFTERUNIVERSITY = "afferuniversity";
+
+    public final static String RECEPTION = "reception";
+    public final static String WAITERS = "waiters";
+    public final static String EXPERT = "expert";
+    public final static String SUPERVIOR = "supervisor";
+    public final static String MANAGER = "manager";
+    public final static String GM = "General Manager";
 
     public Employee(String name, int birthday, String gender, int CMND, int phoneNumber, String email, String staffID, String level, String position, int salary) {
         super(name, birthday, gender, CMND, phoneNumber, email);
@@ -57,7 +58,13 @@ public class Employee  extends Person{
         this.salary = salary;
     }
 
-    public static void main(String[] args) {
-        Employee employee = new Employee("Nam",1990,"Male",1990,11,"Amel","aa",AFFTERUNIVERSITY,GM,30000);
+    @Override
+    public String toString() {
+        return "Employee{" +
+                 super.toString() +
+                "staffID='" + staffID + '\'' +
+                ", level='" + level + '\'' +
+                ", position='" + position + '\'' +
+                ", salary=" + salary + "}";
     }
 }

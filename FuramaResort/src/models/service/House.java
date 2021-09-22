@@ -1,6 +1,8 @@
-package models;
+package models.service;
 
-public class House extends Facility{
+import models.service.Facility;
+
+public class House extends Facility {
     private String roomStandard ;
     private int numOfFloor;
 
@@ -24,5 +26,13 @@ public class House extends Facility{
 
     public void setNumOfFloor(int numOfFloor) {
         this.numOfFloor = numOfFloor;
+    }
+
+    @Override
+    public String toString() {
+        return "House{" + super.toString() +
+                "roomStandard='" + roomStandard + '\'' +
+                ", numOfFloor=" + numOfFloor +
+                "} ";
     }
 }
