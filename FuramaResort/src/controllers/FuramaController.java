@@ -9,10 +9,12 @@ import services.CustomerServiceImpl;
 import services.EmployeeServiceImpl;
 import services.FacilityServiceImpl;
 
+
 import java.util.Scanner;
 
-public class FuramaController  {
+public class FuramaController {
     public static void main(String[] args) {
+
         EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
         CustomerServiceImpl customerService = new CustomerServiceImpl();
         FacilityServiceImpl facilityService = new FacilityServiceImpl();

@@ -29,9 +29,9 @@ public class ReadFileExample {
 
     public static void main(String[] args) {
         System.out.println("Nhap duong dan file: ");
+        // link file : C:\C0721G2_NgoNguyenAnhTay\module_2\data.txt
         Scanner scanner = new Scanner(System.in);
         String path = scanner.nextLine();
-
         ReadFileExample readFileExample = new ReadFileExample();
         readFileExample.readFileText(path);
     }

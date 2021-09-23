@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAndWriteFile {
-    public List<Integer> readFile(String filePath){
+    public List<Integer> readFile(String filePath) {
         List<Integer> numbers = new ArrayList<>();
         try {
             File file = new File(filePath);
@@ -26,9 +26,9 @@ public class ReadAndWriteFile {
         return numbers;
     }
 
-    public void writeFile(String filePath, int max){
+    public void writeFile(String filePath, int max) {
         try {
-            FileWriter writer = new FileWriter(filePath,true);
+            FileWriter writer = new FileWriter(filePath);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
             bufferedWriter.write("Giá trị lớn nhất là: " + max);
             bufferedWriter.close();

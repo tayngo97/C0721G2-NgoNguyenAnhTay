@@ -1,15 +1,11 @@
-package bai16_io_textfile.thuchanh;
+package bai16_io_textfile.thuchanh.Demo;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
         Main main = new Main();
         List<Student> studentList = main.readFile();
         for (Student o : studentList) {

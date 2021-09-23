@@ -63,7 +63,7 @@ public class Booking  {
 
     @Override
     public int hashCode() {
-        return 12;
+        return 1;
     }
 
     @Override

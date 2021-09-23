@@ -1,4 +1,4 @@
-package bai16_io_textfile.thuchanh;
+package bai16_io_textfile.thuchanh.Demo;
 
 public class Student {
     private String name;
@@ -40,6 +40,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return name + "," + age + "," + mark;
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", mark=" + mark +
+                '}';
     }
 }

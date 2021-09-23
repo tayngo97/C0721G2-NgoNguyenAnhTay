@@ -13,11 +13,10 @@ public class BookingServiceImpl implements BookingService {
 
     static {
     bookingTreeSet = new TreeSet<>(new BookingComparatorByCheckinTime());
-
         Booking booking1 = new Booking("Bk1","20-10-2020","20-11-2020",CustomerServiceImpl.customerList.get(0),FacilityServiceImpl.getFT("Villa1"));
         Booking booking2 = new Booking("Bk2","05-10-2020","10-12-2020",CustomerServiceImpl.customerList.get(1),FacilityServiceImpl.getFT("Villa2"));
         Booking booking3 = new Booking("Bk3","15-10-2020","09-09-2021",CustomerServiceImpl.customerList.get(2),FacilityServiceImpl.getFT("Villa3"));
-        Booking booking4 = new Booking("Bk3","15-10-2020","09-09-2021",CustomerServiceImpl.customerList.get(2),FacilityServiceImpl.getFT("Villa3"));
+        Booking booking4 = new Booking("Bk3","15-10-2020","09-09-2021",CustomerServiceImpl.customerList.get(3),FacilityServiceImpl.getFT("Villa3"));
         bookingTreeSet.add(booking1);
         bookingTreeSet.add(booking2);
         bookingTreeSet.add(booking3);
@@ -57,6 +56,9 @@ public class BookingServiceImpl implements BookingService {
         System.out.println("Enter service name");
         String serviceName = scanner.nextLine();
         Facility service = FacilityServiceImpl.getFT(serviceName);
+        if (customer == null){
+            System.out.println("Not found your service name !");
+        }
 
         Booking booking = new Booking(bookingID,timeCI,timeCO,customer,service);
         bookingTreeSet.add(booking);

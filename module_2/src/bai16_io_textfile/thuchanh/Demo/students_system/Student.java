@@ -1,6 +1,8 @@
-package students_system;
+package bai16_io_textfile.thuchanh.Demo.students_system;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
     int id;
     String name;
     int age;

@@ -14,24 +14,25 @@ public class ContractServiceImpl implements ContractService {
         }
     }
 
-//    public static void convertSettoQueue(){
-//        for (Booking e: bookinglist ) {
-//            bookingQueue.offer(e);
-////            System.out.println(e.toString());
-//        }
-////        System.out.println(bookinglist.size());
-////        System.out.println(bookingQueue.size());
-//    }
 
-    public static void showListBK(){
-        while (!bookingQueue.isEmpty()){
-            System.out.println(bookingQueue.poll());
+    @Override
+    public void CreateNewContracts() {
+
+    }
+
+    @Override
+    public void DisplayListContracts() {
+        for (Booking element: bookingQueue) {
+            if (element == null){
+                break;
+            }
+
         }
     }
 
+    @Override
+    public void EditContracts() {
 
-    public static void main(String[] args) {
-        showListBK();
     }
 }
 
