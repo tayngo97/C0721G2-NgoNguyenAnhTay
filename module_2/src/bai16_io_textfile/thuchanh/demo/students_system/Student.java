@@ -1,4 +1,4 @@
-package bai16_io_textfile.thuchanh.Demo.students_system;
+package bai16_io_textfile.thuchanh.demo.students_system;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package bai16_io_textfile.thuchanh.Demo;
+package bai16_io_textfile.thuchanh.demo;
 
 import java.io.PrintWriter;
 

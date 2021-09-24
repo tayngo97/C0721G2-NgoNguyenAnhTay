@@ -1,12 +1,8 @@
-package bai16_io_textfile.thuchanh.Demo;
+package bai16_io_textfile.thuchanh.demo;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 
 public class DemoBufferReader {
@@ -26,7 +22,6 @@ public class DemoBufferReader {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
         // cach 2 :
         File f2 = new File("C:\\C0721G2_NgoNguyenAnhTay\\module_2\\data.txt");
         try {

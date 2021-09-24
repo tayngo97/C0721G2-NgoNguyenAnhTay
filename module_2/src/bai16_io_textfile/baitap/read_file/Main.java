@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
+        List<Country> countryList = new ArrayList<>();
         BufferedReader br = null;
         try {
             String line;
@@ -17,38 +17,23 @@ public class Main {
             br = new BufferedReader(new FileReader(file));
 
             while ((line = br.readLine()) != null) {
-                printCountry(parseCsvLine(line));
+                 String[] csv =  line.split(",");
+                 int id = Integer.parseInt(csv[0]);
+                 String code = csv[1];
+                 String name = csv [2];
+                 countryList.add(new Country(id,code,name));
             }
-
+            br.close();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (br != null)
-                    br.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        }
+
+        for (Country o: countryList) {
+            System.out.println(o);
         }
     }
 
-    public static List<String> parseCsvLine(String csvLine) {
-        List<String> result = new ArrayList<>();
-        if (csvLine != null) {
-            String[] splitData = csvLine.split(",");
-            for (int i = 0; i < splitData.length; i++) {
-                result.add(splitData[i]);
-            }
-        }
-        return result;
-    }
 
-    private static void printCountry(List<String> country) {
-        System.out.println(
-                "Country [id= "
-                        + country.get(0)
-                        + ", code= " + country.get(1)
-                        + " , name=" + country.get(2)
-                        + "]");
-    }
+
+
 }

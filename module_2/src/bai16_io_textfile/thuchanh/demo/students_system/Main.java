@@ -1,4 +1,4 @@
-package bai16_io_textfile.thuchanh.Demo.students_system;
+package bai16_io_textfile.thuchanh.demo.students_system;
 
 import java.io.File;
 import java.util.Scanner;
@@ -47,16 +47,15 @@ public class Main {
 //                    }while(searchedCheck);
 //                    break;
                 case 6:
-                    System.out.println("Nhap ten File");
-                    String tenFile = sc.nextLine();
-                    File f = new File(tenFile);
+//                    System.out.println("Nhap ten File");
+//                    String tenFile = sc.nextLine();
+                    File f = new File("C:\\C0721G2_NgoNguyenAnhTay\\module_2\\src\\student_data.csv");
                     managerStudent.writeDataInFile(f);
                     break;
                 case 7:
-                    System.out.println("Nhap ten File");
-                    //C:\C0721G2_NgoNguyenAnhTay\module_2\student_data.txt
-                    String tenFile1 = sc.nextLine();
-                    File f1 = new File(tenFile1);
+//                    System.out.println("Nhap ten File");
+//                    String tenFile1 = sc.nextLine();
+                    File f1 = new File("C:\\C0721G2_NgoNguyenAnhTay\\module_2\\src\\student_data.csv");
                     managerStudent.readDataInFile(f1);
                     break;
                 case 0:
