@@ -9,8 +9,4 @@ public class Main {
        ArrayList<Country> countries = ReadFile.readFile("C:\\C0721G2_NgoNguyenAnhTay\\module_2\\src\\countries.csv");
        countries.forEach(System.out::println);
     }
-
-
-
-
 }

@@ -14,15 +14,13 @@ public class CopyFile {
             }
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line ;
+            String line = "";
 
             while ((line = bufferedReader.readLine()) != null) {
                 strings.add(line);
             }
 
             bufferedReader.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
