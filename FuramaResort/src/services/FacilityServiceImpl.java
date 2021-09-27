@@ -62,7 +62,7 @@ public class FacilityServiceImpl implements FacilityService {
                         while (flag) {
                             flag = false;
                             try {
-                                System.out.println("Enter roomStandard");
+
                                 String roomStandard = scanner.nextLine();
                                 System.out.println("Enter poolArea");
                                 int poolArea = Integer.parseInt(scanner.nextLine());
