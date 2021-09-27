@@ -20,17 +20,17 @@ public class ProductManager {
         String branch = scanner.nextLine();
         System.out.println("Enter price");
         int price = Integer.parseInt(scanner.nextLine());
-        Product product = new Product(id,name,branch,price,new TypeProduct("AA1","Milk"));
+        Product product = new Product(id,name,branch,price);
 
         if (file.length() > 0){
             products = readDataFromFile();
         }
-
+        // name=Lan age 1
+        // name=Lan age 1
+        // name=Nam age=19
         products.add(product);
         writeToFile(products);
     }
-
-
 
     public void showList(){
         List<Product> productArrayList =  readDataFromFile();
@@ -63,7 +63,7 @@ public class ProductManager {
 
     public static void writeToFile(List<Product> products) {
         try {
-            FileOutputStream fos = new FileOutputStream(file);
+            FileOutputStream fos = new FileOutputStream(file,false);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(products);
             oos.close();

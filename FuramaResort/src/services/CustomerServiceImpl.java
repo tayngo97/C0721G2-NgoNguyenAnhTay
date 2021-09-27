@@ -2,12 +2,14 @@ package services;
 
 import models.person.Customer;
 
+import java.io.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
-    public static List<Customer> customerList = new LinkedList<>();
+    protected static List<Customer> customerList = new LinkedList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     static {
@@ -19,9 +21,9 @@ public class CustomerServiceImpl implements CustomerService {
         customerList.add(customer3);
     }
 
-    public static Customer getOb(String id){
-        for ( Customer e: customerList) {
-            if (e.getCustomerID().equals(id)){
+    public static Customer getOb(String id) {
+        for (Customer e : customerList) {
+            if (e.getCustomerID().equals(id)) {
                 return e;
             }
         }
@@ -31,96 +33,120 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void addNewCustomer() {
-        System.out.println("Enter  name");
-        String name = scanner.nextLine();
-        System.out.println("Enter  bithday");
-        int birrt = scanner.nextInt();
-        System.out.println("Enter  gender");
-        String gender = scanner.nextLine();
-        System.out.println("Enter  CMND");
-        int cmnd = scanner.nextInt();
-        System.out.println("Enter  phone");
-        int phone = scanner.nextInt();
-        System.out.println("Enter  email");
-        String email = scanner.nextLine();
-        System.out.println("Customer ID");
-        String ID = scanner.nextLine();
-        System.out.println("Enter  typeOfGuest");
-        String typeOfGuest = scanner.nextLine();
-        System.out.println("Enter address");
-        String address = scanner.nextLine();
-        Customer customer = new Customer(name,birrt,gender,cmnd,phone,email,ID,typeOfGuest,address);
-        customerList.add(customer);
-        showInfoCustomer();
+        boolean flag = true;
+        while (flag) {
+            flag = false;
+            try {
+                System.out.println("Enter  name");
+                String name = scanner.nextLine();
+                System.out.println("Enter  bithday");
+                int birrt = Integer.parseInt(scanner.nextLine());
+                System.out.println("Enter  gender");
+                String gender = scanner.nextLine();
+                System.out.println("Enter  CMND");
+                int cmnd = Integer.parseInt(scanner.nextLine());
+                System.out.println("Enter  phone");
+                int phone = Integer.parseInt(scanner.nextLine());
+                System.out.println("Enter  email");
+                String email = scanner.nextLine();
+                System.out.println("Customer ID");
+                String ID = scanner.nextLine();
+                System.out.println("Enter  typeOfGuest");
+                String typeOfGuest = scanner.nextLine();
+                System.out.println("Enter address");
+                String address = scanner.nextLine();
+                Customer customer = new Customer(name, birrt, gender, cmnd, phone, email, ID, typeOfGuest, address);
+                customerList.add(customer);
+            } catch (Exception exception) {
+                System.err.println("Invalid input,try again !");
+                flag = true;
+            }
+        }
     }
 
     @Override
     public void editInfoCustomer() {
-        System.out.println("Enter name of employee to edit !");
+        showInfoCustomer();
+        System.out.println("Enter name of customer to edit !");
         String name = scanner.nextLine();
         for (Customer e : customerList) {
             if (e.getName().equals(name)) {
-                while (true) {
-                    System.out.println("1 Edit name" + "\n" +  "2 Edit birthday" + "\n" +  "3 Edit gender" + "\n" +  "4 Edit CMND" + "\n" +  "5 Edit phoneNumber" + "\n" +  "6 Edit email" + "\n" +  "7 Edit Customer ID" + "\n" +  "8 Edit typeOfGuest" + "\n" +  "9 Edit address" + "\n" +  "10 Edit Customer ID" + "\n" +  "11 Finish edit");
-                    int choice = scanner.nextInt();
-                    scanner.nextLine();
-                    switch (choice) {
-                        case 1:
-                            System.out.println("Enter new name");
-                            String name1 = scanner.nextLine();
-                            e.setName(name1);
-                            break;
-                        case 2:
-                            System.out.println("Enter new bithday");
-                            int birrt = scanner.nextInt();
-                            e.setBirthday(birrt);
-                            break;
-                        case 3:
-                            System.out.println("Enter new gender");
-                            String gender = scanner.nextLine();
-                            e.setGender(gender);
-                            break;
-                        case 4:
-                            System.out.println("Enter new CMND");
-                            int cmnd = scanner.nextInt();
-                            e.setCMND(cmnd);
-                            break;
-                        case 5:
-                            System.out.println("Enter new phone");
-                            int phone = scanner.nextInt();
-                            e.setPhoneNumber(phone);
-                            break;
-                        case 6:
-                            System.out.println("Enter new email");
-                            String email = scanner.nextLine();
-                            e.setEmail(email);
-                            break;
-                        case 7:
-                            System.out.println("Enter new customerID");
-                            String id1 = scanner.nextLine();
-                            e.setCustomerID(id1);
-                            break;
-                        case 8:
-                            System.out.println("Enter new typeOfGuest");
-                            System.out.println("a.DIAMOND" + "\n" + "b.PLATINUM" + "\n" + "c.GOLD" + "\n" + "d.SILVER" + "\n" + "e.MEMBER");
-                            String choice1 = scanner.nextLine();
-                            switch (choice1){
-                                case "a" : e.setTypeOfGuest(Customer.DIAMOND);break;
-                                case "b" : e.setTypeOfGuest(Customer.PLATINUM);break;
-                                case "c" : e.setTypeOfGuest(Customer.GOLD);break;
-                                case "d" : e.setTypeOfGuest(Customer.SILVER);break;
-                                case "e" : e.setTypeOfGuest(Customer.MEMBER);break;
-                                default: break;
-                            }
-                            break;
-                        case 9:
-                            System.out.println("Enter new address");
-                            e.setAddress(scanner.nextLine());
-                        case 11:
-                            return;
-                        case 12:
-                            System.out.println("Invalid input");
-                            continue;
+                boolean flag = true;
+                while (flag) {
+                    flag = false;
+                    try {
+                        System.out.println("1 Edit name" + "\n" + "2 Edit birthday" + "\n" + "3 Edit gender" + "\n" + "4 Edit CMND" + "\n" + "5 Edit phoneNumber" + "\n" + "6 Edit email" + "\n" + "7 Edit Customer ID" + "\n" + "8 Edit typeOfGuest" + "\n" + "9 Edit address" + "\n" + "10 Edit Customer ID" + "\n" + "11 Finish edit");
+                        int choice = Integer.parseInt(scanner.nextLine());
+                        switch (choice) {
+                            case 1:
+                                System.out.println("Enter new name");
+                                e.setName(scanner.nextLine());
+                                break;
+                            case 2:
+                                System.out.println("Enter new bithday");
+                                e.setBirthday(Integer.parseInt(scanner.nextLine()));
+                                break;
+                            case 3:
+                                System.out.println("Enter new gender");
+                                e.setGender(scanner.nextLine());
+                                break;
+                            case 4:
+                                System.out.println("Enter new CMND");
+                                e.setCMND(Integer.parseInt(scanner.nextLine()));
+                                break;
+                            case 5:
+                                System.out.println("Enter new phone");
+                                e.setPhoneNumber(Integer.parseInt(scanner.nextLine()));
+                                break;
+                            case 6:
+                                System.out.println("Enter new email");
+                                e.setEmail(scanner.nextLine());
+                                break;
+                            case 7:
+                                System.out.println("Enter new customerID");
+                                e.setCustomerID(scanner.nextLine());
+                                break;
+                            case 8:
+                                boolean flag1 = true;
+                                while (flag1) {
+                                    flag1 = false;
+                                    try {
+                                        System.out.println("Enter new typeOfGuest" + "\n" + "1.DIAMOND" + "\n" + "2.PLATINUM" + "\n" + "3.GOLD" + "\n" + "4.SILVER" + "\n" + "5.MEMBER");
+                                        int choice1 = Integer.parseInt(scanner.nextLine());
+                                        switch (choice1) {
+                                            case 1:
+                                                e.setTypeOfGuest(Customer.DIAMOND);
+                                                break;
+                                            case 2:
+                                                e.setTypeOfGuest(Customer.PLATINUM);
+                                                break;
+                                            case 3:
+                                                e.setTypeOfGuest(Customer.GOLD);
+                                                break;
+                                            case 4:
+                                                e.setTypeOfGuest(Customer.SILVER);
+                                                break;
+                                            case 5:
+                                                e.setTypeOfGuest(Customer.MEMBER);
+                                                break;
+                                        }
+                                    } catch (Exception exception) {
+                                        System.err.println("Invalid input,try again!");
+                                        flag1 = true;
+                                    }
+                                }
+                                break;
+                            case 9:
+                                System.out.println("Enter new address");
+                                e.setAddress(scanner.nextLine());
+                                break;
+                            case 11:
+                                flag = false;
+                                break;
+                        }
+                    } catch (Exception exception) {
+                        System.err.println("Invalid input !");
+                        flag = true;
                     }
                 }
             }
@@ -130,11 +156,15 @@ public class CustomerServiceImpl implements CustomerService {
 
 
     @Override
-    public  void showInfoCustomer() {
-        for (Customer e: customerList) {
+    public void showInfoCustomer() {
+        for (Customer e : customerList) {
             System.out.println(e);
         }
     }
 
-
+    public static void show() {
+        for (Customer e : customerList) {
+            System.out.println(e);
+        }
+    }
 }

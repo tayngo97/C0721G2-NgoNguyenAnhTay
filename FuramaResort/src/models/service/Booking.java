@@ -1,6 +1,7 @@
 package models.service;
 
 import models.person.Customer;
+import models.person.Voucher;
 
 import java.util.Comparator;
 
@@ -82,5 +83,6 @@ public class Booking  {
                 ", facility=" + facility +
                 '}' + "\n";
     }
+
 
 }

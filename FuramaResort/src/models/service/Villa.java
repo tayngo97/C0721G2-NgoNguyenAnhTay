@@ -11,8 +11,8 @@ public class Villa  extends Facility {
     public static final String DELUXE = "Deluxe";
     public static final String FAMILY = "FAMILY";
 
-    public Villa(String serviceName, int usableArea, int rentalCost, int maxNumberOfTenants, String typeOfRent, String roomStandard, int poolArea, int numOfFloor) {
-        super(serviceName, usableArea, rentalCost, maxNumberOfTenants, typeOfRent);
+    public Villa(String serviceName, String serviceID, int usableArea, int rentalCost, int maxNumberOfTenants, String typeOfRent, String roomStandard, int poolArea, int numOfFloor) {
+        super(serviceName, serviceID, usableArea, rentalCost, maxNumberOfTenants, typeOfRent);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
         this.numOfFloor = numOfFloor;
@@ -44,10 +44,10 @@ public class Villa  extends Facility {
 
     @Override
     public String toString() {
-        return "Villa{" +  super.toString() +
+        return "Villa{" +
                 "roomStandard='" + roomStandard + '\'' +
                 ", poolArea=" + poolArea +
                 ", numOfFloor=" + numOfFloor +
-                "} ";
+                "} " + super.toString();
     }
 }

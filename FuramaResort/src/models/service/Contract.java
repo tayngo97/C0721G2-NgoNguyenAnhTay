@@ -7,14 +7,14 @@ public class Contract {
     private Booking bookingID;
     private int depositAmount;
     private int totalPayment;
-    private Customer customerID;
 
-    public Contract(String contractID, Booking bookingID, int depositAmount, int totalPayment, Customer customerID) {
+
+    public Contract(String contractID, Booking bookingID, int depositAmount, int totalPayment) {
         this.contractID = contractID;
         this.bookingID = bookingID;
         this.depositAmount = depositAmount;
         this.totalPayment = totalPayment;
-        this.customerID = customerID;
+
     }
 
     public String getContractID() {
@@ -49,13 +49,7 @@ public class Contract {
         this.totalPayment = totalPayment;
     }
 
-    public Customer getCustomerID() {
-        return customerID;
-    }
 
-    public void setCustomerID(Customer customerID) {
-        this.customerID = customerID;
-    }
 
     @Override
     public String toString() {
@@ -64,7 +58,6 @@ public class Contract {
                 ", bookingID='" + bookingID + '\'' +
                 ", depositAmount=" + depositAmount +
                 ", totalPayment=" + totalPayment +
-                ", customerID='" + customerID + '\'' +
                 '}';
     }
 }

@@ -14,9 +14,9 @@ public class FacilityServiceImpl implements FacilityService {
     private Scanner scanner = new Scanner(System.in);
 
     static {
-        facilityIntegerMap.put(new Villa("Villa1", 50, 100000, 4, Villa.HOURS, Villa.FAMILY, 50, 4), 0);
-        facilityIntegerMap.put(new Villa("Villa2", 50, 120000, 4, Villa.MONTH, Villa.DELUXE, 50, 5), 0);
-        facilityIntegerMap.put(new Villa("Villa3", 50, 150000, 4, Villa.YEAR, Villa.DELUXE, 50, 6), 0);
+        facilityIntegerMap.put(new Villa("Villa1", "SVVL-0001", 50, 100000, 4, Villa.HOURS, Villa.FAMILY, 50, 4), 0);
+        facilityIntegerMap.put(new Villa("Villa2", "SVVL-0002", 50, 120000, 4, Villa.MONTH, Villa.DELUXE, 50, 5), 0);
+        facilityIntegerMap.put(new Villa("Villa3", "SVVL-0003", 50, 150000, 4, Villa.YEAR, Villa.DELUXE, 50, 6), 0);
     }
 
     public void showFacilityList() {
@@ -37,52 +37,82 @@ public class FacilityServiceImpl implements FacilityService {
 
     @Override
     public void addNewService() {
-        System.out.println("Enter your choice" + "\n" + "1.Add New Villa" + "\n" + "2.Add New House" + "\n" + "3.Add New Room" + "\n" + "4.Back to Menu");
-        int choice = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Enter serviceName");
-        String name = scanner.nextLine();
-        System.out.println("Enter usableArea");
-        int Area = scanner.nextInt();
-        System.out.println("Enter rentalCost");
-        int rentalCost = scanner.nextInt();
-        System.out.println("Enter maxNumberOfTenants");
-        int maxNumberOfTenants = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("Enter typeOfRent");
-        String typeOfRent = scanner.nextLine();
-        switch (choice) {
-            case 1:
-                System.out.println("Enter roomStandard");
-                String roomStandard = scanner.nextLine();
-                System.out.println("Enter poolArea");
-                int poolArea = scanner.nextInt();
-                System.out.println("Enter numOfFloor");
-                int numOfFloor = scanner.nextInt();
-                Villa villa = new Villa(name, Area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard, poolArea, numOfFloor);
-                facilityIntegerMap.put(villa, 0);
-                break;
-
-            case 2:
-                System.out.println("Enter roomStandard");
-                String roomStandard1 = scanner.nextLine();
-                System.out.println("Enter numOfFloor");
-                int numOfFloor1 = scanner.nextInt();
-                House house = new House(name, Area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard1, numOfFloor1);
-                facilityIntegerMap.put(house, 0);
-                break;
-            case 3:
-                String typeOfRent3 = scanner.nextLine();
-                System.out.println("Enter promotionService");
-                String promotionService = scanner.nextLine();
-                Room room = new Room(name, Area, rentalCost, maxNumberOfTenants, typeOfRent3, promotionService);
-                facilityIntegerMap.put(room, 0);
-                break;
-            case 4:
-                break;
-            default:
-                System.out.println("Invalid");
+        boolean flag = true;
+        while (flag) {
+            flag = false;
+            try {
+                System.out.println("Enter your choice" + "\n" + "1.Add New Villa" + "\n" + "2.Add New House" + "\n" + "3.Add New Room" + "\n" + "4.Back to Menu");
+                int choice = Integer.parseInt(scanner.nextLine());
+                if (choice == 4 || choice > 4) break;
+                System.out.println("Enter serviceName");
+                String name = scanner.nextLine();
+                System.out.println("Enter serviceID");
+                String serviceId = scanner.nextLine();
+                System.out.println("Enter usableArea");
+                int Area = Integer.parseInt(scanner.nextLine());
+                System.out.println("Enter rentalCost");
+                int rentalCost = Integer.parseInt(scanner.nextLine());
+                System.out.println("Enter maxNumberOfTenants");
+                int maxNumberOfTenants = Integer.parseInt(scanner.nextLine());
+                System.out.println("Enter typeOfRent");
+                String typeOfRent = scanner.nextLine();
+                switch (choice) {
+                    case 1:
+                        flag = true;
+                        while (flag) {
+                            flag = false;
+                            try {
+                                System.out.println("Enter roomStandard");
+                                String roomStandard = scanner.nextLine();
+                                System.out.println("Enter poolArea");
+                                int poolArea = Integer.parseInt(scanner.nextLine());
+                                System.out.println("Enter numOfFloor");
+                                int numOfFloor = Integer.parseInt(scanner.nextLine());
+                                Villa villa = new Villa(name, serviceId, Area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard, poolArea, numOfFloor);
+                                facilityIntegerMap.put(villa, 0);
+                            } catch (Exception e) {
+                                System.err.println("Invalid input");
+                                flag = true;
+                            }
+                        }
+                        break;
+                    case 2:
+                        flag = true;
+                        while (flag) {
+                            flag = false;
+                            try {
+                                System.out.println("Enter roomStandard");
+                                String roomStandard1 = scanner.nextLine();
+                                System.out.println("Enter numOfFloor");
+                                int numOfFloor1 = Integer.parseInt(scanner.nextLine());
+                                House house = new House(name, serviceId, Area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard1, numOfFloor1);
+                                facilityIntegerMap.put(house, 0);
+                            } catch (Exception e) {
+                                System.err.println("Invalid input");
+                                flag = true;
+                            }
+                        }
+                        break;
+                    case 3:
+                        flag = true;
+                        while (flag) {
+                            flag = false;
+                            try {
+                                System.out.println("Enter FreeService");
+                                String promotionService = scanner.nextLine();
+                                Room room = new Room(name, serviceId, Area, rentalCost, maxNumberOfTenants, typeOfRent, promotionService);
+                                facilityIntegerMap.put(room, 0);
+                            } catch (Exception e) {
+                                System.err.println("Invalid input");
+                                flag = true;
+                            }
+                        }
+                        break;
+                }
+            } catch (Exception e) {
+                System.err.println("Invalid input !");
+                flag = true;
+            }
         }
     }
 
@@ -95,5 +125,9 @@ public class FacilityServiceImpl implements FacilityService {
         }
     }
 
-
+    public static void show() {
+        for (Map.Entry<Facility, Integer> entry : facilityIntegerMap.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue() + "times");
+        }
+    }
 }

@@ -1,6 +1,8 @@
 package models.person;
 
-public class Customer  extends Person {
+import java.io.Serializable;
+
+public class Customer  extends Person  implements Serializable {
     private String customerID;
     private String typeOfGuest;
     private String address;

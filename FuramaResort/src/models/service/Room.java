@@ -5,8 +5,8 @@ import models.service.Facility;
 public class Room extends Facility {
     private String promotionService;
 
-    public Room(String serviceName, int usableArea, int rentalCost, int maxNumberOfTenants, String typeOfRent, String promotionService) {
-        super(serviceName, usableArea, rentalCost, maxNumberOfTenants, typeOfRent);
+    public Room(String serviceName, String serviceID, int usableArea, int rentalCost, int maxNumberOfTenants, String typeOfRent, String promotionService) {
+        super(serviceName, serviceID, usableArea, rentalCost, maxNumberOfTenants, typeOfRent);
         this.promotionService = promotionService;
     }
 
@@ -20,8 +20,8 @@ public class Room extends Facility {
 
     @Override
     public String toString() {
-        return "Room{" + super.toString() +
+        return "Room{" +
                 "promotionService='" + promotionService + '\'' +
-                "} ";
+                "} " + super.toString();
     }
 }
