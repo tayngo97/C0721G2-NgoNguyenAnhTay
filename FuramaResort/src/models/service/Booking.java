@@ -3,17 +3,23 @@ package models.service;
 import models.person.Customer;
 import models.person.Voucher;
 
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Comparator;
+import java.util.Date;
 
 
-public class Booking  {
+public class Booking  implements Serializable{
+    protected static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
     private String bookingID ;
-    private String checkinTime ;
-    private String checkoutTime;
+    private Date checkinTime ;
+    private Date checkoutTime;
     private Customer customer;
     private  Facility facility;
+    private String checkInTime;
+    private String checkOutTime;
 
-    public Booking(String bookingID, String checkinTime, String checkoutTime,Customer customer,Facility facility) {
+    public Booking(String bookingID, Date checkinTime, Date checkoutTime,Customer customer,Facility facility) {
         this.bookingID = bookingID;
         this.checkinTime = checkinTime;
         this.checkoutTime = checkoutTime;
@@ -30,19 +36,19 @@ public class Booking  {
         this.bookingID = bookingID;
     }
 
-    public String getCheckinTime() {
+    public Date getCheckinTime() {
         return checkinTime;
     }
 
-    public void setCheckinTime(String checkinTime) {
+    public void setCheckinTime(Date checkinTime) {
         this.checkinTime = checkinTime;
     }
 
-    public String getCheckoutTime() {
+    public Date getCheckoutTime() {
         return checkoutTime;
     }
 
-    public void setCheckoutTime(String checkoutTime) {
+    public void setCheckoutTime(Date checkoutTime) {
         this.checkoutTime = checkoutTime;
     }
 
@@ -62,6 +68,8 @@ public class Booking  {
         this.facility = facilityName;
     }
 
+
+
     @Override
     public int hashCode() {
         return 1;
@@ -73,16 +81,22 @@ public class Booking  {
         return this.bookingID.equals(booking.bookingID);
     }
 
+    public String checkInTime(){
+        return checkInTime = simpleDateFormat.format(checkinTime);
+    }
+
+    public String checkOutTime(){
+        return checkOutTime = simpleDateFormat.format(checkoutTime);
+    }
+
     @Override
     public String toString() {
         return "New Booking{" +
                 "bookingID=" + bookingID +
-                ", checkinTime=" + checkinTime +
-                ", checkoutTime=" + checkoutTime + "\n" +
+                ", checkinTime=" + checkInTime() +
+                ", checkoutTime=" + checkOutTime() + "\n" +
                 ", customer=" + customer + "\n" +
                 ", facility=" + facility +
                 '}' + "\n";
     }
-
-
 }

@@ -26,7 +26,7 @@ public class PromotionServiceImpl implements PromotionService {
         String year = scanner.nextLine();
         for (Booking e : bookingTreeSet) {
             try {
-                Date date = dateFormat.parse(e.getCheckinTime());
+                Date date = dateFormat.parse(String.valueOf(e.getCheckinTime()));
                 String year1 = getYear.format(date);
                 if (year1.equals(year)) {
                     System.out.println(e);
@@ -52,7 +52,7 @@ public class PromotionServiceImpl implements PromotionService {
 
         for (Booking e : bookingTreeSet) {
             try {
-                Date dateBooking = dateFormat.parse(e.getCheckinTime());
+                Date dateBooking = dateFormat.parse(String.valueOf(e.getCheckinTime()));
                 String yearBooking = getYear.format(dateBooking);
                 String monthBooking = getMonth.format(dateBooking);
                 if (yearBooking.equals(currenYear) && monthBooking.equals(currenMonth)) {

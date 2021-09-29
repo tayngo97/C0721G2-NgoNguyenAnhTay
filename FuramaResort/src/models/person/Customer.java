@@ -2,7 +2,7 @@ package models.person;
 
 import java.io.Serializable;
 
-public class Customer  extends Person  implements Serializable {
+public class Customer extends Person implements Serializable {
     private String customerID;
     private String typeOfGuest;
     private String address;
@@ -12,7 +12,7 @@ public class Customer  extends Person  implements Serializable {
     public final static String SILVER = "Silver";
     public final static String MEMBER = "Member";
 
-    public Customer(String name, int birthday, String gender, int CMND, int phoneNumber, String email, String  customerID , String typeOfGuest, String address) {
+    public Customer(String name, String birthday, String gender, int CMND, int phoneNumber, String email, String  customerID , String typeOfGuest, String address) {
         super(name, birthday, gender, CMND, phoneNumber, email);
         this.customerID = customerID;
         this.typeOfGuest = typeOfGuest;

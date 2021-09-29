@@ -2,9 +2,10 @@ package services;
 
 import models.service.Booking;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
-public class BookingComparatorByCheckinTime implements Comparator<Booking> {
+public class BookingComparatorByCheckinTime implements Comparator<Booking>, Serializable {
     @Override
     public int compare(Booking o1, Booking o2) {
         if (o1.getCheckinTime().compareTo(o2.getCheckinTime()) == 0){

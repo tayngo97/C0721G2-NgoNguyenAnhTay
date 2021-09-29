@@ -20,7 +20,7 @@ public class Employee  extends Person implements Serializable {
     public final static String MANAGER = "manager";
     public final static String GM = "General Manager";
 
-    public Employee(String name, int birthday, String gender, int CMND, int phoneNumber, String email, String staffID, String level, String position, int salary) {
+    public Employee(String name, String birthday, String gender, int CMND, int phoneNumber, String email, String staffID, String level, String position, int salary) {
         super(name, birthday, gender, CMND, phoneNumber, email);
         this.staffID = staffID;
         this.level = level;

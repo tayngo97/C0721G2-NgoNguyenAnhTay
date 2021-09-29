@@ -2,10 +2,12 @@ package models.service;
 
 import models.service.Facility;
 
-public class Room extends Facility {
+import java.io.Serializable;
+
+public class Room extends Facility implements Serializable {
     private String promotionService;
 
-    public Room(String serviceName, String serviceID, int usableArea, int rentalCost, int maxNumberOfTenants, String typeOfRent, String promotionService) {
+    public Room(String serviceName, String serviceID, String usableArea, String rentalCost, String maxNumberOfTenants, String typeOfRent, String promotionService) {
         super(serviceName, serviceID, usableArea, rentalCost, maxNumberOfTenants, typeOfRent);
         this.promotionService = promotionService;
     }
@@ -20,8 +22,8 @@ public class Room extends Facility {
 
     @Override
     public String toString() {
-        return "Room{" +
+        return "Room{"  + super.toString()+
                 "promotionService='" + promotionService + '\'' +
-                "} " + super.toString();
+                "} ";
     }
 }

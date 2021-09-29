@@ -1,18 +1,20 @@
 package models.service;
 
-public abstract class Facility {
+import java.io.Serializable;
+
+public abstract class Facility implements Serializable {
     private String serviceName;
     private String serviceID;
-    private int usableArea;
-    private int rentalCost;
-    private int maxNumberOfTenants ;
+    private String usableArea;
+    private String rentalCost;
+    private String maxNumberOfTenants ;
     private  String typeOfRent;
 
-    public final static String HOURS = "hours";
-    public final static String MONTH = "month";
-    public final static String YEAR = "year";
+    public final static String HOURS = "Hours";
+    public final static String MONTH = "Month";
+    public final static String YEAR = "Year";
 
-    public Facility(String serviceName, String serviceID, int usableArea, int rentalCost, int maxNumberOfTenants, String typeOfRent) {
+    public Facility(String serviceName, String serviceID, String usableArea, String rentalCost, String maxNumberOfTenants, String typeOfRent) {
         this.serviceName = serviceName;
         this.serviceID = serviceID;
         this.usableArea = usableArea;
@@ -37,27 +39,27 @@ public abstract class Facility {
         this.serviceID = serviceID;
     }
 
-    public int getUsableArea() {
+    public String getUsableArea() {
         return usableArea;
     }
 
-    public void setUsableArea(int usableArea) {
+    public void setUsableArea(String usableArea) {
         this.usableArea = usableArea;
     }
 
-    public int getRentalCost() {
+    public String getRentalCost() {
         return rentalCost;
     }
 
-    public void setRentalCost(int rentalCost) {
+    public void setRentalCost(String rentalCost) {
         this.rentalCost = rentalCost;
     }
 
-    public int getMaxNumberOfTenants() {
+    public String getMaxNumberOfTenants() {
         return maxNumberOfTenants;
     }
 
-    public void setMaxNumberOfTenants(int maxNumberOfTenants) {
+    public void setMaxNumberOfTenants(String maxNumberOfTenants) {
         this.maxNumberOfTenants = maxNumberOfTenants;
     }
 
@@ -71,13 +73,12 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Facility{" +
+        return
                 "serviceName='" + serviceName + '\'' +
                 ", serviceID='" + serviceID + '\'' +
-                ", usableArea=" + usableArea +
-                ", rentalCost=" + rentalCost +
-                ", maxNumberOfTenants=" + maxNumberOfTenants +
-                ", typeOfRent='" + typeOfRent + '\'' +
-                '}';
+                ", usableArea='" + usableArea + '\'' +
+                ", rentalCost='" + rentalCost + '\'' +
+                ", maxNumberOfTenants='" + maxNumberOfTenants + '\'' +
+                ", typeOfRent='" + typeOfRent + '\'';
     }
 }

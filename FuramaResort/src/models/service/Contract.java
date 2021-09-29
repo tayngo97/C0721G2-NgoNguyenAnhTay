@@ -2,7 +2,9 @@ package models.service;
 
 import models.person.Customer;
 
-public class Contract {
+import java.io.Serializable;
+
+public class Contract implements Serializable {
     private String contractID;
     private Booking bookingID;
     private int depositAmount;

@@ -1,6 +1,9 @@
 package services;
 
 import models.person.Customer;
+import models.person.Employee;
+import services.exception_validate.CheckAgeInput;
+import services.exception_validate.IllegalAgeInputException;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -8,20 +11,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomerServiceImpl implements CustomerService {
+public class CustomerServiceImpl implements CustomerService,Serializable {
+    private static File file = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\customer.csv");
     protected static List<Customer> customerList = new LinkedList<>();
     private static Scanner scanner = new Scanner(System.in);
 
-    static {
-        Customer customer1 = new Customer("Steven", 1980, "Male", 100029, 906959, "Steven@gmail.com", "C101", "Member", "Newyork");
-        Customer customer2 = new Customer("Jonh", 1985, "Male", 100030, 906979, "Jonh@gmail.com", "C102", "Silver", "Canada");
-        Customer customer3 = new Customer("Anna", 1987, "Female", 100031, 906958, "Anna@gmail.com", "C103", "Member", "US");
-        customerList.add(customer1);
-        customerList.add(customer2);
-        customerList.add(customer3);
-    }
 
     public static Customer getOb(String id) {
+        customerList = readDataFromFile();
         for (Customer e : customerList) {
             if (e.getCustomerID().equals(id)) {
                 return e;
@@ -30,8 +27,6 @@ public class CustomerServiceImpl implements CustomerService {
         return null;
     }
 
-
-    @Override
     public void addNewCustomer() {
         boolean flag = true;
         while (flag) {
@@ -39,8 +34,7 @@ public class CustomerServiceImpl implements CustomerService {
             try {
                 System.out.println("Enter  name");
                 String name = scanner.nextLine();
-                System.out.println("Enter  bithday");
-                int birrt = Integer.parseInt(scanner.nextLine());
+                String birrt = CheckAgeInput.checkAgeInput();
                 System.out.println("Enter  gender");
                 String gender = scanner.nextLine();
                 System.out.println("Enter  CMND");
@@ -56,7 +50,11 @@ public class CustomerServiceImpl implements CustomerService {
                 System.out.println("Enter address");
                 String address = scanner.nextLine();
                 Customer customer = new Customer(name, birrt, gender, cmnd, phone, email, ID, typeOfGuest, address);
+                if (file.length()>0){
+                    customerList = readDataFromFile();
+                }
                 customerList.add(customer);
+                writeToFile(customerList);
             } catch (Exception exception) {
                 System.err.println("Invalid input,try again !");
                 flag = true;
@@ -64,18 +62,41 @@ public class CustomerServiceImpl implements CustomerService {
         }
     }
 
-    @Override
-    public void editInfoCustomer() {
+    public void deleteCustomer() {
+        System.out.println("Enter name to delete !");
+        String name = scanner.nextLine();
+        customerList = readDataFromFile();
+        customerList.removeIf(e -> e.getName().equals(name));
+        writeToFile(customerList);
         showInfoCustomer();
+    }
+
+    public void searchCustomer() {
+        boolean flag = false;
+        System.out.println("Enter customer name :");
+        String name = scanner.nextLine();
+        customerList = readDataFromFile();
+        for (Customer customer : customerList) {
+            if (customer.getName().equals(name)) {
+                System.out.println(customer);
+                flag = true;
+            }
+        }
+        if (!flag) {
+            System.err.println("Not found !");
+        }
+    }
+
+    public void editInfoCustomer() {
+        customerList = readDataFromFile();
         System.out.println("Enter name of customer to edit !");
         String name = scanner.nextLine();
         for (Customer e : customerList) {
             if (e.getName().equals(name)) {
                 boolean flag = true;
                 while (flag) {
-                    flag = false;
                     try {
-                        System.out.println("1 Edit name" + "\n" + "2 Edit birthday" + "\n" + "3 Edit gender" + "\n" + "4 Edit CMND" + "\n" + "5 Edit phoneNumber" + "\n" + "6 Edit email" + "\n" + "7 Edit Customer ID" + "\n" + "8 Edit typeOfGuest" + "\n" + "9 Edit address" + "\n" + "10 Edit Customer ID" + "\n" + "11 Finish edit");
+                        System.out.println("1 Edit name" + "\n" + "2 Edit birthday" + "\n" + "3 Edit gender" + "\n" + "4 Edit CMND" + "\n" + "5 Edit phoneNumber" + "\n" + "6 Edit email" + "\n" + "7 Edit Customer ID" + "\n" + "8 Edit typeOfGuest" + "\n" + "9 Edit address" + "\n" + "10 Finish edit");
                         int choice = Integer.parseInt(scanner.nextLine());
                         switch (choice) {
                             case 1:
@@ -84,7 +105,8 @@ public class CustomerServiceImpl implements CustomerService {
                                 break;
                             case 2:
                                 System.out.println("Enter new bithday");
-                                e.setBirthday(Integer.parseInt(scanner.nextLine()));
+                                String birth = CheckAgeInput.checkAgeInput();
+                                e.setBirthday(birth);
                                 break;
                             case 3:
                                 System.out.println("Enter new gender");
@@ -107,9 +129,8 @@ public class CustomerServiceImpl implements CustomerService {
                                 e.setCustomerID(scanner.nextLine());
                                 break;
                             case 8:
-                                boolean flag1 = true;
-                                while (flag1) {
-                                    flag1 = false;
+                                while (flag) {
+                                    flag = false;
                                     try {
                                         System.out.println("Enter new typeOfGuest" + "\n" + "1.DIAMOND" + "\n" + "2.PLATINUM" + "\n" + "3.GOLD" + "\n" + "4.SILVER" + "\n" + "5.MEMBER");
                                         int choice1 = Integer.parseInt(scanner.nextLine());
@@ -132,15 +153,16 @@ public class CustomerServiceImpl implements CustomerService {
                                         }
                                     } catch (Exception exception) {
                                         System.err.println("Invalid input,try again!");
-                                        flag1 = true;
+                                        flag = true;
                                     }
                                 }
+                                flag = true;
                                 break;
                             case 9:
                                 System.out.println("Enter new address");
                                 e.setAddress(scanner.nextLine());
                                 break;
-                            case 11:
+                            case 10:
                                 flag = false;
                                 break;
                         }
@@ -151,20 +173,45 @@ public class CustomerServiceImpl implements CustomerService {
                 }
             }
         }
+        writeToFile(customerList);
         showInfoCustomer();
     }
 
-
-    @Override
     public void showInfoCustomer() {
+        customerList = readDataFromFile();
         for (Customer e : customerList) {
             System.out.println(e);
         }
     }
 
     public static void show() {
+        customerList = readDataFromFile();
         for (Customer e : customerList) {
             System.out.println(e);
+        }
+    }
+
+    public static List<Customer> readDataFromFile() {
+        List<Customer> customer = new LinkedList<>();
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            customer = (List<Customer>) ois.readObject();
+            ois.close();
+        } catch (Exception ex) {
+            System.out.println("File is empty");
+        }
+        return customer;
+    }
+
+    public static void writeToFile(List<Customer> customers) {
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(customers);
+            oos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

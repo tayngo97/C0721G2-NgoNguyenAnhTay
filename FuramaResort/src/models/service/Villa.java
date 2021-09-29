@@ -2,16 +2,18 @@ package models.service;
 
 import models.service.Facility;
 
-public class Villa  extends Facility {
+import java.io.Serializable;
+
+public class Villa  extends Facility implements Serializable {
     private String roomStandard ;
-    private int poolArea;
-    private int numOfFloor;
+    private String poolArea;
+    private String numOfFloor;
 
-    public static final String STANDARD = "standart";
+    public static final String STANDARD = "Standard";
     public static final String DELUXE = "Deluxe";
-    public static final String FAMILY = "FAMILY";
+    public static final String FAMILY = "Family";
 
-    public Villa(String serviceName, String serviceID, int usableArea, int rentalCost, int maxNumberOfTenants, String typeOfRent, String roomStandard, int poolArea, int numOfFloor) {
+    public Villa(String serviceName, String serviceID, String usableArea, String rentalCost, String maxNumberOfTenants, String typeOfRent, String roomStandard, String poolArea, String numOfFloor) {
         super(serviceName, serviceID, usableArea, rentalCost, maxNumberOfTenants, typeOfRent);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
@@ -26,28 +28,28 @@ public class Villa  extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public int getPoolArea() {
+    public String getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(int poolArea) {
+    public void setPoolArea(String poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getNumOfFloor() {
+    public String getNumOfFloor() {
         return numOfFloor;
     }
 
-    public void setNumOfFloor(int numOfFloor) {
+    public void setNumOfFloor(String numOfFloor) {
         this.numOfFloor = numOfFloor;
     }
 
     @Override
     public String toString() {
-        return "Villa{" +
+        return "Villa{" + super.toString() +
                 "roomStandard='" + roomStandard + '\'' +
                 ", poolArea=" + poolArea +
                 ", numOfFloor=" + numOfFloor +
-                "} " + super.toString();
+                "} ";
     }
 }
