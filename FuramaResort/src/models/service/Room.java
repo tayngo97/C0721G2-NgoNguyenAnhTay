@@ -4,7 +4,7 @@ import models.service.Facility;
 
 import java.io.Serializable;
 
-public class Room extends Facility implements Serializable {
+public class Room extends Facility {
     private String promotionService;
 
     public Room(String serviceName, String serviceID, String usableArea, String rentalCost, String maxNumberOfTenants, String typeOfRent, String promotionService) {
@@ -25,5 +25,10 @@ public class Room extends Facility implements Serializable {
         return "Room{"  + super.toString()+
                 "promotionService='" + promotionService + '\'' +
                 "} ";
+    }
+
+    public String stringToFile(){
+        return getServiceName() +","+ getServiceID()+","+ getUsableArea()+","+ getRentalCost()+","+ getMaxNumberOfTenants()+
+                ","+ getTypeOfRent()+","+ getPromotionService();
     }
 }

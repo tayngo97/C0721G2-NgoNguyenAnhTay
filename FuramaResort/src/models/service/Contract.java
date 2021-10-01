@@ -4,7 +4,7 @@ import models.person.Customer;
 
 import java.io.Serializable;
 
-public class Contract implements Serializable {
+public class Contract  {
     private String contractID;
     private Booking bookingID;
     private int depositAmount;
@@ -18,6 +18,11 @@ public class Contract implements Serializable {
         this.totalPayment = totalPayment;
 
     }
+
+    public String stringToWrite(){
+        return contractID + "," + bookingID.stringToWrite() + "," + depositAmount + ","+ totalPayment;
+    }
+
 
     public String getContractID() {
         return contractID;
@@ -57,7 +62,7 @@ public class Contract implements Serializable {
     public String toString() {
         return "Contract{" +
                 "contractID='" + contractID + '\'' +
-                ", bookingID='" + bookingID + '\'' +
+                ", bookingID='" + bookingID.toStringContract() + '\'' +
                 ", depositAmount=" + depositAmount +
                 ", totalPayment=" + totalPayment +
                 '}';

@@ -1,22 +1,24 @@
 package services;
 
 import models.person.Employee;
+import utils.EmployeeToCsv;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
-    private static File file = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\employee.csv");
+    protected static EmployeeToCsv employee = new EmployeeToCsv();
     private static List<Employee> employeelist = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
 
     public void showInfoList() {
-        employeelist = readDataFromFile();
-        for (Employee e : employeelist) {
+        employeelist = employee.readDataFromFile();
+        for (Employee e :  employeelist) {
             System.out.println(e);
         }
     }
@@ -25,7 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         boolean flag = false;
         System.out.println("Enter employee name :");
         String name = scanner.nextLine();
-        employeelist = readDataFromFile();
+        employeelist = employee.readDataFromFile();
         for (Employee employee : employeelist) {
             if (employee.getName().equals(name)) {
                 System.out.println(employee);
@@ -62,13 +64,13 @@ public class EmployeeServiceImpl implements EmployeeService {
                 String position = scanner.nextLine();
                 System.out.println("Enter new Salary (number)");
                 int salary = Integer.parseInt(scanner.nextLine());
-                Employee employee = new Employee(name, birth, gender, cmnd, phone, email, ID, level, position, salary);
+                Employee employee1 = new Employee(name, birth, gender, cmnd, phone, email, ID, level, position, salary);
 
-                if (file.length() > 0) {
-                    employeelist = readDataFromFile();
+                if (EmployeeToCsv.file.length() > 0) {
+                    employeelist = employee.readDataFromFile();
                 }
-                employeelist.add(employee);
-                writeToFile(employeelist);
+                employeelist.add(employee1);
+                employee.writeToFile(employeelist);
             } catch (Exception e) {
                 System.err.println("Error type of input");
                 flag = true;
@@ -79,16 +81,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void deleteEmployee() {
         System.out.println("Enter name to delete !");
         String name = scanner.nextLine();
-        employeelist = readDataFromFile();
+        employeelist = employee.readDataFromFile();
         employeelist.removeIf(e -> e.getName().equals(name));
-        writeToFile(employeelist);
+        employee.writeToFile(employeelist);
         showInfoList();
     }
 
     public void editInfoEmployee() {
         System.out.println("Enter name of employee to edit !");
         String name = scanner.nextLine();
-        employeelist = readDataFromFile();
+        employeelist = employee.readDataFromFile();
         for (Employee e : employeelist) {
             if (e.getName().equals(name)) {
                 boolean flag = true;
@@ -202,31 +204,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 }
             }
         }
-        writeToFile(employeelist);
+        employee.writeToFile(employeelist);
         showInfoList();
-    }
-
-    public static List<Employee> readDataFromFile() {
-        List<Employee> products = new ArrayList<>();
-        try {
-            FileInputStream fis = new FileInputStream(file);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            products = (List<Employee>) ois.readObject();
-            ois.close();
-        } catch (Exception ex) {
-            System.out.println("File is empty");
-        }
-        return products;
-    }
-
-    public static void writeToFile(List<Employee> employees) {
-        try {
-            FileOutputStream fos = new FileOutputStream(file);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(employees);
-            oos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

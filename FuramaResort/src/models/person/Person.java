@@ -2,7 +2,7 @@ package models.person;
 
 import java.io.Serializable;
 
-public abstract class Person implements Serializable {
+public abstract class Person  {
     private String name;
     private String birthday;
     private String gender;

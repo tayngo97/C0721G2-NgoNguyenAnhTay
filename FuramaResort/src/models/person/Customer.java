@@ -2,7 +2,7 @@ package models.person;
 
 import java.io.Serializable;
 
-public class Customer extends Person implements Serializable {
+public class Customer extends Person{
     private String customerID;
     private String typeOfGuest;
     private String address;
@@ -52,4 +52,10 @@ public class Customer extends Person implements Serializable {
                 ", address='" + address + '\'' +
                 '}';
     }
+
+    public String stringToWrite(){
+        return getName() + "," + getBirthday() + "," + getGender()+ "," + getCMND() +"," + getPhoneNumber()
+                + "," + getEmail() +"," + getCustomerID() +"," + getTypeOfGuest() +"," + getAddress();
+    }
+
 }

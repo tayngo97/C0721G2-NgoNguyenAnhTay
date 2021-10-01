@@ -2,6 +2,7 @@ package services;
 
 import models.person.Employee;
 import models.service.*;
+import utils.ContractToCsv;
 
 import java.io.*;
 import java.text.DecimalFormat;
@@ -9,7 +10,6 @@ import java.util.*;
 
 public class ContractServiceImpl implements ContractService {
     protected static File contractFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\contract.csv");
-    protected static Queue<Booking> bookingQueue = BookingServiceImpl.changeSetToQueue();
     protected static Queue<Contract> listContracts = new ArrayDeque<>();
     protected static Scanner scanner = new Scanner(System.in);
 
@@ -17,46 +17,19 @@ public class ContractServiceImpl implements ContractService {
     @Override
     public void CreateNewContracts() {
         boolean flag = true;
+        Queue<Booking> bookingQueue = BookingServiceImpl.changeSetToQueue();
         bookingQueue.forEach(System.out::println);
         System.out.println("Enter bookingID to create contract :");
         String bookingId = scanner.nextLine();
 
         for (Booking booking : bookingQueue) {
-            if (!booking.getBookingID().equals(bookingId) || booking.getFacilityName() instanceof Room) {
+            if (!booking.getBookingID().equals(bookingId) || booking.getFacility() instanceof Room) {
                 flag = false;
             }
             while (flag) {
                 flag = false;
                 try {
-                    if (booking.getFacilityName() instanceof Villa) {
-                        System.out.println(booking.toString());
-                        System.out.println("Enter contractID");
-                        String contractID = (scanner.nextLine());
-                        System.out.println("Enter depositAmount");
-                        int depositAmount = Integer.parseInt(scanner.nextLine());
-                        System.out.println("Enter totalPayment");
-                        int totalPayment = Integer.parseInt(scanner.nextLine());
-                        Contract contract = new Contract(contractID, booking, depositAmount, totalPayment);
-                        if (contractFile.length() > 0) {
-                            listContracts = readDataFromFile();
-                        }
-                        listContracts.add(contract);
-                        writeToFile(listContracts);
-                    } else if (booking.getFacilityName() instanceof House) {
-                        System.out.println(booking.toString());
-                        System.out.println("Enter contractID");
-                        String contractID = scanner.nextLine();
-                        System.out.println("Enter depositAmount");
-                        int depositAmount = Integer.parseInt(scanner.nextLine());
-                        System.out.println("Enter totalPayment");
-                        int totalPayment = Integer.parseInt(scanner.nextLine());
-                        Contract contract = new Contract(contractID, booking, depositAmount, totalPayment);
-                        if (contractFile.length() > 0) {
-                            listContracts = readDataFromFile();
-                        }
-                        listContracts.add(contract);
-                        writeToFile(listContracts);
-                    }
+                    getFacility(booking.getFacility(), booking);
                 } catch (Exception e) {
                     System.err.println("Invalid input");
                     flag = true;
@@ -69,27 +42,25 @@ public class ContractServiceImpl implements ContractService {
 
     @Override
     public void DisplayListContracts() {
-        listContracts = readDataFromFile();
+        Queue<Contract> listContracts1 = ContractToCsv.readDataFromFile();
         int i = 0;
-        for (Contract element : listContracts) {
-            if (element == null) {
-                break;
-            } else System.out.println(++i + "=> " + element);
+        for (Contract element : listContracts1) {
+            System.out.println(++i + "=> " + element);
         }
     }
 
-    public  void deleleContract() {
-        listContracts = readDataFromFile();
+    public void deleleContract() {
+        Queue<Contract> listContracts1 = ContractToCsv.readDataFromFile();
         System.out.println("Enter contractID to delete:");
         String contractId = scanner.nextLine();
-        listContracts.removeIf(contract -> contract.getContractID().equals(contractId));
-        listContracts.forEach(System.out::println);
-        writeToFile(listContracts);
+        listContracts1.removeIf(contract -> contract.getContractID().equals(contractId));
+        listContracts1.forEach(System.out::println);
+        ContractToCsv.writeToFile(listContracts1);
     }
 
     @Override
     public void EditContracts() {
-        listContracts = readDataFromFile();
+        Queue<Contract> listContracts = ContractToCsv.readDataFromFile();
         System.out.println("Enter id to edit contract :");
         String id = scanner.nextLine();
         for (Contract contract : listContracts) {
@@ -127,34 +98,33 @@ public class ContractServiceImpl implements ContractService {
                     }
                 }
             }
-        } writeToFile(listContracts);
-    }
-
-    public static Queue<Contract> readDataFromFile() {
-        Queue<Contract> contracts = new ArrayDeque<>();
-        try {
-            FileInputStream fis = new FileInputStream(contractFile);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            contracts = (Queue<Contract>) ois.readObject();
-            ois.close();
-        } catch (Exception ex) {
-            System.out.println("File is empty");
         }
-        return contracts;
+        ContractToCsv.writeToFile(listContracts);
     }
 
-    public static void writeToFile(Queue<Contract> contracts) {
-        try {
-            FileOutputStream fos = new FileOutputStream(contractFile);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(contracts);
-            oos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+    public void getFacility(Facility facility, Booking booking) {
+        System.out.println(booking.toString());
+        System.out.println("Enter contractID");
+        String contractID = scanner.nextLine();
+        System.out.println("Enter depositAmount");
+        int depositAmount = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter totalPayment");
+        int totalPayment = Integer.parseInt(scanner.nextLine());
+        Contract contract = new Contract(contractID, booking, depositAmount, totalPayment);
+        if (facility instanceof Villa) {
+            if (contractFile.length() > 0) {
+                listContracts = ContractToCsv.readDataFromFile();
+            }
+            listContracts.add(contract);
+            ContractToCsv.writeToFile(listContracts);
+        } else if (facility instanceof House) {
+            if (contractFile.length() > 0) {
+                listContracts = ContractToCsv.readDataFromFile();
+            }
+            listContracts.add(contract);
+            ContractToCsv.writeToFile(listContracts);
         }
     }
-
-
 }
 
 

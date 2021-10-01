@@ -1,32 +1,54 @@
 package models.service;
 
 import models.person.Customer;
-import models.person.Voucher;
 
 import java.io.Serializable;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Comparator;
 import java.util.Date;
+import java.util.Objects;
+import java.util.Set;
+import java.util.TreeSet;
 
-
-public class Booking  implements Serializable{
+public class Booking implements Comparable<Booking> {
     protected static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
-    private String bookingID ;
-    private Date checkinTime ;
-    private Date checkoutTime;
+    private String bookingID;
+    private String checkinTime;
+    private String checkoutTime;
     private Customer customer;
-    private  Facility facility;
-    private String checkInTime;
-    private String checkOutTime;
+    private Facility facility;
+    private Date checkin;
+    private Date checkout;
 
-    public Booking(String bookingID, Date checkinTime, Date checkoutTime,Customer customer,Facility facility) {
+    public Booking(String bookingID, String checkinTime, String checkoutTime, Customer customer, Facility facility) {
         this.bookingID = bookingID;
         this.checkinTime = checkinTime;
         this.checkoutTime = checkoutTime;
         this.customer = customer;
-        this.facility = facility ;
+        this.facility = facility;
     }
 
+    public String stringToWrite() {
+        return getBookingID() + "," + getCheckinTime() + "," + getCheckoutTime() + "," + getCustomer().stringToWrite() + "," + getFacility().stringToFile();
+    }
+
+    public Date getCheckIn() {
+        try {
+            this.checkin = simpleDateFormat.parse(this.checkinTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return checkin;
+    }
+
+    public Date getCheckOut() {
+        try {
+            this.checkout = simpleDateFormat.parse(this.checkoutTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return checkout;
+    }
 
     public String getBookingID() {
         return bookingID;
@@ -36,19 +58,19 @@ public class Booking  implements Serializable{
         this.bookingID = bookingID;
     }
 
-    public Date getCheckinTime() {
+    public String getCheckinTime() {
         return checkinTime;
     }
 
-    public void setCheckinTime(Date checkinTime) {
+    public void setCheckinTime(String checkinTime) {
         this.checkinTime = checkinTime;
     }
 
-    public Date getCheckoutTime() {
+    public String getCheckoutTime() {
         return checkoutTime;
     }
 
-    public void setCheckoutTime(Date checkoutTime) {
+    public void setCheckoutTime(String checkoutTime) {
         this.checkoutTime = checkoutTime;
     }
 
@@ -60,43 +82,44 @@ public class Booking  implements Serializable{
         this.customer = customer;
     }
 
-    public Facility getFacilityName() {
+    public Facility getFacility() {
         return facility;
     }
 
-    public void setFacilityName(Facility facilityName) {
+    public void setFacility(Facility facilityName) {
         this.facility = facilityName;
     }
 
 
 
     @Override
-    public int hashCode() {
-        return 1;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        Booking booking = (Booking) obj ;
-        return this.bookingID.equals(booking.bookingID);
-    }
-
-    public String checkInTime(){
-        return checkInTime = simpleDateFormat.format(checkinTime);
-    }
-
-    public String checkOutTime(){
-        return checkOutTime = simpleDateFormat.format(checkoutTime);
-    }
-
-    @Override
     public String toString() {
-        return "New Booking{" +
+        return "Booking{" +
                 "bookingID=" + bookingID +
-                ", checkinTime=" + checkInTime() +
-                ", checkoutTime=" + checkOutTime() + "\n" +
-                ", customer=" + customer + "\n" +
-                ", facility=" + facility +
+                ", checkinTime=" + checkinTime +
+                ", checkoutTime=" + checkoutTime + "\n"
+                + customer + "\n"
+                + facility +
                 '}' + "\n";
     }
+
+    public String toStringContract() {
+        return   bookingID +
+                ", checkinTime=" + checkinTime +
+                ", checkoutTime=" + checkoutTime + "\n"
+                + customer + "\n"
+                + facility +
+                '}' + "\n";
+    }
+
+    @Override
+    public int compareTo(Booking o) {
+        if ((bookingID.compareTo(o.bookingID)) == 0){
+            return 0;
+        }
+        if ((this.getCheckIn().compareTo(o.getCheckIn()) == 0)) {
+            return this.getCheckOut().compareTo(o.getCheckOut());
+        } else return this.getCheckIn().compareTo(o.getCheckIn());
+    }
+
 }

@@ -2,7 +2,7 @@ package models.person;
 
 import java.io.Serializable;
 
-public class Employee  extends Person implements Serializable {
+public class Employee  extends Person   {
     private String staffID;
     private String level;
     private String position;
@@ -69,4 +69,10 @@ public class Employee  extends Person implements Serializable {
                 ", position='" + position + '\'' +
                 ", salary=" + salary + "}";
     }
+
+    public String stringToWrite(){
+        return getName() + "," + getBirthday() + "," + getGender()+ "," + getCMND() +"," + getPhoneNumber()
+                + "," + getEmail() +"," + getStaffID() +"," + getLevel() +"," + getPosition() + "," + getSalary();
+    }
+
 }

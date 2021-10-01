@@ -1,38 +1,41 @@
 package services;
 
-import models.person.Customer;
-import models.service.Facility;
 import models.service.House;
 import models.service.Room;
 import models.service.Villa;
 import services.exception_validate.ValidateFacility;
+import utils.HouseToCSV;
+import utils.RoomToCsv;
+import utils.VillaToCSV;
 
 import java.io.*;
 import java.util.*;
 
-public class FacilityServiceImpl implements FacilityService,Serializable {
-    public static File villaFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\villa.csv");
-    public static File houseFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\house.csv");
-    public static File roomFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\room.csv");
-    private static Map<Facility, Integer> facilityIntegerMap = new LinkedHashMap<>();
+public class FacilityServiceImpl implements FacilityService {
+    protected static VillaToCSV villaList  = new VillaToCSV();
+    protected static HouseToCSV houseList  = new HouseToCSV();
+    protected static RoomToCsv roomList  = new RoomToCsv();
+    private static Map<Villa, Integer> villaMap = new LinkedHashMap<>();
+    private static Map<House, Integer> houseMap = new LinkedHashMap<>();
+    private static Map<Room, Integer> roomMap = new LinkedHashMap<>();
     private Scanner scanner = new Scanner(System.in);
 
     public void showFacilityList() {
-        if (villaFile.length()>0){
-            Map<Facility,Integer> villaMap= readDataFromFile(villaFile);
-            for (Map.Entry<Facility, Integer> entry : villaMap.entrySet()) {
+        if ( VillaToCSV.villaFile.length() > 0) {
+            Map<Villa, Integer> villaMap = villaList.readDataFromFile();
+            for (Map.Entry<Villa, Integer> entry : villaMap.entrySet()) {
                 System.out.println(entry.getKey() + " " + entry.getValue() + "times");
             }
         }
-        if (houseFile.length()>0){
-            Map<Facility,Integer> houseMap= readDataFromFile(houseFile);
-            for (Map.Entry<Facility, Integer> entry : houseMap.entrySet()) {
+        if (HouseToCSV.houseFile.length() > 0) {
+            Map<House, Integer> houseMap = houseList.readDataFromFile();
+            for (Map.Entry<House, Integer> entry : houseMap.entrySet()) {
                 System.out.println(entry.getKey() + " " + entry.getValue() + "times");
             }
         }
-        if (roomFile.length()>0){
-            Map<Facility,Integer> roomMap= readDataFromFile(roomFile);
-            for (Map.Entry<Facility, Integer> entry : roomMap.entrySet()) {
+        if (RoomToCsv.roomFile.length() > 0) {
+            Map<Room, Integer> roomMap = roomList.readDataFromFile();
+            for (Map.Entry<Room, Integer> entry : roomMap.entrySet()) {
                 System.out.println(entry.getKey() + " " + entry.getValue() + "times");
             }
         }
@@ -61,34 +64,34 @@ public class FacilityServiceImpl implements FacilityService,Serializable {
                         String roomStandard = ValidateFacility.checkRoomStandard();
                         String poolArea = ValidateFacility.checkPoolArea();
                         String numOfFloor = ValidateFacility.checkNumOfFloor();
-                        Villa villa = new Villa(seviceName,serviceVillaId,area,rentalCost,maxNumberOfTenants,typeOfRent,roomStandard,poolArea,numOfFloor);
-                        if (villaFile.length()>0){
-                            facilityIntegerMap = readDataFromFile(villaFile);
+                        Villa villa = new Villa(seviceName, serviceVillaId, area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard, poolArea, numOfFloor);
+                        if (VillaToCSV.villaFile.length() > 0) {
+                            villaMap = villaList.readDataFromFile();
                         }
-                        facilityIntegerMap.put(villa,0);
-                        writeToFile(facilityIntegerMap,villaFile);
+                        villaMap.put(villa, 0);
+                        villaList.writeToFile(villaMap);
                         break;
                     case 2:
                         String serviceHouseId = ValidateFacility.checkHouseId();
                         String roomStandard1 = ValidateFacility.checkRoomStandard();
                         String numOfFloor1 = ValidateFacility.checkNumOfFloor();
-                        House house = new House(seviceName,serviceHouseId,area,rentalCost,maxNumberOfTenants,typeOfRent,roomStandard1,numOfFloor1);
-                        if (houseFile.length()>0){
-                            facilityIntegerMap = readDataFromFile(houseFile);
+                        House house = new House(seviceName, serviceHouseId, area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard1, numOfFloor1);
+                        if (HouseToCSV.houseFile.length() > 0) {
+                            houseMap = houseList.readDataFromFile();
                         }
-                        facilityIntegerMap.put(house,0);
-                        writeToFile(facilityIntegerMap,houseFile);
+                        houseMap.put(house, 0);
+                        houseList.writeToFile(houseMap);
                         break;
                     case 3:
                         String serviceRoomId = ValidateFacility.checkRoomId();
                         System.out.println("Enter FreeService");
                         String promotionService = scanner.nextLine();
-                        Room room = new Room(seviceName, serviceRoomId,area,rentalCost,maxNumberOfTenants,typeOfRent,promotionService);
-                        if (roomFile.length() > 0){
-                            facilityIntegerMap = readDataFromFile(roomFile);
+                        Room room = new Room(seviceName, serviceRoomId, area, rentalCost, maxNumberOfTenants, typeOfRent, promotionService);
+                        if (RoomToCsv.roomFile.length() > 0) {
+                            roomMap = roomList.readDataFromFile();
                         }
-                        facilityIntegerMap.put(room, 0);
-                        writeToFile(facilityIntegerMap,roomFile);
+                        roomMap.put(room, 0);
+                        roomList.writeToFile(roomMap);
                         break;
                 }
             } catch (Exception e) {
@@ -101,56 +104,36 @@ public class FacilityServiceImpl implements FacilityService,Serializable {
 
     @Override
     public void showMaintenanceList() {
-        if (villaFile.length()>0){
-            Map<Facility,Integer> villaMap= readDataFromFile(villaFile);
-            for (Map.Entry<Facility, Integer> entry : villaMap.entrySet()) {
+        boolean flag = false;
+        if ( VillaToCSV.villaFile.length() > 0) {
+            Map<Villa, Integer> villaMap = villaList.readDataFromFile();
+            for (Map.Entry<Villa, Integer> entry : villaMap.entrySet()) {
                 if (entry.getValue() >= 5) {
                     System.out.println("Need to maintenance " + entry.getKey() + " exceed " + entry.getValue() + "times");
+                    flag = true;
                 }
             }
         }
-        if (houseFile.length()>0){
-            Map<Facility,Integer> houseMap= readDataFromFile(houseFile);
-            for (Map.Entry<Facility, Integer> entry : houseMap.entrySet()) {
+        if (HouseToCSV.houseFile.length() > 0) {
+            Map<House, Integer> houseMap = houseList.readDataFromFile();
+            for (Map.Entry<House, Integer> entry : houseMap.entrySet()) {
                 if (entry.getValue() >= 5) {
                     System.out.println("Need to maintenance " + entry.getKey() + " exceed " + entry.getValue() + "times");
+                    flag = true;
                 }
             }
         }
-        if (roomFile.length()>0){
-            Map<Facility,Integer> roomMap= readDataFromFile(roomFile);
-            for (Map.Entry<Facility, Integer> entry : roomMap.entrySet()) {
+        if (RoomToCsv.roomFile.length() > 0) {
+            Map<Room, Integer> roomMap = roomList.readDataFromFile();
+            for (Map.Entry<Room, Integer> entry : roomMap.entrySet()) {
                 if (entry.getValue() >= 5) {
                     System.out.println("Need to maintenance " + entry.getKey() + " exceed " + entry.getValue() + "times");
+                    flag = true;
                 }
             }
         }
-    }
-
-    public static Map<Facility,Integer> readDataFromFile(File file) {
-        Map<Facility,Integer> facilityIntegerMap = new LinkedHashMap<>();
-        try {
-            FileInputStream fis = new FileInputStream(file);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-
-            facilityIntegerMap = (Map<Facility,Integer>) ois.readObject();
-
-            ois.close();
-        } catch (Exception ex) {
-//            System.err.println("Empty facility");
-        }
-        return facilityIntegerMap;
-    }
-
-    public static void writeToFile(Map<Facility,Integer> facilities,File file) {
-        try {
-            FileOutputStream fos = new FileOutputStream(file);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(facilities);
-            oos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (!flag){
+            System.err.println("Have no facility need to maintenance!");
         }
     }
-
 }

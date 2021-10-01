@@ -51,10 +51,12 @@ public class ProductManager {
     public  static List<Product> readDataFromFile(){
         List<Product> products = new ArrayList<>();
         try{
-            FileInputStream fis = new FileInputStream(file);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            products = (List<Product>) ois.readObject();
-            ois.close();
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+
+
+
+            br.close();
         }catch(Exception ex){
             System.out.println("File is empty");
         }

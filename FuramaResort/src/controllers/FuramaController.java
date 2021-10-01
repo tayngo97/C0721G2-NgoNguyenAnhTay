@@ -13,13 +13,13 @@ public class FuramaController {
 
         boolean flagMain = true;
         while (flagMain) {
-            System.out.println("Menu" + "\n" + "1.Employee Management" + "\n" + "2.Customer Management" + "\n" + "3.Facility Management" + "\n" + "4.Booking Management" + "\n" + "5.Promotion Management" + "\n" + "6.Exit");
+            System.out.println("====||FURAMA RESORT SYSTEM||====" + "\n" + "1.Employee Management" + "\n" + "2.Customer Management" + "\n" + "3.Facility Management" + "\n" + "4.Booking Management" + "\n" + "5.Promotion Management" + "\n" + "6.Exit");
             int choice = MenuChoice.displayChoice();
             switch (choice) {
                 case 1: {
                     boolean flag = true;
                     while (flag) {
-                        System.out.println("1.Display list employee" + "\n" + "2.Add new employee" + "\n" + "3.Edit employee" + "\n" + "4.Delete employee" + "\n" + "5.Search employee" + "\n" + "6.Return main menu");
+                        System.out.println("====||EMPLOYEE SYSTEM||====" + "\n" +"1.Display list employee" + "\n" + "2.Add new employee" + "\n" + "3.Edit employee" + "\n" + "4.Delete employee" + "\n" + "5.Search employee" + "\n" + "6.Return main menu");
                         int choice1 = MenuChoice.displayChoice();
                         switch (choice1) {
                             case 1:
@@ -50,7 +50,7 @@ public class FuramaController {
                 case 2: {
                     boolean flag = true;
                     while (flag) {
-                        System.out.println("1.Display list customer" + "\n" + "2.Add new customer" + "\n" + "3.Edit customer" + "\n" + "4.Return main menu");
+                        System.out.println("====||CUSTOMER SYSTEM||====" + "\n" +"1.Display list customer" + "\n" + "2.Add new customer" + "\n" + "3.Edit customer" + "\n" + "4.Search customer"+ "\n" + "5.Return main menu");
                         int choice1 = MenuChoice.displayChoice();
                         switch (choice1) {
                             case 1:
@@ -63,6 +63,9 @@ public class FuramaController {
                                 customerService.editInfoCustomer();
                                 break;
                             case 4:
+                                customerService.searchCustomer();
+                                break;
+                            case 5:
                                 flag = false; break;
                             default:
                                 System.err.println("Invalid,try again !");
@@ -74,7 +77,7 @@ public class FuramaController {
                 case 3: {
                     boolean flag = true;
                     while (flag) {
-                        System.out.println("1.Display list facility" + "\n" + "2.Add new facility" + "\n" + "3.Display maintenance list" + "\n" + "4.Return main menu");
+                        System.out.println("====||FACILITIES SYSTEM||====" + "\n" +"1.Display list facility" + "\n" + "2.Add new facility" + "\n" + "3.Display maintenance list" + "\n" + "4.Return main menu");
                         int choice1 = MenuChoice.displayChoice();
                         switch (choice1) {
                             case 1:
@@ -99,7 +102,7 @@ public class FuramaController {
                 case 4: {
                     boolean flag = true;
                     while (flag) {
-                        System.out.println("1.Add new booking" + "\n" + "2.Display list booking" + "\n" + "3.Delete a booking" + "\n" + "4.Create new contracts" + "\n" + "5.Display list contracts" + "\n" + "6.Edit  contracts"+ "\n" + "7.Delete contracts" + "\n" + "8.Return main menu");
+                        System.out.println("====||BOOKING SYSTEM||====" + "\n" +"1.Add new booking" + "\n" + "2.Display list booking" + "\n" + "3.Delete a booking" + "\n" + "4.Create new contracts" + "\n" + "5.Display list contracts" + "\n" + "6.Edit  contracts"+ "\n" + "7.Delete contracts" + "\n" + "8.Return main menu");
                         int choice1 = MenuChoice.displayChoice();
                         switch (choice1) {
                             case 1:
@@ -136,7 +139,7 @@ public class FuramaController {
                 case 5:
                     boolean flag = true;
                     while (flag) {
-                        System.out.println("1.Display list customer use service based on year " + "\n" + "2.Display list customer get voucher in this month" + "\n" + "3.Return main menu");
+                        System.out.println("====||VOUCHER SYSTEM||====" + "\n" +"1.Display list customer use service based on year " + "\n" + "2.Display list customer get voucher in this month" + "\n" + "3.Return main menu");
                         int choice1 = MenuChoice.displayChoice();
                         switch (choice1) {
                             case 1:

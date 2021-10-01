@@ -4,7 +4,7 @@ import models.service.Facility;
 
 import java.io.Serializable;
 
-public class Villa  extends Facility implements Serializable {
+public class Villa  extends Facility {
     private String roomStandard ;
     private String poolArea;
     private String numOfFloor;
@@ -51,5 +51,10 @@ public class Villa  extends Facility implements Serializable {
                 ", poolArea=" + poolArea +
                 ", numOfFloor=" + numOfFloor +
                 "} ";
+    }
+
+    public String stringToFile(){
+        return getServiceName() +","+ getServiceID()+","+ getUsableArea()+","+ getRentalCost()+","+ getMaxNumberOfTenants()+
+                ","+ getTypeOfRent()+","+ getRoomStandard()+","+ getPoolArea()+","+ getNumOfFloor();
     }
 }

@@ -2,7 +2,7 @@ package models.service;
 
 import java.io.Serializable;
 
-public abstract class Facility implements Serializable {
+public abstract class Facility   {
     private String serviceName;
     private String serviceID;
     private String usableArea;
@@ -80,5 +80,10 @@ public abstract class Facility implements Serializable {
                 ", rentalCost='" + rentalCost + '\'' +
                 ", maxNumberOfTenants='" + maxNumberOfTenants + '\'' +
                 ", typeOfRent='" + typeOfRent + '\'';
+    }
+
+    public String stringToFile() {
+        return getServiceName() + "," + getServiceID() + "," + getUsableArea() + "," + getRentalCost() + "," + getMaxNumberOfTenants() +
+                "," + getTypeOfRent();
     }
 }

@@ -4,8 +4,8 @@ import models.service.Facility;
 
 import java.io.Serializable;
 
-public class House extends Facility implements Serializable {
-    private String roomStandard ;
+public class House extends Facility {
+    private String roomStandard;
     private String numOfFloor;
 
     public static final String STANDARD = "Standart";
@@ -36,9 +36,14 @@ public class House extends Facility implements Serializable {
 
     @Override
     public String toString() {
-        return "House{" + super.toString()+
+        return "House{" + super.toString() +
                 "roomStandard='" + roomStandard + '\'' +
                 ", numOfFloor=" + numOfFloor +
                 "} ";
+    }
+
+    public String stringToFile() {
+        return getServiceName() + "," + getServiceID() + "," + getUsableArea() + "," + getRentalCost() + "," + getMaxNumberOfTenants() +
+                "," + getTypeOfRent() + "," + getRoomStandard() + "," + getNumOfFloor();
     }
 }

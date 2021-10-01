@@ -14,7 +14,7 @@ public class PromotionServiceImpl implements PromotionService {
     protected SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
     protected DateFormat getMonth = new SimpleDateFormat("MM");
     protected SimpleDateFormat getYear = new SimpleDateFormat("yyyy");
-    protected static TreeSet<Booking> bookingTreeSet = BookingServiceImpl.bookingTreeSet;
+    protected static Set<Booking> bookingTreeSet = BookingServiceImpl.bookingTreeSet;
     protected static Stack<Booking> bookingStack = new Stack<>();
     protected static ArrayDeque<Voucher> voucherQueue = new ArrayDeque<>();
     protected static ArrayDeque<Voucher> vouchers = new ArrayDeque<>();
@@ -25,14 +25,9 @@ public class PromotionServiceImpl implements PromotionService {
         System.out.println("Enter year that customer used services !");
         String year = scanner.nextLine();
         for (Booking e : bookingTreeSet) {
-            try {
-                Date date = dateFormat.parse(String.valueOf(e.getCheckinTime()));
-                String year1 = getYear.format(date);
-                if (year1.equals(year)) {
-                    System.out.println(e);
-                }
-            } catch (ParseException parseException) {
-                parseException.printStackTrace();
+            String year1 = getYear.format(e.getCheckinTime());
+            if (year1.equals(year)) {
+                System.out.println(e);
             }
         }
     }
