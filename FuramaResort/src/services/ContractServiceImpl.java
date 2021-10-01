@@ -18,14 +18,18 @@ public class ContractServiceImpl implements ContractService {
     public void CreateNewContracts() {
         boolean flag = true;
         Queue<Booking> bookingQueue = BookingServiceImpl.changeSetToQueue();
-        bookingQueue.forEach(System.out::println);
-        System.out.println("Enter bookingID to create contract :");
-        String bookingId = scanner.nextLine();
-
-        for (Booking booking : bookingQueue) {
-            if (!booking.getBookingID().equals(bookingId) || booking.getFacility() instanceof Room) {
-                flag = false;
+        Queue<Contract> listContracts1 = ContractToCsv.readDataFromFile();
+        for (Booking booking: bookingQueue) {
+            for (Contract contract: listContracts1) {
+                if (booking.getBookingID().equals(contract.getBookingID().getBookingID()) || booking.getFacility() instanceof Room){
+                    bookingQueue.remove(booking);
+                }
             }
+        }
+
+        System.out.println("List booking have no contract:");
+        System.out.println(bookingQueue.size());
+        for (Booking booking : bookingQueue) {
             while (flag) {
                 flag = false;
                 try {
@@ -54,7 +58,9 @@ public class ContractServiceImpl implements ContractService {
         System.out.println("Enter contractID to delete:");
         String contractId = scanner.nextLine();
         listContracts1.removeIf(contract -> contract.getContractID().equals(contractId));
-        listContracts1.forEach(System.out::println);
+        for (Contract contract:listContracts1) {
+            System.out.println(contract);
+        }
         ContractToCsv.writeToFile(listContracts1);
     }
 

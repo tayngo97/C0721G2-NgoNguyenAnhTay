@@ -1,14 +1,10 @@
 package models.service;
 
 import models.person.Customer;
-
-import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Objects;
-import java.util.Set;
-import java.util.TreeSet;
+
 
 public class Booking implements Comparable<Booking> {
     protected static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -29,7 +25,7 @@ public class Booking implements Comparable<Booking> {
     }
 
     public String stringToWrite() {
-        return getBookingID() + "," + getCheckinTime() + "," + getCheckoutTime() + "," + getCustomer().stringToWrite() + "," + getFacility().stringToFile();
+        return getBookingID() + "," + getCheckinTime() + "," + getCheckoutTime()+ "," + getCustomer().stringToWrite() + "," + getFacility().stringToFile();
     }
 
     public Date getCheckIn() {

@@ -35,7 +35,7 @@ public class ContractToCsv {
                     facility = new Room(contract[13], contract[14], contract[15], contract[16], contract[17], contract[18], contract[19]);
 
                 Booking booking = new Booking(contract[1], contract[2], contract[3], customer, facility);
-                bookingSet.add(new Contract(contract[0], booking, Integer.parseInt(contract[2]), Integer.parseInt(contract[3])));
+                bookingSet.add(new Contract(contract[0], booking, Integer.parseInt(contract[contract.length-2]), Integer.parseInt(contract[contract.length-1])));
             }
 
             br.close();
