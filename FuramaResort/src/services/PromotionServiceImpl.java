@@ -2,8 +2,8 @@ package services;
 
 import models.person.Voucher;
 import models.service.Booking;
+import utils.BookingToCsv;
 
-import java.awt.print.Book;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,7 +14,6 @@ public class PromotionServiceImpl implements PromotionService {
     protected SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
     protected DateFormat getMonth = new SimpleDateFormat("MM");
     protected SimpleDateFormat getYear = new SimpleDateFormat("yyyy");
-    protected static Set<Booking> bookingTreeSet = BookingServiceImpl.bookingTreeSet;
     protected static Stack<Booking> bookingStack = new Stack<>();
     protected static ArrayDeque<Voucher> voucherQueue = new ArrayDeque<>();
     protected static ArrayDeque<Voucher> vouchers = new ArrayDeque<>();
@@ -22,11 +21,18 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public void displayCustomerUseService() {
+        Set<Booking> bookingTreeSet1 = BookingToCsv.readDataFromFile();
         System.out.println("Enter year that customer used services !");
         String year = scanner.nextLine();
-        for (Booking e : bookingTreeSet) {
-            String year1 = getYear.format(e.getCheckinTime());
-            if (year1.equals(year)) {
+        for (Booking e : bookingTreeSet1) {
+            String year2 = "";
+            try {
+                Date year1 = dateFormat.parse(e.getCheckinTime());
+                 year2 = getYear.format(year1);
+            }catch (Exception exception){
+                exception.printStackTrace();
+            }
+            if (year2.equals(year)) {
                 System.out.println(e);
             }
         }
@@ -44,10 +50,11 @@ public class PromotionServiceImpl implements PromotionService {
         }
         String currenMonth = getMonth.format(date);
         String currenYear = getYear.format(date);
+        Set<Booking> bookingTreeSet = BookingToCsv.readDataFromFile();
 
         for (Booking e : bookingTreeSet) {
             try {
-                Date dateBooking = dateFormat.parse(String.valueOf(e.getCheckinTime()));
+                Date dateBooking = dateFormat.parse(e.getCheckinTime());
                 String yearBooking = getYear.format(dateBooking);
                 String monthBooking = getMonth.format(dateBooking);
                 if (yearBooking.equals(currenYear) && monthBooking.equals(currenMonth)) {
@@ -64,33 +71,48 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     public static void createVouchers() {
-        System.out.println("The number of customer have booked in this month : " + bookingTreeSet.size() + " person");
+        System.out.println("The number of customer have booked in this month : " + bookingStack.size() + " person");
 
-        while (voucherQueue.size() < bookingStack.size()) {
-            int choice = 0;
-            boolean flag = true;
-            while (flag){
-                flag = false;
-                try {
-                    System.out.println("1.Discount 50%" + "\n" + "2.Discount 20%" + "\n" + "3.Discount 10%" + "\n" + "Enter your choice");
-                   choice = Integer.parseInt(scanner.nextLine());
-                }catch (Exception exception){
-                    System.err.println("Invalid input !");
-                    flag = true;
-                }
+        int discount50 = 0;
+        boolean flag = true;
+        while (flag){
+            flag = false;
+            System.out.println("Enter the number of voucher discount 50%" );
+            discount50 = scanner.nextInt();
+            if (discount50  > bookingStack.size()){
+                System.out.println("The number of voucher discount 50% cannot exceed " + bookingStack.size() + " please try again!");
+                flag = true;
+            } else for (int i = 0; i < discount50; i++) {
+                voucherQueue.offer(new Voucher(Voucher.DISCOUNT50));
             }
-            switch (choice) {
-                case 1:
-                    voucherQueue.offer(new Voucher(Voucher.DISCOUNT50));
-                    break;
-                case 2:
-                    voucherQueue.offer(new Voucher(Voucher.DISCOUNT20));
-                    break;
-                case 3:
-                    voucherQueue.offer(new Voucher(Voucher.DISCOUNT10));
-                    break;
-                default:
-                    System.err.println("Invalid input 1-3");
+        }
+
+        int discount20 = 0;
+        boolean flag1 = true;
+        if (bookingStack.size() - discount50 == 0) flag1 = false;
+        while (flag1){
+            flag1 = false;
+            System.out.println("Enter the number of voucher discount 20%" );
+            discount20 = scanner.nextInt();
+            if (discount20 > bookingStack.size() - discount50){
+                System.out.println("The number of voucher discount 20% cannot exceed " + (bookingStack.size() - discount50) + " please try again!");
+                flag1 = true;
+            } else for (int i = 0; i < discount20; i++) {
+                voucherQueue.offer(new Voucher(Voucher.DISCOUNT20));
+            }
+        }
+
+        boolean flag2 = true;
+        int discount10 = bookingStack.size() - discount50 + discount20;
+        if (discount10 == 0){
+            flag2 = false;
+        }
+        while (flag2){
+            flag2 = false;
+            System.out.println("Enter the number of voucher discount 10%" );
+            discount10 = scanner.nextInt();
+            for (int i = 0; i <discount10 ; i++) {
+                voucherQueue.offer(new Voucher(Voucher.DISCOUNT10));
             }
         }
         sortVoucher(voucherQueue, "discount 50%");

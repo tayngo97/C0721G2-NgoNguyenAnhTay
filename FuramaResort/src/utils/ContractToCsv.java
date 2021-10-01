@@ -2,14 +2,11 @@ package utils;
 
 import models.person.Customer;
 import models.service.*;
-
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class ContractToCsv {
     public static File contractFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\contract.csv");
-    protected static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
 
     public static Queue<Contract> readDataFromFile() {
         Queue<Contract> bookingSet = new ArrayDeque<>();

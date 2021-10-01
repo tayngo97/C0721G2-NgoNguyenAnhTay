@@ -19,9 +19,9 @@ public class ContractServiceImpl implements ContractService {
         boolean flag = true;
         Queue<Booking> bookingQueue = BookingServiceImpl.changeSetToQueue();
         Queue<Contract> listContracts1 = ContractToCsv.readDataFromFile();
-        for (Booking booking: bookingQueue) {
-            for (Contract contract: listContracts1) {
-                if (booking.getBookingID().equals(contract.getBookingID().getBookingID()) || booking.getFacility() instanceof Room){
+        for (Booking booking : bookingQueue) {
+            for (Contract contract : listContracts1) {
+                if (booking.getBookingID().equals(contract.getBookingID().getBookingID()) || booking.getFacility() instanceof Room) {
                     bookingQueue.remove(booking);
                 }
             }
@@ -58,7 +58,7 @@ public class ContractServiceImpl implements ContractService {
         System.out.println("Enter contractID to delete:");
         String contractId = scanner.nextLine();
         listContracts1.removeIf(contract -> contract.getContractID().equals(contractId));
-        for (Contract contract:listContracts1) {
+        for (Contract contract : listContracts1) {
             System.out.println(contract);
         }
         ContractToCsv.writeToFile(listContracts1);
