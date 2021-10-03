@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class HouseToCSV {
+public class HouseToCsv {
     public static File houseFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\house.csv");
 
     public Map<House, Integer> readDataFromFile() {

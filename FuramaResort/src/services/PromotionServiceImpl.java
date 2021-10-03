@@ -103,7 +103,7 @@ public class PromotionServiceImpl implements PromotionService {
         }
 
         boolean flag2 = true;
-        int discount10 = bookingStack.size() - discount50 + discount20;
+        int discount10 = bookingStack.size() - discount50 - discount20;
         if (discount10 == 0){
             flag2 = false;
         }

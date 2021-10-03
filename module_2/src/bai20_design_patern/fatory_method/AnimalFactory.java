@@ -8,5 +8,4 @@ public class AnimalFactory {
             return new Cat();
         }
     }
-
 }

@@ -1,4 +1,4 @@
-package services.exception_validate;
+package exception_validate;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;

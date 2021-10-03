@@ -3,31 +3,30 @@ package services;
 import models.service.House;
 import models.service.Room;
 import models.service.Villa;
-import services.exception_validate.ValidateFacility;
-import utils.HouseToCSV;
+import exception_validate.ValidateFacility;
+import utils.HouseToCsv;
 import utils.RoomToCsv;
-import utils.VillaToCSV;
+import utils.VillaToCsv;
 
-import java.io.*;
 import java.util.*;
 
 public class FacilityServiceImpl implements FacilityService {
-    protected static VillaToCSV villaList  = new VillaToCSV();
-    protected static HouseToCSV houseList  = new HouseToCSV();
+    protected static VillaToCsv villaList  = new VillaToCsv();
+    protected static HouseToCsv houseList  = new HouseToCsv();
     protected static RoomToCsv roomList  = new RoomToCsv();
     private static Map<Villa, Integer> villaMap = new LinkedHashMap<>();
     private static Map<House, Integer> houseMap = new LinkedHashMap<>();
     private static Map<Room, Integer> roomMap = new LinkedHashMap<>();
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner  scanner = new Scanner(System.in);
 
     public void showFacilityList() {
-        if ( VillaToCSV.villaFile.length() > 0) {
+        if ( VillaToCsv.villaFile.length() > 0) {
             Map<Villa, Integer> villaMap = villaList.readDataFromFile();
             for (Map.Entry<Villa, Integer> entry : villaMap.entrySet()) {
                 System.out.println(entry.getKey() + " " + entry.getValue() + "times");
             }
         }
-        if (HouseToCSV.houseFile.length() > 0) {
+        if (HouseToCsv.houseFile.length() > 0) {
             Map<House, Integer> houseMap = houseList.readDataFromFile();
             for (Map.Entry<House, Integer> entry : houseMap.entrySet()) {
                 System.out.println(entry.getKey() + " " + entry.getValue() + "times");
@@ -51,7 +50,6 @@ public class FacilityServiceImpl implements FacilityService {
                 if (choice == 4) {
                     break;
                 } else if (choice > 4) continue;
-
                 String seviceName = ValidateFacility.checkServiceName();
                 String area = ValidateFacility.checkUsableArea();
                 String rentalCost = ValidateFacility.checkRentalCost();
@@ -65,7 +63,7 @@ public class FacilityServiceImpl implements FacilityService {
                         String poolArea = ValidateFacility.checkPoolArea();
                         String numOfFloor = ValidateFacility.checkNumOfFloor();
                         Villa villa = new Villa(seviceName, serviceVillaId, area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard, poolArea, numOfFloor);
-                        if (VillaToCSV.villaFile.length() > 0) {
+                        if (VillaToCsv.villaFile.length() > 0) {
                             villaMap = villaList.readDataFromFile();
                         }
                         villaMap.put(villa, 0);
@@ -76,9 +74,9 @@ public class FacilityServiceImpl implements FacilityService {
                         String roomStandard1 = ValidateFacility.checkRoomStandard();
                         String numOfFloor1 = ValidateFacility.checkNumOfFloor();
                         House house = new House(seviceName, serviceHouseId, area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard1, numOfFloor1);
-                        if (HouseToCSV.houseFile.length() > 0) {
+                        if (HouseToCsv.houseFile.length() > 0) {
                             houseMap = houseList.readDataFromFile();
-                        }
+                          }
                         houseMap.put(house, 0);
                         houseList.writeToFile(houseMap);
                         break;
@@ -105,7 +103,7 @@ public class FacilityServiceImpl implements FacilityService {
     @Override
     public void showMaintenanceList() {
         boolean flag = false;
-        if ( VillaToCSV.villaFile.length() > 0) {
+        if ( VillaToCsv.villaFile.length() > 0) {
             Map<Villa, Integer> villaMap = villaList.readDataFromFile();
             for (Map.Entry<Villa, Integer> entry : villaMap.entrySet()) {
                 if (entry.getValue() >= 5) {
@@ -114,7 +112,7 @@ public class FacilityServiceImpl implements FacilityService {
                 }
             }
         }
-        if (HouseToCSV.houseFile.length() > 0) {
+        if (HouseToCsv.houseFile.length() > 0) {
             Map<House, Integer> houseMap = houseList.readDataFromFile();
             for (Map.Entry<House, Integer> entry : houseMap.entrySet()) {
                 if (entry.getValue() >= 5) {

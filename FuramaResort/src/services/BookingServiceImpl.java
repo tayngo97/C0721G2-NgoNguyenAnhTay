@@ -2,10 +2,9 @@ package services;
 
 import models.person.Customer;
 import models.service.*;
-import services.exception_validate.CheckValidTime;
+import exception_validate.CheckValidTime;
 import utils.BookingToCsv;
 
-import java.io.*;
 import java.util.*;
 
 public class BookingServiceImpl implements BookingService {
@@ -13,7 +12,6 @@ public class BookingServiceImpl implements BookingService {
     protected static FacilityServiceImpl facilityService = new FacilityServiceImpl();
     protected static Set<Booking> bookingTreeSet = new TreeSet<>();
     protected static List<Customer> customerList = CustomerServiceImpl.readDataFromFile();
-
     protected static Map<Villa,Integer> villaMap = FacilityServiceImpl.villaList.readDataFromFile();
     protected static Map<House,Integer> houseMap = FacilityServiceImpl.houseList.readDataFromFile();
     protected static Map<Room,Integer> roomMap = FacilityServiceImpl.roomList.readDataFromFile();

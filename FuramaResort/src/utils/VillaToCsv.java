@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class VillaToCSV {
+public class VillaToCsv {
     public static File villaFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\villa.csv");
 
 

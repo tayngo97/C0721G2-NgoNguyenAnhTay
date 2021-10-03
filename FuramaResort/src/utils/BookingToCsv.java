@@ -12,6 +12,7 @@ public class BookingToCsv {
     public static File bookingFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\booking.csv");
     protected static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
 
+
     public static Set<Booking> readDataFromFile() {
         Set<Booking> bookingSet = new TreeSet<>();
         try {

@@ -17,6 +17,6 @@ public class SocialMediaFacade {
         this.linkedIn.setMessage(message);
         this.twitter.share();
         this.facebook.share();
-        this.facebook.share();
+        this.linkedIn.share();
     }
 }

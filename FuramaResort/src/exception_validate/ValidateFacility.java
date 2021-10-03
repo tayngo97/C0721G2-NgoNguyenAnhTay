@@ -1,4 +1,4 @@
-package services.exception_validate;
+package exception_validate;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;

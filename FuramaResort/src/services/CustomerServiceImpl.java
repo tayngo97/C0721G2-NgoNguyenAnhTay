@@ -1,12 +1,9 @@
 package services;
 
 import models.person.Customer;
-import models.person.Employee;
-import services.exception_validate.CheckAgeInput;
-import services.exception_validate.IllegalAgeInputException;
+import exception_validate.CheckAgeInput;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;

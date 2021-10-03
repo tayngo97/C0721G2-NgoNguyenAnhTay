@@ -1,10 +1,11 @@
-package controllers;
+package utils;
 
 import java.util.Scanner;
 
-public class MenuChoice {
-    private static Scanner scanner= new Scanner(System.in);
-    public static int displayChoice(){
+public class GetChoiceInMenu {
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static int getChoice(){
         boolean flag = true;
         int choice = 0;
         while (flag) {
@@ -16,6 +17,6 @@ public class MenuChoice {
                 flag = true;
             }
         }
-        return choice;
+        return choice ;
     }
 }
