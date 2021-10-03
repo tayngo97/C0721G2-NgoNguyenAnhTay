@@ -1,21 +1,20 @@
 package utils;
 
-
-import models.person.Customer;
-import models.service.*;
 import facility_buider.HouseBuider;
 import facility_buider.RoomBuider;
 import facility_buider.VillaBuider;
+import models.person.Customer;
+import models.service.Booking;
+import models.service.Facility;
 
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class BookingToCsv {
-    public static File bookingFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\booking.csv");
+public class BookingStackToCsv {
+    public static File bookingFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\booking_stack.csv");
 
-    public static Set<Booking> readDataFromFile() {
-        Set<Booking> bookingSet = new TreeSet<>();
+    public static Stack<Booking> readDataFromFile() {
+        Stack<Booking> bookingQueue = new Stack<>();
         try {
             FileReader fr = new FileReader(bookingFile);
             BufferedReader br = new BufferedReader(fr);
@@ -60,17 +59,17 @@ public class BookingToCsv {
                             .addTypeOfRent(booking[17])
                             .addPromotionService(booking[18])
                             .build();
-                bookingSet.add(new Booking(booking[0], booking[1], booking[2], customer1, facility));
+                bookingQueue.add(new Booking(booking[0], booking[1], booking[2], customer1, facility));
             }
 
             br.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return bookingSet;
+        return bookingQueue;
     }
 
-    public static void writeToFile(Set<Booking> bookings) {
+    public static void writeToFile(Stack<Booking> bookings) {
         try {
             FileWriter fw = new FileWriter(bookingFile);
             BufferedWriter bw = new BufferedWriter(fw);

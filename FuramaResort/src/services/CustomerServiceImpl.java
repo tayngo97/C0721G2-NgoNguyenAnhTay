@@ -1,7 +1,7 @@
 package services;
 
 import models.person.Customer;
-import exception_validate.CheckAgeInput;
+import validator.CheckAgeInput;
 
 import java.io.*;
 import java.util.LinkedList;

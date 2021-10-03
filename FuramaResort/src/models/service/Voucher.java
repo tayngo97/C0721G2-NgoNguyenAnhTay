@@ -1,4 +1,4 @@
-package models.person;
+package models.service;
 
 public class Voucher  {
     private String discount;
@@ -24,6 +24,10 @@ public class Voucher  {
         return "Voucher{" +
                 "discount='" + discount + '\'' +
                 '}';
+    }
+
+    public String voucherToWrite(){
+        return getDiscount();
     }
 
 }

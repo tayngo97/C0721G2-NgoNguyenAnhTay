@@ -137,7 +137,6 @@ public class FuramaController {
                     }
                     break;
                 }
-
                 case 5:
                     boolean flag = true;
                     while (flag) {
@@ -158,7 +157,6 @@ public class FuramaController {
                         }
                     }
                     break;
-
                 case 6:
                     flagMain = false;
                     break;

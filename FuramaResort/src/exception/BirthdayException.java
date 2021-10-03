@@ -1,4 +1,4 @@
-package exception_validate;
+package exception;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

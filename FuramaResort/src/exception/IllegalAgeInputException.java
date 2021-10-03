@@ -1,4 +1,4 @@
-package exception_validate;
+package exception;
 
 public class IllegalAgeInputException  {
     public IllegalAgeInputException(){

@@ -3,7 +3,7 @@ package services;
 import models.service.House;
 import models.service.Room;
 import models.service.Villa;
-import exception_validate.ValidateFacility;
+import validator.ValidateFacility;
 import utils.HouseToCsv;
 import utils.RoomToCsv;
 import utils.VillaToCsv;
@@ -55,7 +55,6 @@ public class FacilityServiceImpl implements FacilityService {
                 String rentalCost = ValidateFacility.checkRentalCost();
                 String maxNumberOfTenants = ValidateFacility.checkMaximumTenants();
                 String typeOfRent = ValidateFacility.checktypeOfRent();
-
                 switch (choice) {
                     case 1:
                         String serviceVillaId = ValidateFacility.checkVillaId();
@@ -134,4 +133,5 @@ public class FacilityServiceImpl implements FacilityService {
             System.err.println("Have no facility need to maintenance!");
         }
     }
+
 }

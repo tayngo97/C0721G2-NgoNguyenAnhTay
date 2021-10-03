@@ -2,7 +2,7 @@ package services;
 
 import models.person.Customer;
 import models.service.*;
-import exception_validate.CheckValidTime;
+import validator.CheckValidTime;
 import utils.BookingToCsv;
 
 import java.util.*;
