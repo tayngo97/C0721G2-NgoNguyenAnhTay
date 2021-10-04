@@ -1,6 +1,4 @@
 package services;
 
-public interface PromotionService {
-        void displayCustomerUseService();
-        void displayCustomerGetVoucher();
+public interface PromotionService extends Service{
 }

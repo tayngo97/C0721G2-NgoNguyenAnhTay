@@ -21,26 +21,24 @@ public class PromotionServiceImpl implements PromotionService {
     protected static Queue<Voucher> vouchers = new ArrayDeque<>();
 
 
-    @Override
-    public void displayCustomerUseService() {
+    public  void displayCustomerUseService() {
         Set<Booking> bookingTreeSet1 = BookingToCsv.readDataFromFile();
         System.out.println("Enter year that customer used services !");
         String year = scanner.nextLine();
-        for (Booking e : bookingTreeSet1) {
+        for (Booking booking : bookingTreeSet1) {
             String year2 = "";
             try {
-                Date year1 = dateFormat.parse(e.getCheckinTime());
+                Date year1 = dateFormat.parse(booking.getCheckinTime());
                 year2 = getYear.format(year1);
             } catch (Exception exception) {
                 exception.printStackTrace();
             }
             if (year2.equals(year)) {
-                System.out.println(e);
+                System.out.println(booking);
             }
         }
     }
 
-    @Override
     public void displayCustomerGetVoucher() {
         Calendar cal = Calendar.getInstance();
         String currenTime = dateFormat.format(cal.getTime());
@@ -135,4 +133,18 @@ public class PromotionServiceImpl implements PromotionService {
         }
     }
 
+    @Override
+    public void add() {
+
+    }
+
+    @Override
+    public void delete() {
+
+    }
+
+    @Override
+    public void edit() {
+
+    }
 }

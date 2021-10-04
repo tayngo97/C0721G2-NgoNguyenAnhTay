@@ -16,7 +16,7 @@ public class BookingServiceImpl implements BookingService {
     protected static Map<House,Integer> houseMap = FacilityServiceImpl.houseList.readDataFromFile();
     protected static Map<Room,Integer> roomMap = FacilityServiceImpl.roomList.readDataFromFile();
 
-    public void addNewBooking() {
+    public void add() {
         System.out.println("Enter bookingID");
         String bookingID = scanner.nextLine();
 
@@ -36,21 +36,26 @@ public class BookingServiceImpl implements BookingService {
         BookingToCsv.writeToFile(bookingTreeSet);
     }
 
-    public void showBooking() {
+    public void show() {
         bookingTreeSet = BookingToCsv.readDataFromFile();
         for (Booking e : bookingTreeSet) {
             System.out.println(e);
         }
     }
 
-    public void deleteBooking() {
+    public void delete() {
         bookingTreeSet = BookingToCsv.readDataFromFile();
         bookingTreeSet.forEach(System.out::println);
         System.out.println("Enter booking ID to delete booking !");
         String bookingId = scanner.nextLine();
         bookingTreeSet.removeIf(b -> b.getBookingID().equals(bookingId));
         BookingToCsv.writeToFile(bookingTreeSet);
-        showBooking();
+        show();
+    }
+
+    @Override
+    public void edit() {
+
     }
 
     public static Customer getCustomerID() {
@@ -70,7 +75,7 @@ public class BookingServiceImpl implements BookingService {
 
     public static Facility getFacility() {
         System.out.println("-------------FACILITY LISTS--------------");
-        facilityService.showFacilityList();
+        facilityService.show();
         while (true) {
             System.out.println("Enter service ID");
             String serviceID = scanner.nextLine();

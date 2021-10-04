@@ -24,16 +24,16 @@ public class FuramaController {
                         int choice1 = GetChoiceInMenu.getChoice();
                         switch (choice1) {
                             case 1:
-                                employeeService.showInfoList();
+                                employeeService.show();
                                 break;
                             case 2:
-                                employeeService.addNewEmployee();
+                                employeeService.add();
                                 break;
                             case 3:
-                                employeeService.editInfoEmployee();
+                                employeeService.edit();
                                 break;
                             case 4:
-                                employeeService.deleteEmployee();
+                                employeeService.delete();
                                 break;
                             case 5:
                                 employeeService.searchEmployee();
@@ -47,7 +47,6 @@ public class FuramaController {
                     }
                     break;
                 }
-
                 case 2: {
                     boolean flag = true;
                     while (flag) {
@@ -58,13 +57,13 @@ public class FuramaController {
                                 customerService.showInfoCustomer();
                                 break;
                             case 2:
-                                customerService.addNewCustomer();
+                                customerService.add();
                                 break;
                             case 3:
-                                customerService.editInfoCustomer();
+                                customerService.edit();
                                 break;
                             case 4:
-                                customerService.searchCustomer();
+                                customerService.search();
                                 break;
                             case 5:
                                 flag = false;
@@ -83,10 +82,10 @@ public class FuramaController {
                         int choice1 = GetChoiceInMenu.getChoice();
                         switch (choice1) {
                             case 1:
-                                facilityService.showFacilityList();
+                                facilityService.show();
                                 break;
                             case 2:
-                                facilityService.addNewService();
+                                facilityService.add();
                                 break;
                             case 3:
                                 facilityService.showMaintenanceList();
@@ -108,25 +107,25 @@ public class FuramaController {
                         int choice1 = GetChoiceInMenu.getChoice();
                         switch (choice1) {
                             case 1:
-                                bookingService.addNewBooking();
+                                bookingService.add();
                                 break;
                             case 2:
-                                bookingService.showBooking();
+                                bookingService.show();
                                 break;
                             case 3:
-                                bookingService.deleteBooking();
+                                bookingService.delete();
                                 break;
                             case 4:
-                                contractService.CreateNewContracts();
+                                contractService.add();
                                 break;
                             case 5:
-                                contractService.DisplayListContracts();
+                                contractService.show();
                                 break;
                             case 6:
-                                contractService.EditContracts();
+                                contractService.edit();
                                 break;
                             case 7:
-                                contractService.deleleContract();
+                                contractService.delete();
                                 break;
                             case 8:
                                 flag = false;
@@ -137,7 +136,7 @@ public class FuramaController {
                     }
                     break;
                 }
-                case 5:
+                case 5: {
                     boolean flag = true;
                     while (flag) {
                         System.out.println("====||VOUCHER SYSTEM||====" + "\n" + "1.Display list customer use service based on year " + "\n" + "2.Display list customer get voucher in this month" + "\n" + "3.Return main menu");
@@ -157,9 +156,11 @@ public class FuramaController {
                         }
                     }
                     break;
-                case 6:
+                }
+                case 6: {
                     flagMain = false;
                     break;
+                }
                 default:
                     System.out.println("Invalid");
             }

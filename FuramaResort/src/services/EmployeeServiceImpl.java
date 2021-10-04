@@ -16,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private static Scanner scanner = new Scanner(System.in);
 
 
-    public void showInfoList() {
+    public void show() {
         employeelist = employee.readDataFromFile();
         for (Employee e :  employeelist) {
             System.out.println(e);
@@ -39,7 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
     }
 
-    public void addNewEmployee() {
+    public void add() {
         boolean flag = true;
         while (flag) {
             flag = false;
@@ -78,16 +78,17 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
     }
 
-    public void deleteEmployee() {
+    public void delete() {
         System.out.println("Enter name to delete !");
         String name = scanner.nextLine();
         employeelist = employee.readDataFromFile();
         employeelist.removeIf(e -> e.getName().equals(name));
         employee.writeToFile(employeelist);
-        showInfoList();
+        show();
     }
 
-    public void editInfoEmployee() {
+
+    public void edit() {
         System.out.println("Enter name of employee to edit !");
         String name = scanner.nextLine();
         employeelist = employee.readDataFromFile();
@@ -205,6 +206,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             }
         }
         employee.writeToFile(employeelist);
-        showInfoList();
+        show();
     }
+
 }

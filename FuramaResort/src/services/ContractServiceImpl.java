@@ -14,8 +14,7 @@ public class ContractServiceImpl implements ContractService {
     protected static Scanner scanner = new Scanner(System.in);
 
 
-    @Override
-    public void CreateNewContracts() {
+    public void add() {
         boolean flag = true;
         Queue<Booking> bookingQueue = BookingServiceImpl.changeSetToQueue();
         Queue<Contract> listContracts1 = ContractToCsv.readDataFromFile();
@@ -45,15 +44,7 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
-    public void DisplayListContracts() {
-        Queue<Contract> listContracts1 = ContractToCsv.readDataFromFile();
-        int i = 0;
-        for (Contract element : listContracts1) {
-            System.out.println(++i + "=> " + element);
-        }
-    }
-
-    public void deleleContract() {
+    public void delete() {
         Queue<Contract> listContracts1 = ContractToCsv.readDataFromFile();
         System.out.println("Enter contractID to delete:");
         String contractId = scanner.nextLine();
@@ -64,8 +55,18 @@ public class ContractServiceImpl implements ContractService {
         ContractToCsv.writeToFile(listContracts1);
     }
 
+
+    public void show() {
+        Queue<Contract> listContracts1 = ContractToCsv.readDataFromFile();
+        int i = 0;
+        for (Contract element : listContracts1) {
+            System.out.println(++i + "=> " + element);
+        }
+    }
+
+
     @Override
-    public void EditContracts() {
+    public void edit() {
         Queue<Contract> listContracts = ContractToCsv.readDataFromFile();
         System.out.println("Enter id to edit contract :");
         String id = scanner.nextLine();

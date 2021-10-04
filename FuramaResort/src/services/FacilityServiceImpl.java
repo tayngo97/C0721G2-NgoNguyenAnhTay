@@ -19,7 +19,7 @@ public class FacilityServiceImpl implements FacilityService {
     private static Map<Room, Integer> roomMap = new LinkedHashMap<>();
     private Scanner  scanner = new Scanner(System.in);
 
-    public void showFacilityList() {
+    public void show() {
         if ( VillaToCsv.villaFile.length() > 0) {
             Map<Villa, Integer> villaMap = villaList.readDataFromFile();
             for (Map.Entry<Villa, Integer> entry : villaMap.entrySet()) {
@@ -40,7 +40,7 @@ public class FacilityServiceImpl implements FacilityService {
         }
     }
 
-    public void addNewService() {
+    public void add() {
         boolean flag = true;
         while (flag) {
             flag = false;
@@ -50,6 +50,7 @@ public class FacilityServiceImpl implements FacilityService {
                 if (choice == 4) {
                     break;
                 } else if (choice > 4) continue;
+
                 String seviceName = ValidateFacility.checkServiceName();
                 String area = ValidateFacility.checkUsableArea();
                 String rentalCost = ValidateFacility.checkRentalCost();
@@ -96,10 +97,19 @@ public class FacilityServiceImpl implements FacilityService {
                 flag = true;
             }
         }
-        showFacilityList();
+        show();
     }
 
     @Override
+    public void delete() {
+
+    }
+
+    @Override
+    public void edit() {
+
+    }
+
     public void showMaintenanceList() {
         boolean flag = false;
         if ( VillaToCsv.villaFile.length() > 0) {

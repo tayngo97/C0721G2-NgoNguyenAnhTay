@@ -24,7 +24,7 @@ public class CustomerServiceImpl implements CustomerService {
         return null;
     }
 
-    public void addNewCustomer() {
+    public void add() {
         boolean flag = true;
         while (flag) {
             flag = false;
@@ -59,7 +59,7 @@ public class CustomerServiceImpl implements CustomerService {
         }
     }
 
-    public void deleteCustomer() {
+    public void delete() {
         System.out.println("Enter name to delete !");
         String name = scanner.nextLine();
         customerList = readDataFromFile();
@@ -68,7 +68,8 @@ public class CustomerServiceImpl implements CustomerService {
         showInfoCustomer();
     }
 
-    public void searchCustomer() {
+
+    public void search() {
         boolean flag = false;
         System.out.println("Enter customer name :");
         String name = scanner.nextLine();
@@ -84,7 +85,7 @@ public class CustomerServiceImpl implements CustomerService {
         }
     }
 
-    public void editInfoCustomer() {
+    public void edit() {
         customerList = readDataFromFile();
         System.out.println("Enter name of customer to edit !");
         String name = scanner.nextLine();
