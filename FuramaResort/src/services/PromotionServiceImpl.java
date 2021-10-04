@@ -71,7 +71,10 @@ public class PromotionServiceImpl implements PromotionService {
         for (Booking e : bookingStack) {
             System.out.println(e + " => have received: " + vouchers.poll() + " \n  ---------------------------------------------------------------------------");
         }
+
     }
+
+
 
     public static void createVouchers() {
         System.out.println("The number of customer have booked in this month : " + bookingStack.size() + " person");
@@ -121,7 +124,6 @@ public class PromotionServiceImpl implements PromotionService {
         sortVoucher(voucherQueue, "discount 50%");
         sortVoucher(voucherQueue, "discount 20%");
         sortVoucher(voucherQueue, "discount 10%");
-
         VoucherToCsv.writeToFile(voucherQueue);
     }
 
@@ -132,6 +134,5 @@ public class PromotionServiceImpl implements PromotionService {
             }
         }
     }
-
 
 }
