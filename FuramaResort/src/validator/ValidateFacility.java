@@ -7,13 +7,12 @@ import java.util.regex.Pattern;
 public class ValidateFacility {
     private static Scanner scanner = new Scanner(System.in);
     private static final String REGEX_SERVICE_NAME = "^[A-Z][a-z0-9]+$";
-
     private static final String REGEX_VILLA_ID = "^[S][V][V][L][-][0-9]{4}$";
     private static final String REGEX_HOUSE_ID = "^[S][V][H][O][-][0-9]{4}$";
     private static final String REGEX_ROOM_ID = "^[S][V][R][O][-][0-9]{4}$";
     private static final String REGEX_USABLE_AREA1 = "^[3-9]+\\d+\\.?\\d{0,3}\\.?\\d{0,3}$";
     private static final String REGEX_RENTAL_COST = "^([\\d]{1,3}\\.[\\d]{0,3})+$|^[\\d]+$";
-    private static final String REGEX_MAXIMUML_TENANTS = "^[1]?[\\d]?$";
+    private static final String REGEX_MAXIMUML_TENANTS = "^[1]?[1-9]?$";
     private static final String REGEX_NUM_OF_FLOOR = "^[1-9]\\d*$";
     private static final String REGEX_ROOM_STANDARD = "^[A-Z][a-z0-9]+$";
     private static final String REGEX_TYPE_OF_RENT = "^[A-Z][a-z0-9]+$";
@@ -34,8 +33,6 @@ public class ValidateFacility {
         }
         return serviceName;
     }
-
-
 
     public static String checkVillaId() {
         String serviceVillaId = "";

@@ -64,8 +64,7 @@ public class PromotionServiceImpl implements PromotionService {
                 parseException.printStackTrace();
             }
         }
-
-        createVouchers();
+        add();
         for (Booking e : bookingStack) {
             System.out.println(e + " => have received: " + vouchers.poll() + " \n  ---------------------------------------------------------------------------");
         }
@@ -74,7 +73,7 @@ public class PromotionServiceImpl implements PromotionService {
 
 
 
-    public static void createVouchers() {
+    public void add() {
         System.out.println("The number of customer have booked in this month : " + bookingStack.size() + " person");
         int discount50 = 0;
         boolean flag = true;
@@ -83,7 +82,7 @@ public class PromotionServiceImpl implements PromotionService {
             System.out.println("Enter the number of voucher discount 50%");
             discount50 = scanner.nextInt();
             if (discount50 > bookingStack.size()) {
-                System.out.println("The number of voucher discount 50% cannot exceed " + bookingStack.size() + " please try again!");
+                System.err.println("The number of voucher discount 50% cannot exceed " + bookingStack.size() + " please try again!");
                 flag = true;
             } else for (int i = 0; i < discount50; i++) {
                 voucherQueue.offer(new Voucher(Voucher.DISCOUNT50));
@@ -98,7 +97,7 @@ public class PromotionServiceImpl implements PromotionService {
             System.out.println("Enter the number of voucher discount 20%");
             discount20 = scanner.nextInt();
             if (discount20 > bookingStack.size() - discount50) {
-                System.out.println("The number of voucher discount 20% cannot exceed " + (bookingStack.size() - discount50) + " please try again!");
+                System.err.println("The number of voucher discount 20% cannot exceed " + (bookingStack.size() - discount50) + " please try again!");
                 flag1 = true;
 
             } else for (int i = 0; i < discount20; i++) {
@@ -133,10 +132,7 @@ public class PromotionServiceImpl implements PromotionService {
         }
     }
 
-    @Override
-    public void add() {
 
-    }
 
     @Override
     public void delete() {

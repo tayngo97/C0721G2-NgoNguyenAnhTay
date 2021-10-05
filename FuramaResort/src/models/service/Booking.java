@@ -108,6 +108,13 @@ public class Booking implements Comparable<Booking> {
                 '}' + "\n";
     }
 
+
+//    @Override
+//    public boolean equals(Object obj) {
+//        Booking booking = (Booking) obj;
+//        return bookingID.compareTo(booking.bookingID) == 0;
+//    }
+
     @Override
     public int compareTo(Booking o) {
         if ((bookingID.compareTo(o.bookingID)) == 0){
