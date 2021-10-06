@@ -1,5 +1,6 @@
 package services;
 
+import models.service.Facility;
 import models.service.House;
 import models.service.Room;
 import models.service.Villa;
@@ -17,6 +18,7 @@ public class FacilityServiceImpl implements FacilityService {
     private static Map<Villa, Integer> villaMap = new LinkedHashMap<>();
     private static Map<House, Integer> houseMap = new LinkedHashMap<>();
     private static Map<Room, Integer> roomMap = new LinkedHashMap<>();
+    private static Map<Facility, Integer> facilities = new LinkedHashMap<>();
     private Scanner  scanner = new Scanner(System.in);
 
 
@@ -69,6 +71,7 @@ public class FacilityServiceImpl implements FacilityService {
                         String numOfFloor = CheckInput.getInput(CheckInput.REGEX_NUM_OF_FLOOR);
                         Villa villa = new Villa(seviceName, serviceVillaId, area, rentalCost,
                                 maxNumberOfTenants, typeOfRent, roomStandard, poolArea, numOfFloor);
+
                         if (VillaToCsv.villaFile.length() > 0) {
                             villaMap = villaList.readDataFromFile();
                         }

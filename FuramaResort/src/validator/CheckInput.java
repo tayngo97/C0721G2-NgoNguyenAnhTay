@@ -5,12 +5,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CheckInput {
-    private static ValidateFacilities validateFacilities = new ValidateFacilities();
     private static Scanner scanner = new Scanner(System.in);
     public static final String REGEX_CHECK_NAME = "^[A-Z][a-z0-9]+$";
-    public static final String REGEX_VILLA_ID = "^[S][V][V][L][-][0-9]{4}$";
-    public static final String REGEX_HOUSE_ID = "^[S][V][H][O][-][0-9]{4}$";
-    public static final String REGEX_ROOM_ID = "^[S][V][R][O][-][0-9]{4}$";
+    public static final String REGEX_VILLA_ID = "^SVVL-[0-9]{4}$";
+    public static final String REGEX_HOUSE_ID = "^SVHO-[0-9]{4}$";
+    public static final String REGEX_ROOM_ID = "^SVRO-[0-9]{4}$";
     public static final String REGEX_RENTAL_COST = "^([\\d]{1,3}\\.[\\d]{0,3})+$|^[\\d]+$";
     public static final String REGEX_MAXIMUML_TENANTS = "^[1-9]|[1][0-9]$";
     public static final String REGEX_NUM_OF_FLOOR = "^[1-9]\\d*$";
@@ -32,7 +31,7 @@ public class CheckInput {
                 System.err.println("Invalid input , please try again !");
             }
         }
-        return validateFacilities.getString(input);
+        return input;
     }
 
     public static void getMessage(String regex) {
