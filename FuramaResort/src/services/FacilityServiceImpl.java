@@ -3,10 +3,10 @@ package services;
 import models.service.House;
 import models.service.Room;
 import models.service.Villa;
-import validator.ValidateFacility;
 import utils.HouseToCsv;
 import utils.RoomToCsv;
 import utils.VillaToCsv;
+import validator.CheckInput;
 
 import java.util.*;
 
@@ -18,6 +18,7 @@ public class FacilityServiceImpl implements FacilityService {
     private static Map<House, Integer> houseMap = new LinkedHashMap<>();
     private static Map<Room, Integer> roomMap = new LinkedHashMap<>();
     private Scanner  scanner = new Scanner(System.in);
+
 
     public void show() {
         if ( VillaToCsv.villaFile.length() > 0) {
@@ -45,24 +46,29 @@ public class FacilityServiceImpl implements FacilityService {
         while (flag) {
             flag = false;
             try {
-                System.out.println("Enter your choice" + "\n" + "1.Add New Villa" + "\n" + "2.Add New House" + "\n" + "3.Add New Room" + "\n" + "4.Back to Menu");
+                System.out.println("Enter your choice" + "\n" + "1.Add New Villa" + "\n"
+                        + "2.Add New House" + "\n" + "3.Add New Room" + "\n" + "4.Back to Menu");
                 int choice = Integer.parseInt(scanner.nextLine());
                 if (choice == 4) {
                     break;
                 } else if (choice > 4) continue;
-
-                String seviceName = ValidateFacility.checkServiceName();
-                String area = ValidateFacility.checkUsableArea();
-                String rentalCost = ValidateFacility.checkRentalCost();
-                String maxNumberOfTenants = ValidateFacility.checkMaximumTenants();
-                String typeOfRent = ValidateFacility.checktypeOfRent();
+                System.out.println("Enter service name :");
+                String seviceName = CheckInput.getInput(CheckInput.REGEX_CHECK_NAME);
+                System.out.println("Enter number of usable area :");
+                String area = CheckInput.getInput(CheckInput.REGEX_AREA);
+                String rentalCost = CheckInput.getInput(CheckInput.REGEX_RENTAL_COST);
+                String maxNumberOfTenants = CheckInput.getInput(CheckInput.REGEX_MAXIMUML_TENANTS);
+                System.out.println("Enter type of rent :");
+                String typeOfRent = CheckInput.getInput(CheckInput.REGEX_CHECK_NAME);
                 switch (choice) {
                     case 1:
-                        String serviceVillaId = ValidateFacility.checkVillaId();
-                        String roomStandard = ValidateFacility.checkRoomStandard();
-                        String poolArea = ValidateFacility.checkPoolArea();
-                        String numOfFloor = ValidateFacility.checkNumOfFloor();
-                        Villa villa = new Villa(seviceName, serviceVillaId, area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard, poolArea, numOfFloor);
+                        String serviceVillaId = CheckInput.getInput(CheckInput.REGEX_VILLA_ID);
+                        String roomStandard = CheckInput.getInput(CheckInput.REGEX_CHECK_NAME);
+                        System.out.println("Enter number of pool area");
+                        String poolArea = CheckInput.getInput(CheckInput.REGEX_AREA);
+                        String numOfFloor = CheckInput.getInput(CheckInput.REGEX_NUM_OF_FLOOR);
+                        Villa villa = new Villa(seviceName, serviceVillaId, area, rentalCost,
+                                maxNumberOfTenants, typeOfRent, roomStandard, poolArea, numOfFloor);
                         if (VillaToCsv.villaFile.length() > 0) {
                             villaMap = villaList.readDataFromFile();
                         }
@@ -70,10 +76,11 @@ public class FacilityServiceImpl implements FacilityService {
                         villaList.writeToFile(villaMap);
                         break;
                     case 2:
-                        String serviceHouseId = ValidateFacility.checkHouseId();
-                        String roomStandard1 = ValidateFacility.checkRoomStandard();
-                        String numOfFloor1 = ValidateFacility.checkNumOfFloor();
-                        House house = new House(seviceName, serviceHouseId, area, rentalCost, maxNumberOfTenants, typeOfRent, roomStandard1, numOfFloor1);
+                        String serviceHouseId = CheckInput.getInput(CheckInput.REGEX_HOUSE_ID);
+                        String roomStandard1 = CheckInput.getInput(CheckInput.REGEX_CHECK_NAME);
+                        String numOfFloor1 = CheckInput.getInput(CheckInput.REGEX_NUM_OF_FLOOR);
+                        House house = new House(seviceName, serviceHouseId, area,
+                                rentalCost, maxNumberOfTenants, typeOfRent, roomStandard1, numOfFloor1);
                         if (HouseToCsv.houseFile.length() > 0) {
                             houseMap = houseList.readDataFromFile();
                           }
@@ -81,10 +88,11 @@ public class FacilityServiceImpl implements FacilityService {
                         houseList.writeToFile(houseMap);
                         break;
                     case 3:
-                        String serviceRoomId = ValidateFacility.checkRoomId();
+                        String serviceRoomId = CheckInput.getInput(CheckInput.REGEX_ROOM_ID);
                         System.out.println("Enter FreeService");
                         String promotionService = scanner.nextLine();
-                        Room room = new Room(seviceName, serviceRoomId, area, rentalCost, maxNumberOfTenants, typeOfRent, promotionService);
+                        Room room = new Room(seviceName, serviceRoomId, area, rentalCost,
+                                maxNumberOfTenants, typeOfRent, promotionService);
                         if (RoomToCsv.roomFile.length() > 0) {
                             roomMap = roomList.readDataFromFile();
                         }
@@ -93,6 +101,7 @@ public class FacilityServiceImpl implements FacilityService {
                         break;
                 }
             } catch (Exception e) {
+                e.printStackTrace();
                 System.err.println("Invalid input !");
                 flag = true;
             }
