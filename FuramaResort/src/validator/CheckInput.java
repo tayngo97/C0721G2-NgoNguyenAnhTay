@@ -12,7 +12,7 @@ public class CheckInput {
     public static final String REGEX_HOUSE_ID = "^[S][V][H][O][-][0-9]{4}$";
     public static final String REGEX_ROOM_ID = "^[S][V][R][O][-][0-9]{4}$";
     public static final String REGEX_RENTAL_COST = "^([\\d]{1,3}\\.[\\d]{0,3})+$|^[\\d]+$";
-    public static final String REGEX_MAXIMUML_TENANTS = "^[0-9]+$";
+    public static final String REGEX_MAXIMUML_TENANTS = "^[1-9]|[1][0-9]$";
     public static final String REGEX_NUM_OF_FLOOR = "^[1-9]\\d*$";
     public static final String REGEX_AREA = "^[3-9]+\\d+\\.?\\d{0,3}\\.?\\d{0,3}$";
 
@@ -32,7 +32,7 @@ public class CheckInput {
                 System.err.println("Invalid input , please try again !");
             }
         }
-        return validateFacilities.getString();
+        return validateFacilities.getString(input);
     }
 
     public static void getMessage(String regex) {

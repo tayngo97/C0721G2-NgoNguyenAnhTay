@@ -28,6 +28,7 @@ public class BookingToCsv {
                 String bookingId = booking[13];
                 Facility facility;
                 if (bookingId.contains("SVVL")) {
+//                    facility = new Villa(booking[12],booking[13],booking[14],booking[15],booking[16],booking[17],booking[18],booking[19],booking[20]);
                     facility = new VillaBuider()
                             .addServiceName(booking[12])
                             .addServiceId(booking[13])
@@ -39,7 +40,9 @@ public class BookingToCsv {
                             .addPoolArea(booking[19])
                             .addNumOfFloor(booking[20])
                             .build();
+
                 } else if (bookingId.contains("SVHO")) {
+//                    facility = new House(booking[12],booking[13],booking[14],booking[15],booking[16],booking[17],booking[18],booking[19]);
                     facility = new HouseBuider()
                             .addServiceName(booking[12])
                             .addServiceId(booking[13])
@@ -60,6 +63,8 @@ public class BookingToCsv {
                             .addTypeOfRent(booking[17])
                             .addPromotionService(booking[18])
                             .build();
+//                facility = new Room(booking[12],booking[13],booking[14],booking[15],booking[16],booking[17],booking[18]);
+
                 bookingSet.add(new Booking(booking[0], booking[1], booking[2], customer1, facility));
             }
 
