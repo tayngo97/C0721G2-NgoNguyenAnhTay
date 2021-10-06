@@ -12,6 +12,7 @@ import validator.CheckInput;
 import java.util.*;
 
 public class FacilityServiceImpl implements FacilityService {
+    private static  CheckInput  input = new CheckInput();
     protected static VillaToCsv villaList  = new VillaToCsv();
     protected static HouseToCsv houseList  = new HouseToCsv();
     protected static RoomToCsv roomList  = new RoomToCsv();
@@ -55,20 +56,20 @@ public class FacilityServiceImpl implements FacilityService {
                     break;
                 } else if (choice > 4) continue;
                 System.out.println("Enter service name :");
-                String seviceName = CheckInput.getInput(CheckInput.REGEX_CHECK_NAME);
+                String seviceName = input.getInput(input.REGEX_CHECK_NAME);
                 System.out.println("Enter number of usable area :");
-                String area = CheckInput.getInput(CheckInput.REGEX_AREA);
-                String rentalCost = CheckInput.getInput(CheckInput.REGEX_RENTAL_COST);
-                String maxNumberOfTenants = CheckInput.getInput(CheckInput.REGEX_MAXIMUML_TENANTS);
+                String area = input.getInput(input.REGEX_AREA);
+                String rentalCost = input.getInput(input.REGEX_RENTAL_COST);
+                String maxNumberOfTenants = input.getInput(input.REGEX_MAXIMUML_TENANTS);
                 System.out.println("Enter type of rent :");
-                String typeOfRent = CheckInput.getInput(CheckInput.REGEX_CHECK_NAME);
+                String typeOfRent = input.getInput(input.REGEX_CHECK_NAME);
                 switch (choice) {
                     case 1:
-                        String serviceVillaId = CheckInput.getInput(CheckInput.REGEX_VILLA_ID);
-                        String roomStandard = CheckInput.getInput(CheckInput.REGEX_CHECK_NAME);
+                        String serviceVillaId = input.getInput(input.REGEX_VILLA_ID);
+                        String roomStandard = input.getInput(input.REGEX_CHECK_NAME);
                         System.out.println("Enter number of pool area");
-                        String poolArea = CheckInput.getInput(CheckInput.REGEX_AREA);
-                        String numOfFloor = CheckInput.getInput(CheckInput.REGEX_NUM_OF_FLOOR);
+                        String poolArea = input.getInput(input.REGEX_AREA);
+                        String numOfFloor = input.getInput(input.REGEX_NUM_OF_FLOOR);
                         Villa villa = new Villa(seviceName, serviceVillaId, area, rentalCost,
                                 maxNumberOfTenants, typeOfRent, roomStandard, poolArea, numOfFloor);
 
@@ -79,9 +80,9 @@ public class FacilityServiceImpl implements FacilityService {
                         villaList.writeToFile(villaMap);
                         break;
                     case 2:
-                        String serviceHouseId = CheckInput.getInput(CheckInput.REGEX_HOUSE_ID);
-                        String roomStandard1 = CheckInput.getInput(CheckInput.REGEX_CHECK_NAME);
-                        String numOfFloor1 = CheckInput.getInput(CheckInput.REGEX_NUM_OF_FLOOR);
+                        String serviceHouseId = input.getInput(input.REGEX_HOUSE_ID);
+                        String roomStandard1 = input.getInput(input.REGEX_CHECK_NAME);
+                        String numOfFloor1 = input.getInput(input.REGEX_NUM_OF_FLOOR);
                         House house = new House(seviceName, serviceHouseId, area,
                                 rentalCost, maxNumberOfTenants, typeOfRent, roomStandard1, numOfFloor1);
                         if (HouseToCsv.houseFile.length() > 0) {
@@ -91,7 +92,7 @@ public class FacilityServiceImpl implements FacilityService {
                         houseList.writeToFile(houseMap);
                         break;
                     case 3:
-                        String serviceRoomId = CheckInput.getInput(CheckInput.REGEX_ROOM_ID);
+                        String serviceRoomId = input.getInput(input.REGEX_ROOM_ID);
                         System.out.println("Enter FreeService");
                         String promotionService = scanner.nextLine();
                         Room room = new Room(seviceName, serviceRoomId, area, rentalCost,

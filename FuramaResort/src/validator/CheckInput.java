@@ -6,25 +6,23 @@ import java.util.regex.Pattern;
 
 public class CheckInput {
     private static Scanner scanner = new Scanner(System.in);
-    public static final String REGEX_CHECK_NAME = "^[A-Z][a-z0-9]+$";
-    public static final String REGEX_VILLA_ID = "^SVVL-[0-9]{4}$";
-    public static final String REGEX_HOUSE_ID = "^SVHO-[0-9]{4}$";
-    public static final String REGEX_ROOM_ID = "^SVRO-[0-9]{4}$";
-    public static final String REGEX_RENTAL_COST = "^([\\d]{1,3}\\.[\\d]{0,3})+$|^[\\d]+$";
-    public static final String REGEX_MAXIMUML_TENANTS = "^[1-9]|[1][0-9]$";
-    public static final String REGEX_NUM_OF_FLOOR = "^[1-9]\\d*$";
-    public static final String REGEX_AREA = "^[3-9]+\\d+\\.?\\d{0,3}\\.?\\d{0,3}$";
+    public final String REGEX_CHECK_NAME = "^[A-Z][a-z0-9]+$";
+    public  final String REGEX_VILLA_ID = "^SVVL-[0-9]{4}$";
+    public  final String REGEX_HOUSE_ID = "^SVHO-[0-9]{4}$";
+    public  final String REGEX_ROOM_ID = "^SVRO-[0-9]{4}$";
+    public  final String REGEX_RENTAL_COST = "^([\\d]{1,3}\\.[\\d]{0,3})+$|^[\\d]+$";
+    public  final String REGEX_MAXIMUML_TENANTS = "^[1-9]|[1][0-9]$";
+    public  final String REGEX_NUM_OF_FLOOR = "^[1-9]\\d*$";
+    public  final String REGEX_AREA = "^[3-9]+\\d+\\.?\\d{0,3}\\.?\\d{0,3}$";
 
 
-    public static String getInput(String regex) {
+    public  String getInput(String regex) {
         String input = "";
         boolean flag = true;
         while (flag) {
             getMessage(regex);
             input = scanner.nextLine();
-            Pattern pattern = Pattern.compile(regex);
-            Matcher matcher = pattern.matcher(input);
-            if (matcher.matches()) {
+            if (Pattern.matches(regex,input)) {
                 System.out.println("------------------");
                 flag = false;
             } else {
@@ -34,7 +32,7 @@ public class CheckInput {
         return input;
     }
 
-    public static void getMessage(String regex) {
+    public  void getMessage(String regex) {
         switch (regex) {
             case REGEX_CHECK_NAME:
                 System.out.print("You must capitalize the first character \n=>");
