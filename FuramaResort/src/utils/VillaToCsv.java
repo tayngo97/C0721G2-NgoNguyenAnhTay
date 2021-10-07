@@ -10,7 +10,6 @@ import java.util.Map;
 public class VillaToCsv {
     public static File villaFile = new File("C:\\C0721G2_NgoNguyenAnhTay\\FuramaResort\\src\\data\\villa.csv");
 
-
     public Map<Villa, Integer> readDataFromFile() {
         Map<Villa, Integer> facilityIntegerMap = new LinkedHashMap<>();
         try {
@@ -61,4 +60,5 @@ public class VillaToCsv {
             e.printStackTrace();
         }
     }
+
 }
