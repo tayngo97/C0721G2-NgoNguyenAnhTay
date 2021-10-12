@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f957bc1-576a-4a43-a3a1-3d2d40548f91" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../untitled/src/IQuanLyStk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/KhachHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/QuanLyKhachHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/QuanLyStk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/SoTietKiem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/TkCoThoiHan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/TkDaiHan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/TkNganHan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/TkVoThoiHan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/ValiDateStk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/so_tiet_kiem.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/FacilityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/FacilityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/utils/BookingToCsv.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/utils/BookingToCsv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/utils/VillaToCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/utils/VillaToCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/data/customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/data/customer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/utils/BookingToCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/utils/BookingToCsv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module1/12.Mảng 2/Bài tập/Luyện tập mảng 1/bai5.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/12.Mảng 2/Bài tập/Luyện tập mảng 1/bai5.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1zAmJcOeUZhDY04fEmIeBo0Wrsx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f957bc1-576a-4a43-a3a1-3d2d40548f91" name="Default Changelist" comment="" />
+      <created>1633599195459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633599195459</updated>
+      <workItem from="1633599198425" duration="31000" />
+      <workItem from="1633941542835" duration="6000" />
+      <workItem from="1633941852630" duration="15000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2659" y="274" key="FileChooserDialogImpl" timestamp="1633941865945">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2659" y="274" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1633941865945" />
+  </component>
+</project>

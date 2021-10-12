@@ -25,9 +25,11 @@ public class BookingToCsv {
                 String[] booking = line.split(",");
 
                 Customer customer1 = new Customer(booking[3], booking[4], booking[5], Integer.parseInt(booking[6]), Integer.parseInt(booking[7]), booking[8], booking[9], booking[10], booking[11]);
-                String bookingId = booking[13];
+                String bookingId = booking[12];
+
                 Facility facility;
-                if (bookingId.contains("SVVL")) {
+                System.out.println(booking[12]);
+                if (booking[12].contains("SVVL")) {
 //                    facility = new Villa(booking[12],booking[13],booking[14],booking[15],booking[16],booking[17],booking[18],booking[19],booking[20]);
                     facility = new VillaBuider()
                             .addServiceName(booking[12])
