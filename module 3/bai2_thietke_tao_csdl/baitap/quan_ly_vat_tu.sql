@@ -22,15 +22,24 @@ SoDH int primary key,
 NgayDH datetime
 );
 
+create table SDT(
+sdtID int primary key,
+SDT int
+);
+
 create table nhacc(
 MaNCC int primary key,
 TenNCC varchar(50),
-DiaChi varchar(50)
+DiaChi varchar(50),
+sdtID int,
+foreign key (sdtID) references SDT(sdtID)
 );
 
 create table chitiet_phieuxuat(
 SoPX int,
 MaVTU int,
+DGXuat int,
+SLXuat int,
 primary key(SoPX,MaVTU),
 constraint pk_SoPX foreign key (SoPX) references phieuxuat(SoPX),
 foreign key (MaVTU) references vattu(MaVTU)
@@ -39,6 +48,8 @@ foreign key (MaVTU) references vattu(MaVTU)
 create table chitiet_phieunhap(
 SoPN int,
 MaVTU int,
+DGNhap int,
+SLNhap int,
 primary key(SoPN,MaVTU),
 constraint pk_SoPN foreign key (SoPN) references phieunhap(SoPN),
 foreign key (MaVTU) references vattu(MaVTU)
@@ -60,8 +71,4 @@ foreign key (SoDH) references dondh(SoDH),
 foreign key (MaNCC) references nhacc(MaNCC)
 );
 
-create table SDT(
-MaNCC int,
-SDT int,
-primary key (MaNCC,SDT)
-);
+
