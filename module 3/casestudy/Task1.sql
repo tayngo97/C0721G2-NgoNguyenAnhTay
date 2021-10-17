@@ -26,9 +26,11 @@ values('Diamond'),('Platinium'),('Gold'),('Silver'),('Member');
 
 -- Thêm mới khách hàng
 insert into khachhang(IDLoaiKhach,HoTen,NgaySinh,SoCMND,Sdt,Email,DiaChi)
-values(1,'Nhan','1995-10-09',102021,09021231,'Long@gmail.com','DN'),
-(1,'Tien','1992-05-09',102021,09021231,'Hoa@gmail.com','HN'),
-(1,'Truong','1995-10-09',102021,09021231,'LY@gmail.com','QN');
+values(1,'Nhan','1995-10-09',102021,09021231,'Long@gmail.com','Đà nẵng'),
+(1,'Tien','1992-05-09',102021,09021231,'Hoa@gmail.com','Hà nội'),
+(1,'Truong','1995-10-09',102021,09021231,'Truong@gmail.com','Quãng ngãi'),
+(2,'Nam','1992-05-09',102021,09021231,'Hoa@gmail.com','Vinh'),
+(3,'Ly','1995-10-09',102021,09021231,'LY@gmail.com','Quãng ngãi');
 
 -- Thêm mới dịch vụ đi kèm
 insert into dichvudikem(TenDichVuDiKem,Gia,DonVi,TrangThaiKhaDung)
@@ -42,25 +44,41 @@ values ('Massage',10000,1,'San Sang'),
 insert into kieuthue(TenKieuThue,Gia)
 values('Thuê Năm',100000),('Thuê Tháng',50000),('Thuê Ngày',1500),('Thuê Giờ',200);
 
+-- Thêm mới loại dich vụ
+insert into loaidichvu(TenLoaiDichVu)
+values('Villa'),
+('House'),
+('Room');
+
 -- Thêm mới dịch vụ
 insert into dichvu(TenDichVu,DienTich,SoTang,SoNguoiToiDa,ChiPhiThue,IDKieuThue,IdLoaiDichVu,TrangThai)
-values('Villa',50,4,3,10000,1,null,'Ready'),
-('House',40,5,2,5000,2,null,'Ready'),
-('Room',20,4,3,600,4,null,'Ready');
+values('Villa',50,4,3,10000,1,1,'Ready'),
+('House',40,5,2,5000,2,2,'Ready'),
+('Room',20,4,3,600,4,3,'Ready');
 
 -- Thêm mới hợp đồng
 insert into hopdong(IDNhanVien,IDKhachHang,IDDichVu,NgayLamHopDong,NgayKetThuc,TienDatCoc)
 values
 (1,2,1,'2018-2-18','2020-10-10',2000000),
-(2,3,2,'2024-3-12','2021-10-10',4000000),
-(3,1,1,'2019-1-2','2019-5-30',7000000),
-(1,2,2,'2020-9-16','2020-10-10',2000000);
+(2,3,2,'2019-3-12','2021-10-10',4000000),
+(3,1,1,'2020-1-2','2019-5-30',7000000),
+(2,3,2,'2019-6-12','2021-10-10',4000000),
+(1,2,2,'2020-9-16','2020-10-10',2000000),
+(1,2,1,'2019-2-18','2020-10-10',2000000),
+(2,3,2,'2019-6-12','2021-10-10',4000000),
+(3,1,1,'2020-1-2','2019-5-30',7000000),
+(1,2,2,'2019-9-16','2020-10-10',2000000);
 
 -- Thêm mới hợp đồng chi tiết 
 insert into HopDongChiTiet(IDHopDong,IDDichVuDiKem,SoLuong)
 values 
 (4,2,2),
 (1,2,3),
-(2,1,2),
+(2,1,6),
 (2,3,1),
-(3,5,4);
+(3,5,4),
+(5,3,2),
+(6,4,1),
+(9,1,4),
+(8,1,3),
+(7,5,5);
