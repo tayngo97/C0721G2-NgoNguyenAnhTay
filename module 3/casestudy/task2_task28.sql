@@ -190,6 +190,14 @@ from loaikhach lk
      where hdct.soluong > 10) as hd
      group by dvdk.ten_dichvu_dikem
      ) ;
+     
+  --    task20
+select id_nhanvien as id, hoten as hoten , sdt, ngaysinh, email, diachi
+from nhanvien
+union
+select id_khachhang as id, hoten as hoten , sdt, ngaysinh, email, diachi
+from khachhang;
+     
 
 
 -- Task 21
@@ -211,8 +219,20 @@ from loaikhach lk
 -- 	task22
 update v_nhanvien
 set diachi = 'Liển  Chiểu';
-
 select * from v_nhanvien;
+
+
+-- task23
+delimiter //
+create procedure sp_1(
+id_khachang int(10)
+)
+begin
+		delete from khachhang
+        where khachhang.id_khachhang = id_khachang;
+end //
+delimiter ;
+call delete_khachang(3);
 
 
 
