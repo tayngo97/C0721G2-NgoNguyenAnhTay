@@ -1,0 +1,56 @@
+body{
+    background-color: black ;
+}
+
+*{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: Arial;
+}
+
+.nav{
+    background-color: black;
+    display: flex;
+    height: 4em;
+    line-height: 4em;
+    justify-content:space-between ;
+}
+
+.logo{
+    font-size: 2em;
+    padding-left: 20px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    padding-right: 2.5em;
+    font-size: 20px;
+}
+.menu li a:hover{
+    color: darkred;
+    transition: color .3s ease-out;
+}
+.menu_down{
+    background-color: blueviolet;
+    width: 180px;
+    height: 10em;
+    position: absolute;
+    top: 70px;
+    right: 100px;
+    display: none;
+}
+.menu_down li{
+    text-align: center;
+    padding: 0px;
+}
+.menu_down li a:hover {
+    color: red;
+}
+.menu .menu_link:hover .menu_down{
+        display: block;
+    transition-delay: 10s;
+}

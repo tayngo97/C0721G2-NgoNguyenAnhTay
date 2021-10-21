@@ -1,0 +1,18 @@
+#siteSub{
+    display: inline;
+    font-size: 70%;
+}
+
+sup {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50%;
+}
+
+body {
+    margin-right: 50%;
+}
+
+p {
+    text-indent: 30px;
+}
