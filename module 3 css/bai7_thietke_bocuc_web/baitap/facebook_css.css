@@ -2,7 +2,380 @@
     margin: 0;
     padding: 0;
     font-family: poppins,sans-serif;
+    box-sizing: border-box;
 }
 body{
     background: #efefef;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1876f2;
+    padding: 5px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.logo{
+    width: 50px;
+    margin-right: 50px;
+    margin-left: 0px;
+}
+
+.nav-left,.nav-right{
+    display: flex;
+    align-items: center;
+}
+.nav-right p{
+    color: white;
+}
+.nav-center i{
+    align-items: center;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 30px;
+}
+.nav-left ul li{
+    list-style: none;
+    display: inline-block;
+}
+.nav-left ul li img{
+    width: 28px;
+    margin: 0 15px;
+}
+.nav-user-icon img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.nav-user-icon{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.search-box{
+    background: #efefef;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.search-box img{
+    width: 18px;
+}
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline-style: none;
+    border: 0;
+}
+.online{
+    position: relative;
+}
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #41db51;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 2%;
+    margin-top: 100px;
+    /*chưa hiểu ??????????*/
+}
+.left-sidebar{
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+    color: #1876f2;
+}
+.right-sidebar{
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    right: 0;
+    height: 100%;
+    align-self: flex-start;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    color: #626262;
+}
+.main-content{
+    margin-right: 15px;
+    margin-left: 15px;
+    flex-basis:  47%;
+    /*width: 47%;*/
+    border-radius: 20px;
+}
+.imp-links a,.shortcut-links a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #626262;
+    width: fit-content;
+}
+.imp-links a img{
+    width: 25px;
+    margin-right: 15px;
+}
+.imp-links a:last-child{
+    color: #1876f2;
+}
+.imp-links{
+    border-bottom: 1px solid #ccc;
+}
+.shortcut-links p{
+    margin: 25px 0;
+    color: #626262;
+    font-weight: 700;
+}
+.shortcut-links a img{
+    width: 40px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+.sidebar-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.sidebar-title h4{
+    font-weight: 600;
+    font-size: 16px;
+}
+.sidebar-title a{
+    text-decoration: none;
+    color: #1876f2;
+    font-size: 20px;
+}
+.event{
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.left-event{
+    border-radius: 10px;
+    height: 65px;
+    width: 65px;
+    margin-right: 15px;
+    padding-top: 10px;
+    text-align: center ;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 9px 7px 2px mistyrose;
+}
+.event p{
+    font-weight: 700;
+}
+.event a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #1876f2;
+}
+.left-event span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: lightsalmon;
+    color: white;
+    font-size: 10px;
+    padding: 4px 0;
+}
+.icon-chat{
+    color: black;
+}
+.online-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.online-list .online img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.online-list .online{
+    background: #1876f2;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.left-conversation a i{
+    font-size: 18px;
+    align-items: center;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.story_gallery{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+/*.story{*/
+/*    flex-basis: 18%;*/
+/*}*/
+.write-your-st{
+    width: 60%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.write-your-st img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px ;
+}
+
+.write-your-st input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline-style: none;
+}
+.option-choice{
+    display: flex;
+    margin: 10px 10px;
+}
+.option{
+    display: flex;
+    margin-left: 5px;
+}
+#icon1{
+    color: forestgreen;
+}
+#icon2{
+    color: blue;
+}
+#icon3{
+    color: saddlebrown;
+}
+
+
+.story-header i{
+    margin-left: 580px;
+}
+.img a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+.name-owns{
+    width: 200px;
+    margin-left: 5px;
+    align-items: center;
+}
+.name-user{
+    font-weight: 700;
+}
+.hours{
+    font-weight: 100;
+    font-size: 10px;
+}
+.body-status{
+    width: 100px;
+    height: 100px;
+}
+.body-status img{
+        width: 50px;
+    height: 50px;
+}
+.icon-chat{
+    margin-right: 20px;
+}
+.image-content{
+    width: 90%;
+    height: 600px;
+    border-radius: 30px;
+}
+.post-story{
+    background: white;
+    border-radius: 10px;
+}
+.story{
+    border-radius: 10px;
+    background: white;
+    /*margin: 10px;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    align-items: center;
+}
+.story i{
+    align-items: center;
+    margin-left: 120px;
+}
+.story{
+    margin-bottom: 20px;
+}
+.story-header{
+    display: flex;
+    align-items: center;
+
+}
+.story-body img{
+    margin-left: 20px;
+}
+.img a img{
+    margin-left: 20px;
+}
+.story-body p{
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 30px;
+    word-wrap: break-word;
+}
+.like i{
+    margin-left: 20px;
+    color: dodgerblue;
+}
+.comment{
+    display: flex;
+    justify-content: space-between;
+}
+.comment-under{
+    margin-right: 18%;
+    font-size: 15px;
+}
+.like-and-comment{
+    display: flex;
+    justify-content: space-between;
+}
+.like1{
+
+    width: 45%;
+    display: flex;
+    align-items: center;
+    border-top: #626262 solid 1px;
+    border-bottom: #626262 solid 1px;
+    border-right: #626262 solid 1px;
+}
+.comment1{
+    width: 45%;
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    border-top: #626262 solid 1px;
+    border-bottom: #626262 solid 1px ;
 }
