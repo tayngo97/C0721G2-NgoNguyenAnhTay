@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+    font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+body{
+
+}
+.nav-item a span{
+    text-decoration: none;
+}

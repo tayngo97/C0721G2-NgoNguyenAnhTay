@@ -1,11 +1,36 @@
-
-.right-navbar{
-    display: flex;
-    margin-left: 300px;
-}
-.search-box{
-    width: 100em;
-}
-.all-microsoft{
-
-}
+/**{*/
+/*    !*background: white;*!*/
+/*    margin: 0;*/
+/*    padding: 0px 10px;*/
+/*}*/
+/*.logo{*/
+/*    !*background: transparent;*!*/
+/*    width: 130px;*/
+/*}*/
+/*.main-menu{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+/*.nar-bar{*/
+/*    !*background: #1876f2;*!*/
+/*}*/
+/*.Surface a{*/
+/*    background: transparent;*/
+/*    color: #1C1C1C;*/
+/*    font-size: 22px;*/
+/*    padding: 5px 5px;*/
+/*}*/
+/*table{*/
+/*    display: none;*/
+/*}*/
+/*.nav-item{*/
+/*    display: block;*/
+/*}*/
+/*.navbar-nav a:hover{*/
+/*    border-bottom: 3px solid black;*/
+/*}*/
+/*h3 a:hover{*/
+/*    border-bottom: 3px solid black;*/
+/*    text-decoration: none;*/
+/*    color: #1C1C1C;*/
+/*}*/
