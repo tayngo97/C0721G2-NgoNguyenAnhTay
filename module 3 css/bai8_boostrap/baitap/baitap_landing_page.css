@@ -9,3 +9,14 @@ body{
 .nav-item a span{
     text-decoration: none;
 }
+.panel1 a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+.text1{
+    display: flex;
+}
+.text1 a{
+    text-decoration: none;
+
+}
