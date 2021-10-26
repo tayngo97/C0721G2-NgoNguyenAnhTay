@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="chuyendoi_tiente:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/chuyendoi_tiente_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="chuyendoi_tiente/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="chuyendoi_tiente" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
