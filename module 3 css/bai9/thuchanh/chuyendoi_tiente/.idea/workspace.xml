@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="chuyendoi_tiente:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bc9604fa-6236-4b7c-8825-796a0a57fb86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/thuchanh.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/chuyendoi_tiente_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chuyendoi_tiente.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/chuyendoi_tiente_war_exploded/WEB-INF/classes/ConverterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/chuyendoi_tiente_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/chuyendoi_tiente_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chuyendoi_tiente/ConverterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConverterServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/build/classes/java/main/Servlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/build/libs/bai9-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/src/main/java/Servlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ngaygio/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/.idea/artifacts/product_discount_calculator_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/out/artifacts/product_discount_calculator_war_exploded/WEB-INF/classes/DiscountServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/out/artifacts/product_discount_calculator_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/out/artifacts/product_discount_calculator_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/out/production/product_discount_calculator/DiscountServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/product_discount_calculator.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/src/DiscountServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/web/index1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/.idea/artifacts/thuchanh_dangnhap_hienthiloichao_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/out/artifacts/thuchanh_dangnhap_hienthiloichao_war_exploded/WEB-INF/classes/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/out/artifacts/thuchanh_dangnhap_hienthiloichao_war_exploded/WEB-INF/classes/META-INF/thuchanh_dangnhap_hienthiloichao.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/out/artifacts/thuchanh_dangnhap_hienthiloichao_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/out/artifacts/thuchanh_dangnhap_hienthiloichao_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/out/production/thuchanh_dangnhap_hienthiloichao/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/out/production/thuchanh_dangnhap_hienthiloichao/META-INF/thuchanh_dangnhap_hienthiloichao.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/src/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/thuchanh_dangnhap_hienthiloichao.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuchanh_dangnhap_hienthiloichao/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien/.idea/artifacts/tudien_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien/tudien.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/build/classes/java/main/TranslationServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/build/libs/tudien_dongian-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/src/main/java/TranslationServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tudien_dongian/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/artifacts/untitled_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/untitled.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/web/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="202yTJJ7xqWHxj1YEDhJGKOP463" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.41" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.41" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <deployment>
+        <artifact name="chuyendoi_tiente:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_41_chuyendoi_tiente" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60758" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="chuyendoi_tiente:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bc9604fa-6236-4b7c-8825-796a0a57fb86" name="Default Changelist" comment="" />
+      <created>1635256983479</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635256983479</updated>
+      <workItem from="1635256987350" duration="1065000" />
+      <workItem from="1635305419048" duration="856000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1635305501471">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1635305501471" />
+    <state x="370" y="0" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1635305490892">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="370" y="0" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1280.680@0.0.1280.680" timestamp="1635305490892" />
+    <state x="420" y="94" key="FileChooserDialogImpl" timestamp="1635306406888">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1635306406888" />
+    <state width="843" height="159" key="GridCell.Tab.0.bottom" timestamp="1635306427556">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635306427556" />
+    <state width="843" height="159" key="GridCell.Tab.0.center" timestamp="1635306427556">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1635306427556" />
+    <state width="843" height="159" key="GridCell.Tab.0.left" timestamp="1635306427556">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1635306427556" />
+    <state width="843" height="159" key="GridCell.Tab.0.right" timestamp="1635306427556">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1635306427556" />
+    <state width="843" height="159" key="GridCell.Tab.1.bottom" timestamp="1635306427557">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635306427557" />
+    <state width="843" height="159" key="GridCell.Tab.1.center" timestamp="1635306427556">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1635306427556" />
+    <state width="843" height="159" key="GridCell.Tab.1.left" timestamp="1635306427556">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1635306427556" />
+    <state width="843" height="159" key="GridCell.Tab.1.right" timestamp="1635306427557">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1635306427557" />
+    <state width="843" height="159" key="GridCell.Tab.2.bottom" timestamp="1635306427557">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635306427557" />
+    <state width="843" height="159" key="GridCell.Tab.2.center" timestamp="1635306427557">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1635306427557" />
+    <state width="843" height="159" key="GridCell.Tab.2.left" timestamp="1635306427557">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1635306427557" />
+    <state width="843" height="159" key="GridCell.Tab.2.right" timestamp="1635306427557">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="843" height="159" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1635306427557" />
+    <state x="90" y="0" key="new project wizard" timestamp="1635306424969">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="90" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1635306424969" />
+  </component>
+</project>
