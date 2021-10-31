@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9257abc6-3031-4323-890b-42890292c83d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/thuchanh_quanlykhachhang/src/main/java/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/thuchanh_quanlykhachhang/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/thuchanh_quanlykhachhang/src/main/java/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/thuchanh_quanlykhachhang/src/main/java/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/thuchanh_quanlykhachhang/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/java/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/java/service/impl/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/java/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/webapp/product/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/webapp/product/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/webapp/product/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/webapp/product/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/webapp/product/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/webapp/product/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham/src/main/webapp/product/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/java/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/java/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/webapp/404error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/webapp/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/webapp/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai11_mvc/thuchanh/quanly_khachhang/src/main/webapp/customer/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuchanh/quanlyuser/src/main/java/Controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuchanh/quanlyuser/src/main/java/model/IUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuchanh/quanlyuser/src/main/java/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuchanh/quanlyuser/src/main/java/model/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuchanh/quanlyuser/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/build/classes/java/main/servlet/CalculatorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/build/classes/java/main/servlet/CalculatorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/build/libs/Calculator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai10_jstl/thuchanh/Calculator/build/libs/Calculator-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai8_boostrap/baitap/baitap_landing_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai8_boostrap/baitap/baitap_landing_page.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="20D6i0QfDjWvwLFl6CX7h5vjBYY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bai11_mvc/baitap/quanli_sanpham" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9257abc6-3031-4323-890b-42890292c83d" name="Default Changelist" comment="" />
+      <created>1635566934251</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635566934251</updated>
+      <workItem from="1635566935652" duration="14000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2659" y="274" key="FileChooserDialogImpl" timestamp="1635566947624">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2659" y="274" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1635566947624" />
+  </component>
+</project>
