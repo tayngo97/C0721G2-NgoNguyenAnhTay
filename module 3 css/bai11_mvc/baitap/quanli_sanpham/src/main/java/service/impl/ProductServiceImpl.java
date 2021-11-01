@@ -51,24 +51,24 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public Product findByName(String name) {
-        List<Product> productList = findAll();
-        for (Product product: productList) {
-            if (product.getName().equals(name)){
-                return product;
-            }
-        }
+//        List<Product> productList = findAll();
+//        for (Product product: productList) {
+//            if (product.getName().equals(name)){
+//                return product;
+//            }
+//        }
         return null;
     }
 
 
 
     public Product findById(int id){
-        List<Product> productList = findAll();
-        for (Product product: productList) {
-            if (product.getId() == id){
-                return product;
-            }
-        }
+//        List<Product> productList = findAll();
+//        for (Product product: productList) {
+//            if (product.getId() == id){
+//                return product;
+//            }
+//        }
         return null;
     }
 
