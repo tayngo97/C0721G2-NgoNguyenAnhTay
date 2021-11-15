@@ -164,12 +164,20 @@
                                     </tr>
                                 </c:forEach>
                             </table>
+
+                            <select>
+                                <option value="1">Lễ tân</option>
+                                <option value="2">Lễ tân</option>
+                                <option value="3">Lễ tân</option>
+                            </select>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
 
     <%--    Footer--%>

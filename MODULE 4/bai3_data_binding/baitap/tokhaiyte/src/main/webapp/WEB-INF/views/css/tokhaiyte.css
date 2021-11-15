@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+p{
+    color: red;
+}
+.row{
+    margin-bottom: 20px;
+}

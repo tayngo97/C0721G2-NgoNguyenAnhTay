@@ -36,26 +36,26 @@ public class BookRepository implements IBookRepositpry {
 
     @Override
     public void save(Book book) {
-//        try {
-//            PreparedStatement preparedStatement =
-//                    BaseRepoEmployee.connection.prepareStatement(
-//                            " insert into employee(`name`,birthday,salary,phone_number,email,address,position_id,education_degree_id,division_id,username)"+
-//                            " values (?,?,?,?,?,?,?,?,?,?)");
-//            System.out.println(employee.toString());
-//            preparedStatement.setString(1,employee.getName());
-//            preparedStatement.setString(2,employee.getBirthday());
-//            preparedStatement.setInt(3,employee.getSalary());
-//            preparedStatement.setString(4,employee.getPhoneNumberl());
-//            preparedStatement.setString(5,employee.getEmail());
-//            preparedStatement.setString(6,employee.getAdress());
-//            preparedStatement.setInt(7,Integer.parseInt(employee.getDivision()));
-//            preparedStatement.setInt(8,Integer.parseInt(employee.getEducation_degree()));
-//            preparedStatement.setInt(9,Integer.parseInt(employee.getPosition()));
-//            preparedStatement.setString(10,employee.getUserName());
-//            preparedStatement.executeUpdate();
-//        } catch (SQLException throwables) {
-//            throwables.printStackTrace();
-//        }
+        try {
+            PreparedStatement preparedStatement =
+                    BaseRepoEmployee.connection.prepareStatement(
+                            " insert into employee(`name`,birthday,salary,phone_number,email,address,position_id,education_degree_id,division_id,username)"+
+                            " values (?,?,?,?,?,?,?,?,?,?)");
+            System.out.println(employee.toString());
+            preparedStatement.setString(1,employee.getName());
+            preparedStatement.setString(2,employee.getBirthday());
+            preparedStatement.setInt(3,employee.getSalary());
+            preparedStatement.setString(4,employee.getPhoneNumberl());
+            preparedStatement.setString(5,employee.getEmail());
+            preparedStatement.setString(6,employee.getAdress());
+            preparedStatement.setInt(7,Integer.parseInt(employee.getDivision()));
+            preparedStatement.setInt(8,Integer.parseInt(employee.getEducation_degree()));
+            preparedStatement.setInt(9,Integer.parseInt(employee.getPosition()));
+            preparedStatement.setString(10,employee.getUserName());
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     @Override

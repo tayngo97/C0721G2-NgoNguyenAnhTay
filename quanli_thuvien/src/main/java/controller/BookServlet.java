@@ -107,37 +107,37 @@ public class BookServlet extends HttpServlet {
     }
 
     private void createBook(HttpServletRequest request, HttpServletResponse response){
-//            String name = request.getParameter("name");
-//            String birthday = request.getParameter("birthday");
-//            int salary = Integer.parseInt(request.getParameter("salary"));
-//            String phoneNumber = request.getParameter("phoneNumber");
-//            String email = request.getParameter("email");
-//            String address = request.getParameter("address");
-//            String division = request.getParameter("division");
-//            String education = request.getParameter("education");
-//            String position = request.getParameter("position");
-//            String userName = request.getParameter("userName");
-//
-//            Book employee = new Book();
-//            employee.setName(name);
-//            employee.setBirthday(birthday);
-//            employee.setSalary(salary);
-//            employee.setPhoneNumberl(phoneNumber);
-//            employee.setEmail(email);
-//            employee.setAdress(address);
-//            employee.setDivision(division);
-//            employee.setEducation_degree(education);
-//            employee.setPosition(position);
-//            employee.setUserName(userName);
-//
-//             System.out.println(name);
-//            this.bookService.save(employee);
-//
-//        try {
-//            response.sendRedirect("/employee");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+            String name = request.getParameter("name");
+            String birthday = request.getParameter("birthday");
+            int salary = Integer.parseInt(request.getParameter("salary"));
+            String phoneNumber = request.getParameter("phoneNumber");
+            String email = request.getParameter("email");
+            String address = request.getParameter("address");
+            String division = request.getParameter("division");
+            String education = request.getParameter("education");
+            String position = request.getParameter("position");
+            String userName = request.getParameter("userName");
+
+            Book employee = new Book();
+            employee.setName(name);
+            employee.setBirthday(birthday);
+            employee.setSalary(salary);
+            employee.setPhoneNumberl(phoneNumber);
+            employee.setEmail(email);
+            employee.setAdress(address);
+            employee.setDivision(division);
+            employee.setEducation_degree(education);
+            employee.setPosition(position);
+            employee.setUserName(userName);
+
+             System.out.println(name);
+            this.bookService.save(employee);
+
+        try {
+            response.sendRedirect("/employee");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response){
