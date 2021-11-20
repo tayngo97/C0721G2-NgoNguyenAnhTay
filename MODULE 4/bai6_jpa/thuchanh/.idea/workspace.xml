@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fa0e36ff-3234-4d75-ad54-168b2dec1058" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/demo/thymleaf/src/main/java/com/codegym/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/demo/thymleaf/src/main/java/com/codegym/ApplicationInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/java/com/codegym/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai4_thymleaf/thuchanh/quanlikhachhang/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/java/music_app/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/java/music_app/config/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/java/music_app/controller/SongController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/java/music_app/model/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/java/music_app/service/ISongService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/java/music_app/service/impl/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/java/music_app/service/impl/SongService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/baitap/ungdung_nghenhac/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/quanli_kh/src/main/java/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/quanli_kh/src/main/java/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/quanli_kh/src/main/java/cg/wbd/grandemonstration/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/quanli_kh/src/main/java/cg/wbd/grandemonstration/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/quanli_kh/src/main/java/cg/wbd/grandemonstration/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/quanli_kh/src/main/java/cg/wbd/grandemonstration/service/impl/SimpleCustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/quanli_kh/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/quanli_kh/src/main/webapp/WEB-INF/templates/customers/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5_orm/quanli_kh/src/main/webapp/WEB-INF/templates/customers/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/IQuanLyStk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/KhachHang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/META-INF/untitled.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/QuanLyKhachHang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/QuanLyStk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/SoTietKiem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/TkCoThoiHan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/TkDaiHan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/TkNganHan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/TkVoThoiHan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/ValiDateStk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/out/production/untitled/so_tiet_kiem.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/IQuanLyStk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/KhachHang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/QuanLyKhachHang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/QuanLyStk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/SoTietKiem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/TestConnertion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/TkCoThoiHan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/TkDaiHan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/TkNganHan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/TkVoThoiHan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/ValiDateStk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/src/so_tiet_kiem.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled/untitled.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/lib/javax.annotation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/lib/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/lib/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/lib/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/lib/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/lib/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/lib/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/lib/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/src/main/java/Servlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../untitled1/src/main/webapp/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="213HKiNmDevp6beZKFV46LigMRr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa0e36ff-3234-4d75-ad54-168b2dec1058" name="Default Changelist" comment="" />
+      <created>1637162788063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637162788063</updated>
+      <workItem from="1637162789201" duration="42000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="420" y="95" key="FileChooserDialogImpl" timestamp="1637162809087">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="420" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1637162809087" />
+    <state x="90" y="0" key="new project wizard" timestamp="1637162830404">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="90" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1637162830404" />
+  </component>
+</project>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <label for="author">Search By Author</label>
+    <input type="text" id="author" name="author" placeholder="Author">
+    <input type="submit">
+</form>
+
+<form>
+    <label for="ecomId" >Filter by Ecommerce</label>
+    <select onchange="this.form.submit()" id="ecomId" th:name="ecomId" th:value="${ecomId}">
+        <option value="" disabled selected>Choose something</option>
+        <th:block th:each="ecom:${ecommer}">
+            <option th:value="${ecom.id}" th:text="${ecom.name}"></option>
+        </th:block>
+    </select>
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Topic</th>
+        <th>Author</th>
+        <th>Ecommerce</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog : ${blogs}">
+        <td th:text="${blog.id}"></td>
+        <td th:text="${blog.topic}"></td>
+        <td th:text="${blog.author}"></td>
+        <td th:text="${blog.eCommerce.name}"></td>
+        <td>abc</td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <a th:href="@{'/'(page=${blogs.number - 1},author=${author})}" th:if="${blogs.hasPrevious()}">Previous</a>
+    <span th:text="${blogs.number + 1}"></span>  <span th:text="${blogs.totalPages}"></span>
+    <a th:href="@{'/'(page=${blogs.number + 1},author=${author})}" th:if="${blogs.hasNext()}">Next</a>
+</div>
+</body>
+</html>
