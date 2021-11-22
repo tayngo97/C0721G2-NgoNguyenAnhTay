@@ -52,6 +52,4 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
         viewResolver.setCharacterEncoding("UTF-8");
         return viewResolver;
     }
-    
-
 }

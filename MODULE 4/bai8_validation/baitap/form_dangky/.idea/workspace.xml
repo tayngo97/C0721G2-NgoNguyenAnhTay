@@ -20,50 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8137cbf7-4bc5-45e9-83d0-11337df0c89a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/result.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/java/com/codegym/controller/FormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/java/com/codegym/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/java/com/codegym/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/PhoneController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/model/PhoneNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/build/classes/java/main/com/codegym/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/build/classes/java/main/com/codegym/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/build/classes/java/main/com/codegym/controller/PhoneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/build/classes/java/main/com/codegym/model/PhoneNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/build/libs/customer_phone_validation-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/build/libs/customer_phone_validation-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/build/resources/main/validation-message.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/build/resources/main/validation-message.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/java/com/codegym/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/java/com/codegym/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/java/com/codegym/controller/PhoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/java/com/codegym/model/PhoneNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/java/com/codegym/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/java/com/codegym/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/resources/validation-message.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/resources/validation-message.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/customer_phone_validation/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/form_input/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/form_input/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuchanh/form_input/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuchanh/form_input/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,6 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1637393316391</updated>
       <workItem from="1637393320607" duration="5176000" />
+      <workItem from="1637544439779" duration="3050000" />
     </task>
     <servers />
   </component>
@@ -221,6 +181,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2333" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637393647820">
