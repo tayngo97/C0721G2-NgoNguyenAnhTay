@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+
+<body>
+<div id="form">
+    <form th:action="@{/customer/delete}" th:object="${customer}"
+          method="POST" novalidate="novalidate">
+        <input type="hidden" name="id" th:field="*{id}"/>
+        <h3 style="color: black;background-color: white">Are you sure to delete that named : <span
+                th:text="${customer.name}"></span></h3>
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-dark">
+            <a style="color: white;text-decoration: none" th:href="@{/customer}">Back</a>
+        </button>
+    </form>
+</div>
+<footer></footer>
+</body>
+</html>

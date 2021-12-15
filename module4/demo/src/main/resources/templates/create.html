@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<style>
+    #form {
+        margin-left: 650px;
+    }
+
+</style>
+<body>
+<h3>Add Suat Chieu</h3>
+<!--<h2>-->
+<!--    <a th:href="@{/customer}">-->
+<!--        HOME-->
+<!--    </a>-->
+<!--</h2>-->
+<!--<p>-->
+<button type="button" class="btn btn-info">
+    <a th:href="@{/phimchieu}">
+        Back
+    </a></button>
+</p>
+<form th:action="@{save}" th:object="${suatchieu}"
+      method="POST" novalidate="novalidate">
+    <input type="hidden" th:field="*{id}"/>
+    <div>
+        <label>Mã suất chiếu</label>
+        <input type="text" th:field="*{maSuatChieu}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('maSuatChieu')}" th:errors="*{maSuatChieu}"></p>
+    </div>
+    <div>
+        <label>Ngày chiếu</label>
+        <br>
+        <input type="date" th:field="*{ngayChieu}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('ngayChieu')}" th:errors="*{ngayChieu}"></p>
+
+    </div>
+    <div>
+        <label>Số lượng vé</label>
+        <input type="number" th:field="*{soLuongVe}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('soLuongVe')}" th:errors="*{soLuongVe}"></p>
+    </div>
+    <div>
+        <label>Tên phim </label>
+        <select th:field="*{phimChieu}">
+            <option th:each="p : ${phimchieus}" th:value="${p.id}" th:text="${p.tenPhimChieu}"></option>
+        </select>
+    </div>
+    <input type="submit" value="Save"/>
+</form>
+
+</body>
+</html>
+<!--private String name;-->
+<!--private Date dateOfBirt;-->
+<!--private String gender;-->
+<!--private String idCard;-->
+<!--private String phoneNumber;-->
+<!--private String email;-->
+<!--private String address;-->
+<!--CustomerType type_id-->
