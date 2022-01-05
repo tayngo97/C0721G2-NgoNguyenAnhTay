@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="customer/layout :: head"></head>
+<style>
+    #form{
+        margin-left: 650px;
+    }
+
+</style>
+<body>
+<h3>Add Service</h3>
+<!--<h2>-->
+<!--    <a th:href="@{/service}">-->
+<!--        HOME-->
+<!--    </a>-->
+<!--</h2>-->
+<button type="button" class="btn btn-dark btn-lg btn-radius">
+    <a style="text-decoration: none" th:href="@{/service}"><h1>Back</h1></a>
+</button>
+<p>
+    <button type="button" class="btn btn-info">
+        <a th:href="@{/service}">
+            Back
+        </a></button>
+</p>
+<div id="form">
+    <form th:action="@{/service/save}" th:object="${services}"
+          th:method="post" novalidate="novalidate">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Service Name</label>
+            <input type="text" th:field="*{serviceName}"/>
+        </div>
+        <div>
+            <label>Area</label>
+            <br>
+            <input type="text" th:field="*{area}"/>
+        </div>
+        <div>
+            <label>Cost</label>
+            <input type="text" th:field="*{cost}"/>
+        </div>
+        <div>
+            <label>Max People</label>
+            <input type="text" th:field="*{maxPeople}"/>
+        </div>
+        <div>
+            <label>Standard Room</label>
+            <input type="text" th:field="*{standardRoom}"/>
+        </div>
+        <div>
+            <label>Description</label>
+            <input type="text" th:field="*{description}"/>
+        </div>
+        <div>
+            <label>Pool Area</label>
+            <input type="text" th:field="*{poolArea}"/>
+        </div>
+        <div>
+            <label>Floor</label>
+            <input type="text" th:field="*{floor}"/>
+        </div>
+        <div>
+            <label>Rent Type </label>
+            <select th:field="*{rentType}">
+                <option th:each="p : ${rentType}" th:value="${p.id}" th:text="${p.nameRentType}"></option>
+            </select>
+        </div>
+        <div>
+            <label>Service Type </label>
+            <select th:field="*{serviceType}">
+                <option th:each="p : ${serviceType}" th:value="${p.typeId}" th:text="${p.typeName}"></option>
+            </select>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+<footer th:replace="customer/layout :: footer"></footer>
+</body>
+</html>
+<!--private String name;-->
+<!--private Date dateOfBirt;-->
+<!--private String gender;-->
+<!--private String idCard;-->
+<!--private String phoneNumber;-->
+<!--private String email;-->
+<!--private String address;-->
+<!--CustomerType type_id-->

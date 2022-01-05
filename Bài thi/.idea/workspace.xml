@@ -2774,7 +2774,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../module4/baithi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -2790,6 +2790,7 @@
       <workItem from="1633941542835" duration="6000" />
       <workItem from="1633941852630" duration="15000" />
       <workItem from="1639140006310" duration="14000" />
+      <workItem from="1640761058044" duration="2000" />
     </task>
     <servers />
   </component>

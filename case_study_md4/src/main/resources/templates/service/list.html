@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="customer/layout :: head">
+</head>
+<body>
+<h3>Services</h3>
+<!--<a style="text-decoration: none" th:href="@{/home}"><h1>Home</h1></a>-->
+<p>
+    <button type="button" class="btn btn-dark btn-lg btn-radius">
+        <a style="text-decoration: none" th:href="@{/home}"><h1>Back</h1></a>
+    </button>
+</p>
+<!--<div class="notify">-->
+<!--    <div th:if="${success}">-->
+<!--        <span th:text="${success}"></span>-->
+<!--    </div>-->
+<!--</div>-->
+<div>
+    <form id="form" th:action="@{/service/search}" method="post">
+        <p>Tìm kiếm </p>
+        <input type="text" name="name" placeholder="Enter name"><span>
+        <input style="width: 100px" type="submit" value="Search"></span>
+    </form>
+</div>
+
+<p style="color: lawngreen" th:text="${msg}"></p>
+<button type="button" class="btn btn-success">
+    <a style="color: black;font-weight: bold;font-size: x-large" th:href="@{service/create}">Add</a>
+</button>
+<table id="customers">
+    <thead>
+    <tr>
+        <th>Service Name</th>
+        <th>Area</th>
+        <th>Cost</th>
+        <th>Max People</th>
+        <th>Standard Room</th>
+        <th>Description</th>
+        <th>Pool Area</th>
+        <th>Floor</th>
+        <th>Rent Type</th>
+        <th>Service Type</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row : ${services}">
+        <td th:text="${row.serviceName}"></td>
+        <td th:text="${row.area}"></td>
+        <td th:text="${row.cost}"></td>
+        <td th:text="${row.maxPeople}"></td>
+        <td th:text="${row.standardRoom}"></td>
+        <td th:text="${row.description}"></td>
+        <td th:text="${row.poolArea}"></td>
+        <td th:text="${row.floor}"></td>
+        <td th:if="${row.rentType}" th:text="${row.rentType.nameRentType}"></td>
+<!--        <td th:unless="${row.rentType}"></td>-->
+        <td th:if="${row.serviceType}" th:text="${row.serviceType.typeName}"></td>
+<!--        <td th:unless="${row.serviceType}"></td>-->
+
+        <td><button type="button" class="btn btn-warning"><a th:href="@{/service/{id}/edit(id=${row.getId()})}">Edit</a></button></td>
+        <td><button type="button" class="btn btn-danger"> <a th:href="@{/service/{id}/delete(id=${row.getId()})}">Delete</a></button></td>
+        <td><button type="button" class="btn btn-info"><a th:href="@{/service/{id}/view(id=${row.getId()})}">Detail</a></button></td>
+    </tr>
+    </tbody>
+</table>
+
+<!--<div>-->
+<!--    <a th:href="@{'/customer'(page=${customers.number -1})}" th:if="${customers.hasPrevious()}">Previous</a>-->
+<!--    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>-->
+<!--    <a th:href="@{'/customer'(page=${customers.number + 1})}" th:if="${customers.hasNext()}" >Next</a>-->
+<!--</div>-->
+<footer th:replace="customer/layout :: footer"></footer>
+</body>
+</html>
+<!--private String name;-->
+<!--private Date dateOfBirt;-->
+<!--private String gender;-->
+<!--private String idCard;-->
+<!--private String phoneNumber;-->
+<!--private String email;-->
+<!--private String address;-->
+<!--CustomerType type_id-->

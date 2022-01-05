@@ -5,6 +5,8 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -23,6 +25,7 @@ public class Question implements Validator{
     @NotBlank(message = "Can not be null !")
     @Size(min = 5,max = 100,message = "Title have to from 5 to 100 character !")
     private String title;
+
 
 //    @NotBlank(message = "Can not be null !")
 //    @Size(min = 10,max = 500,message = "Question have to from 5 to 100 character !")
@@ -64,13 +67,13 @@ public class Question implements Validator{
         this.title = title;
     }
 
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
-    }
+//    public String getQuestion() {
+//        return question;
+//    }
+//
+//    public void setQuestion(String question) {
+//        this.question = question;
+//    }
 
     public String getAnswer() {
         return answer;

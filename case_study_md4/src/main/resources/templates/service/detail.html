@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="customer/layout :: head"></head>
+<body>
+<h3>View Service</h3>
+<p>
+    <a th:href="@{/}">
+       HOME
+    </a>
+</p>
+<p>
+    <button type="button" class="btn btn-info">
+        <a th:href="@{/service}">
+            Back
+        </a></button>
+</p>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Name:</label>
+        <label th:text="${service.serviceName}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Date of birth:</label>
+        <label th:text="${service.area}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Gender:</label>
+        <label th:text="${service.cost}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Id card:</label>
+        <label th:text="${service.maxPeople}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Phone Number:</label>
+        <label th:text="${service.standardRoom}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Email:</label>
+        <label th:text="${service.description}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Address:</label>
+        <label th:text="${service.poolArea}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Rent Type : </label>
+        <label th:if="${service.rentType}" th:text="${service.rentType.nameRentType}"></label>
+    </div>
+</div>
+<footer th:replace="customer/layout :: footer"></footer>
+</body>
+</html>
+
+
+
+<!--<div>-->
+<!--    <label>Type </label>-->
+<!--    <select th:field="*{type_id}">-->
+<!--        <option th:each="p : ${customerType}" th:value="${p.type_id}" th:text="${p.type_name}"></option>-->
+<!--    </select>-->
+<!--</div>-->
+
+<!--private String name;-->
+<!--private Date dateOfBirt;-->
+<!--private String gender;-->
+<!--private String idCard;-->
+<!--private String phoneNumber;-->
+<!--private String email;-->
+<!--private String address;-->
+<!--CustomerType type_id-->

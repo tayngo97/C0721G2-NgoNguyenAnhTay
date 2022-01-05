@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="customer/layout :: head"></head>
+<body>
+<h3>Remove Customer</h3>
+<p>
+    <button type="button" class="btn btn-info">
+        <a th:href="@{/service}">
+            Back
+        </a></button>
+</p>
+<div id="form">
+    <form  th:action="@{/service/delete}" th:object="${service}"
+           method="post" novalidate="novalidate">
+        <input type="hidden" name="id" th:field="*{id}"/>
+        <div>
+            <label>Name</label>
+            <label   th:text="${service.serviceName}"/>
+        </div>
+        <div>
+            <label>Standard Room</label>
+            <label    th:text="${service.standardRoom}"/>
+        </div>
+        <div>
+            <label>Area</label>
+            <label  th:text="${service.area}"/>
+        </div>
+        <input type="submit" value="Remove"/>
+    </form>
+</div>
+<footer th:replace="customer/layout :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="customer/layout :: head"></head>
+<body>
+<h3>Edit Customer</h3>
+<p>
+    <button type="button" class="btn btn-info">
+        <a th:href="@{/service}">
+            Back
+        </a></button>
+</p>
+<div id="form">
+    <form action="#" th:action="@{/service/edit}" th:object="${service}"
+          method="POST" novalidate="novalidate">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name </label>
+            <input type="text" th:field="*{serviceName}"/>
+        </div>
+        <div>
+            <label>Area </label>
+            <input type="text" th:field="*{area}"/>
+        </div>
+        <div>
+            <label>Max People</label>
+            <input type="text" th:field="*{maxPeople}"/>
+        </div>
+        <div>
+            <label>Standard Room</label>
+            <input type="text" th:field="*{standardRoom}"/>
+        </div>
+        <div>
+            <label>Description</label>
+            <input type="text" th:field="*{description}"/>
+        </div>
+        <div>
+            <label>Pool Area</label>
+            <input type="text" th:field="*{poolArea}"/>
+        </div>
+        <div>
+            <label>Floor</label>
+            <input type="text" th:field="*{floor}"/>
+        </div>
+        <div>
+            <label>Rent Type </label>
+            <select th:field="*{rentType}">
+                <option th:each="p : ${rentType}" th:value="${p.id}" th:text="${p.nameRentType}"></option>
+            </select>
+        </div>
+        <div>
+            <label>Service Type </label>
+            <select th:field="*{serviceType}">
+                <option th:each="p : ${serviceType}" th:value="${p.typeId}" th:text="${p.typeName}"></option>
+            </select>
+        </div>
+        <input type="submit" value="Edit"/>
+    </form>
+</div>
+<footer th:replace="customer/layout :: footer"></footer>
+</body>
+</html>
+
+<!--private String name;-->
+<!--private Date dateOfBirt;-->
+<!--private String gender;-->
+<!--private String idCard;-->
+<!--private String phoneNumber;-->
+<!--private String email;-->
+<!--private String address;-->
+<!--CustomerType type_id-->
