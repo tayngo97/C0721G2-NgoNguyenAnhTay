@@ -1,0 +1,113 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "hoTen": "Tay Ngo",
+      "ngaySinh": "2022-02-06",
+      "gioiTinh": "Nam",
+      "soCMND": "206313399",
+      "soDienThoai": "0905027209",
+      "email": "tay@gmail.com",
+      "loaiKhach": "Vip",
+      "diaChi": "Da nang"
+    },
+    {
+      "id": 2,
+      "hoTen": "Tay Ngo",
+      "ngaySinh": "2022-02-06",
+      "gioiTinh": "Nam",
+      "soCMND": "206313399",
+      "soDienThoai": "0905027209",
+      "email": "tay@gmail.com",
+      "loaiKhach": "Vip",
+      "diaChi": "Da nang"
+    },
+    {
+      "id": 4,
+      "hoTen": "Tay Ngo",
+      "ngaySinh": "2022-02-06",
+      "gioiTinh": "Nam",
+      "soCMND": "206313399",
+      "soDienThoai": "0905027209",
+      "email": "tay@gmail.com",
+      "loaiKhach": "Vip",
+      "diaChi": "Da nang"
+    },
+    {
+      "id": 5,
+      "hoTen": "Tay Ngo",
+      "ngaySinh": "2022-02-06",
+      "gioiTinh": "Nam",
+      "soCMND": "206313399",
+      "soDienThoai": "0905027209",
+      "email": "tay@gmail.com",
+      "loaiKhach": "Vip",
+      "diaChi": "Da nang"
+    },
+    {
+      "id": 6,
+      "hoTen": "Tay Ngo",
+      "ngaySinh": "2022-02-06",
+      "gioiTinh": "Nam",
+      "soCMND": "206313399",
+      "soDienThoai": "0905027209",
+      "email": "tay@gmail.com",
+      "loaiKhach": "Vip",
+      "diaChi": "Da nang"
+    },
+    {
+      "id": 7,
+      "hoTen": "Tay Ngo",
+      "ngaySinh": "2022-02-06",
+      "gioiTinh": "Nam",
+      "soCMND": "206313399",
+      "soDienThoai": "0905027209",
+      "email": "tay@gmail.com",
+      "loaiKhach": "Vip",
+      "diaChi": "Da nang"
+    },
+    {
+      "id": 8,
+      "hoTen": "Tay Ngo",
+      "ngaySinh": "2022-02-06",
+      "gioiTinh": "Nam",
+      "soCMND": "206313399",
+      "soDienThoai": "0905027209",
+      "email": "tay@gmail.com",
+      "loaiKhach": "Vip",
+      "diaChi": "Da nang"
+    }
+  ],
+  "customertype": [
+    {
+      "id": 1,
+      "name": "Member"
+    },
+    {
+      "id": 2,
+      "name": "Gold"
+    },
+    {
+      "id": 3,
+      "name": "Silver"
+    },
+    {
+      "id": 4,
+      "name": "Platinum"
+    },
+    {
+      "id": 5,
+      "name": "Vip"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,153 @@
+<div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+
+      <div class="col-6 container1 body-form">
+        <h1 style="text-align: center; margin-top:20px"><b>Thêm mới khách hàng</b></h1>
+        <form [formGroup]="customerForm" (ngSubmit)="submit()">
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" >
+                  Id:
+                  <input type="number" formControlName="id" class="form-control" />
+                </label>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" >
+                  Họ tên
+                  <input type="text"  formControlName="hoTen" class="form-control" />
+                </label>
+<!--      s-->
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" >
+                  Ngày sinh
+                  <input type="date" formControlName="ngaySinh" class="form-control" />
+                </label>
+                <small *ngIf="customerForm.get('ngaySinh').hasError('required')
+                          && customerForm.get('ngaySinh').touched">Không được để trống</small>
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <label>
+                  Giới tính :
+                  <div>
+                    <span> <input class="form-check-input" formControlName="gioiTinh" value="Nam" type="radio" name="gioiTinh" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Nam
+                    </label></span>
+                    <span> <input class="form-check-input" formControlName="gioiTinh" value="Nữ" type="radio" name="gioiTinh" id="flexRadioDefault2" >
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Nữ
+                    </label></span>
+                  </div>
+
+                </label>
+
+
+<!--                <label class="form-label" >-->
+<!--                  Giới tính-->
+<!--                  <input type="text"  formControlName="gioiTinh"  class="form-control" />-->
+<!--                </label>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" >
+                  Số CMND
+                  <input type="text"  formControlName="soCMND"  class="form-control" />
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" >
+                  Số điện thoại
+                  <input type="text"  formControlName="soDienThoai"  class="form-control" />
+                </label>
+
+                <small *ngIf="customerForm.get('soDienThoai').hasError('required')
+                          && customerForm.get('soDienThoai').touched">Không được để trống</small>
+                <small *ngIf="customerForm.get('soDienThoai').hasError('pattern')
+                          && customerForm.get('soDienThoai').dirty">Sai định dạng Ex:090xxxxxxx or 091xxxxxxx</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" >
+                  Email
+                  <input type="email"  formControlName="email"  class="form-control" />
+                </label>
+                <small *ngIf="customerForm.get('email').hasError('required')
+                          && customerForm.get('email').touched">Không được để trống</small>
+                <small *ngIf="customerForm.get('email').hasError('email')
+                          && customerForm.get('email').dirty">Sai định dạng Ex: abc@xyz</small>
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <label>
+                  Loại khách :
+                  <select class="form-select" aria-label="Default select example" formControlName="loaiKhach" >
+                    <option *ngFor="let customerType of customerType" [value]="customerType.name">{{customerType.name}}</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" >
+                  Địa chỉ
+                  <input type="text"  formControlName="diaChi"  class="form-control" />
+                </label>
+
+              </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" >
+                    Mã khách hàng
+                    <input type="text"  formControlName="maKh" class="form-control" />
+                  </label>
+                  <small *ngIf="customerForm.get('maKh').hasError('required')
+                          && customerForm.get('maKh').touched">Không được để trống</small>
+                  <small *ngIf="customerForm.get('maKh').hasError('pattern')
+                           && customerForm.get('maKh').dirty ">Không hợp lệ : Ex: KH-XXXX</small>
+                </div>
+            </div>
+          </div>
+
+        <!-- Submit button -->
+        <button class="btn btn-outline-success btn-block mb-4"
+                [disabled]="customerForm.invalid"
+        >Create</button>
+        <button type="reset" class="btn btn-dark btn-block mb-4">Reset</button>
+
+        </form>
+      </div>
+
+      <div class="col-3"></div>
+
+    </div>
+  </div>

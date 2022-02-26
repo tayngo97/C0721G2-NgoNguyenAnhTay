@@ -6,6 +6,7 @@ import com.example.demo.service.IQuesTionService;
 import com.example.demo.service.IQuestionTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @Controller()
 @RequestMapping("question")
@@ -31,8 +33,8 @@ public class QuestionController {
 
 
     @GetMapping("")
-    public String show(String keyword, Model model,@PageableDefault(value = 10) Pageable pageable) {
-        if (keyword != null) {
+    public String show(String keyword ,Model model, @PageableDefault(value = 10) Pageable pageable) {
+        if (keyword == null) {
             model.addAttribute("questions", iQuesTionService.findByKeyWord(keyword, pageable));
         } else model.addAttribute("questions", iQuesTionService.findAllQuesTions(pageable));
         return "question/list";
